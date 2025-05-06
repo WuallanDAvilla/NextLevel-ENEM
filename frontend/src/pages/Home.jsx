@@ -6,6 +6,7 @@ function Home() {
       <h1>Bem-vindo ao Quiz Prepara Aí!</h1>
       <Link to="/quiz"><button>Começar o Quiz</button></Link>
       <Link to="/ranking"><button>Ver Ranking</button></Link>
+      <Link to="/login"><button>Sair</button></Link>
     </div>
   );
 }
