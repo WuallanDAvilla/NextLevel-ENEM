@@ -2,13 +2,17 @@ import { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
+import Logo from "../assets/Logo.png";
+import GoogleLogo from "../assets/GoogleLogo.png";
+import "../styles/Login.css";
+import "../App.jsx";
 
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
+  const [showPopup, setShowPopup] = useState(false); // Estado para controlar o pop-up
 
   // Login com e-mail/senha
   const handleLoginEmailSenha = async (e) => {
@@ -34,54 +38,72 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-card">
-        <div className="login-logo">
-          <img src="/logo-next-level.png" alt="Next Level ENEM" />
+        <div className="login-left">
+          <div className="login-logo">
+            <img src={Logo  } alt="imagem" />
+          </div>
+          <div className="buttons-container">
+            <button onClick={() => setShowPopup(true)} className="btn-entrar">
+              Entrar
+            </button>
+            <img
+              src={GoogleLogo} // Substitua pelo caminho correto do logo do Google
+              alt="Login com Google"
+              className="google-login"
+              onClick={handleLoginGoogle}
+            />
+          </div>
         </div>
 
         <div className="login-description">
           <p>
-            O aplicativo desenvolvido para ajudar os estudantes a se
-            prepararem para o ENEM é uma ferramenta inovadora e prática. Com um
-            design intuitivo, ele oferece uma vasta gama de questões objetivas,
-            abrangendo todas as disciplinas incluídas no exame.
+            O aplicativo desenvolvido para ajudar os estudantes a se prepararem
+            para o <strong>ENEM</strong> é uma ferramenta inovadora e prática.
+            Com um design intuitivo, ele oferece uma vasta gama de{" "}
+            <strong>questões objetivas</strong>, abrangendo todas as disciplinas
+            incluídas no exame.
           </p>
           <p>
-            Essa ferramenta não apenas ajuda na memorização, mas também
-            estimula o raciocínio crítico, preparando os alunos para os
+            Essa ferramenta não apenas ajuda na memorização, mas também estimula
+            o <strong>raciocínio crítico</strong>, preparando os alunos para os
             desafios e, consequentemente, para o futuro acadêmico.
           </p>
         </div>
-
-        <form onSubmit={handleLoginEmailSenha} className="login-form">
-          <div className="form-group">
-            <input
-              type="email"
-              placeholder="E-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="password"
-              placeholder="Senha"
-              value={senha}
-              onChange={(e) => setSenha(e.target.value)}
-              required
-            />
-          </div>
-          {erro && <div className="login-error">{erro}</div>}
-          <button type="submit" className="btn-entrar">
-            Entrar com E-mail
-          </button>
-        </form>
-
-        <div className="divisor">ou</div>
-        <button onClick={handleLoginGoogle} className="btn-conectar">
-          Entrar com Google
-        </button>
       </div>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <button className="popup-close" onClick={() => setShowPopup(false)}>
+              &times;
+            </button>
+            <form onSubmit={handleLoginEmailSenha} className="login-form">
+              <div className="form-group">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  placeholder="Senha"
+                  value={senha}
+                  onChange={(e) => setSenha(e.target.value)}
+                  required
+                />
+              </div>
+              {erro && <div className="login-error">{erro}</div>}
+              <button type="submit" className="btn-entrar">
+                Entrar
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
