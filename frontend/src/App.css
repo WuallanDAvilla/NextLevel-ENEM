@@ -4,4 +4,32 @@
   padding: 2rem;
   text-align: center;
 }
+.home-container {
+  text-align: center;
 
+  margin-top: 50px;
+}
+
+.home-buttons button {
+  margin: 0 10px;
+}
+
+.logout-button {
+  background-color: #e53935;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 12px 24px;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.logout-button:hover {
+  opacity: 0.8;
+}
