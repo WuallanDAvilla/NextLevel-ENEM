@@ -9,6 +9,7 @@ import Quiz from "./pages/Quiz";
 import Ranking from "./pages/Ranking";
 import Login from "./pages/Login";
 import PrivateRoute from "./pages/PrivateRoute";
+import Materias from "./pages/Materias";
 
 function App() {
   return (

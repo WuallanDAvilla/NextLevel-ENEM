@@ -4,32 +4,109 @@
   padding: 2rem;
   text-align: center;
 }
-.home-container {
-  text-align: center;
 
+.home-container {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
   margin-top: 50px;
 }
 
-.home-buttons button {
-  margin: 0 10px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #4caf50;
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
 }
 
 .logout-button {
   background-color: #e53935;
-
   color: white;
-
   border: none;
-
   border-radius: 8px;
-
   padding: 12px 24px;
-
   cursor: pointer;
-
   transition: opacity 0.2s ease;
 }
 
 .logout-button:hover {
   opacity: 0.8;
+}
+
+.carousel {
+  margin: 2rem 0;
+}
+
+.carousel h2 {
+  margin-bottom: 1rem;
+}
+
+.carousel-images img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.profile, .subjects, .contact {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subject-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.subject-button {
+  padding: 0.5rem 1rem;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subject-button:hover {
+  background: #1976d2;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.email-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.primary-button {
+  padding: 0.5rem 1rem;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.primary-button:hover {
+  background: #388e3c;
 }

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: "Georgia", cursive, sans-serif;
+  background-color: #14497c;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #2a9dba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.materias-section {
+  background-color: #14497c;
+  padding: 30px;
+  text-align: center;
+}
+
+.materias-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fdfdfd;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.materias-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.materias-card {
+  background-color: #ffffff;
+  color: black;
+  width: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.materias-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.materia-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-bottom: 2px solid #2aa7c2;
+}
+
+.materia-card p {
+    margin: 15px 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2a2a2a;
+}
+
+footer {
+    background-color: #2aa7c2;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.Logo-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+
+.Logo-container {
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.home-image,
+.menu-image {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    background: #14497c;
+    color: white;
+    padding: 10px 200px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px
+}

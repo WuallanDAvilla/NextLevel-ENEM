@@ -134,6 +134,29 @@ body {
   animation: slideDown 0.4s ease-in-out; /* Animação de deslizar */
 }
 
+/* Título do pop-up */
+.popup-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333; /* Cor do título */
+}
+
+/* Link de redefinição de senha */
+.popup-content .reset-password {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.popup-content .reset-password:hover {
+  color: #0d3e63;
+  text-decoration: underline;
+}
+
 /* Botão de fechar */
 .popup-close {
   position: absolute;

@@ -40,7 +40,7 @@ function Login() {
       <div className="login-card">
         <div className="login-left">
           <div className="login-logo">
-            <img src={Logo  } alt="imagem" />
+            <img src={Logo} alt="imagem" />
           </div>
           <div className="buttons-container">
             <button onClick={() => setShowPopup(true)} className="btn-entrar">
@@ -77,29 +77,27 @@ function Login() {
             <button className="popup-close" onClick={() => setShowPopup(false)}>
               &times;
             </button>
+            <h2>Área de Login</h2>
             <form onSubmit={handleLoginEmailSenha} className="login-form">
-              <div className="form-group">
-                <input
-                  type="email"
-                  placeholder="E-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="password"
-                  placeholder="Senha"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
-                  required
-                />
-              </div>
+              <input
+                type="email"
+                placeholder="insira seu e-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <input
+                type="password"
+                placeholder="insira sua senha"
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}
+                required
+              />
+              <a href="#" className="reset-password">
+                Redefinir Senha
+              </a>
               {erro && <div className="login-error">{erro}</div>}
-              <button type="submit" className="btn-entrar">
-                Entrar
-              </button>
+              <button type="submit">ENTRAR</button>
             </form>
           </div>
         </div>
