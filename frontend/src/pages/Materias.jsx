@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom"; // 1. Importe o hook
 import "../styles/Materias.css";
-import { FiLogOut } from "react-icons/fi";
 
 import Logo from "../assets/Logo.png";
 import Usuario from "../assets/Usuario.png";
@@ -13,13 +13,13 @@ import Sociologia from "../assets/Materias/Sociologia.png";
 import Biologia from "../assets/Materias/Biologia.png";
 import Artes from "../assets/Materias/Artes.png";
 import Ingles from "../assets/Materias/Ingles.png";
-import Espanhol from "../assets/Materias/Espanhol";
-import Fisica from "../assets/Materias/Fisica";
+import Espanhol from "../assets/Materias/Espanhol.png";
+import Fisica from "../assets/Materias/Fisica.png";
 import Quimica from "../assets/Materias/Quimica.png";
 import EducacaoFisica from "../assets/Materias/EducacaoFisica.png";
 import Conectivos from "../assets/Materias/Conectivos.png";
 
-const Materias = () => {
+export default function Materias() {
   const fileInputRef = useRef(null);
   const [profileImage, setProfileImage] = useState(null);
   const [popupVisible, setPopupVisible] = useState(false);
@@ -27,64 +27,80 @@ const Materias = () => {
     titulo: "",
     texto: "",
     imagem: "",
+    rota: "",
   });
+  const navigate = useNavigate(); // 2. Inicialize o hook
 
   const conteudo = {
     Geografia: {
       texto: "",
       imagem: Geografia,
+      rota: "/materias/geografia",
     },
     Matemática: {
       texto: "",
       imagem: Matematica,
+      rota: "/materias/matematica",
     },
     LínguaPortuguesa: {
       texto: "",
       imagem: LinguaPortuguesa,
+      rota: "/materias/linguaportuguesa",
     },
     Física: {
       texto: "",
       imagem: Fisica,
+      rota: "/QuizMaterias/Fisica",
     },
     Química: {
       texto: "",
       imagem: Quimica,
+      rota: "/materias/quimica",
     },
     História: {
       texto: "",
       imagem: Historia,
+      rota: "/materias/historia",
     },
     Filosofia: {
       texto: "",
       imagem: Filosofia,
+      rota: "/materias/filosofia",
     },
     Sociologia: {
       texto: "",
       imagem: Sociologia,
+      rota: "/materias/sociologia",
     },
     Biologia: {
       texto: "",
       imagem: Biologia,
+      rota: "/materias/biologia",
     },
     Artes: {
       texto: "",
       imagem: Artes,
+      rota: "/materias/artes",
     },
     Inglês: {
       texto: "",
       imagem: Ingles,
+      rota: "/materias/ingles",
     },
     Espanhol: {
       texto: "",
       imagem: Espanhol,
+      rota: "/materias/espanhol",
     },
     EducaçãoFísica: {
       texto: "",
       imagem: EducacaoFisica,
+      rota: "/materias/educacaofisica",
     },
     Conectivos: {
       texto: "",
       imagem: Conectivos,
+      rota: "/materias/conectivos",
     },
   };
 
@@ -94,6 +110,7 @@ const Materias = () => {
       titulo: materia,
       texto: data?.texto || "Conteúdo em breve.",
       imagem: data?.imagem || "",
+      rota: data?.rota || "/materias",
     });
     setPopupVisible(true);
   };
@@ -139,12 +156,12 @@ const Materias = () => {
           style={{ display: 'none' }}
           onChange={handleProfileChange}
           />
-          <FiLogOut 
+          {/* <FiLogOut 
           size={40}
           color="black"
           style={{ cursor: 'pointer' }}
           title="Sair"
-          />
+          /> */}
         </div>
       </header>
 
@@ -170,12 +187,10 @@ const Materias = () => {
                 <h2>{popupData.titulo}</h2>
                 <img src={popupData.imagem} alt={popupData.titulo} />
                 <p>{popupData.texto}</p>
-                <button onClick={fecharPopup}>Iniciar</button>
+                <button onClick={() => navigate(popupData.rota)}>Iniciar</button>
             </div>
         </div>
     )}
     </div>
   );
 };
-
-export default Materias;

@@ -1,0 +1,192 @@
+[
+    {
+    "pergunta": "A presença de líquens em determinada região tem sido usada como indicadora de qualidade do ar. Esses organismos são sensíveis a poluentes atmosféricos, especiamente dióxido de enxofre (SO₂), sendo ausentes em locais poluídos. Considerando essa informação, a presença de líquens em uma área urbana indica:",
+    "opcoes": ["Alta biodiversidade vegetal", "Intensa atividade industrial", "Boa qualidade do ar", "Elevado teor de dióxido de carbono", "Aumento da temperatura local"],
+    "correta": "Boa qualidade do ar",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um casal heterozigoto para a fibrose cística (doença genética recessiva) deseja saber a probabilidade de seus filhos herdarem a doença. A fibrose é causada por um alelo recessivo. Qual a chance de esse casal ter um filho com a doença?",
+    "opcoes": ["0%", "25%", "50%", "75%", "100%"],
+    "correta": "25%",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Durante uma expedição, cientistas observaram duas espécies de aves muito semelhantes vivendo em ambientes distintos. Apesar de suas semelhanças, cada uma apresenta adaptações específicas ao seu ambiente. Esse fenômeno pode ser explicado pela:",
+    "opcoes": ["Deriva genética", "Mutação letal", "Especiação alopátrica", "Irradiação adaptativa", "Seleção artificial"],
+    "correta": "Especiação alopátrica",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Durante uma maratona, o corpo do atleta aumenta a frequência respiratória e o ritmo cardíaco. Essas alterações fisiológicas têm como principal objetivo:",
+    "opcoes": ["Reduzir o consumo de oxigênio pelas células.", "Elevar a pressão arterial para evitar desmaios", "Aumentar o fornecimento de oxigênio e nutrientes aos tecidos", "Diminuir a produção de ácido lático nos músculos", "Controlar a liberação de hormônios da tireoide"],
+    "correta": "Aumentar o fornecimento de oxigênio e nutrientes aos tecidos",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "A esquistossomose, também conhecida como barriga d’água, é causada por um verme do gênero Schistosoma. Uma medida eficaz para a prevenção da esquistossomose é:",
+    "opcoes": ["Vacinação da população", "Controle de mosquito vetor", "Tratamento da água com flúor", "Eliminação de caramujos em áreas de risco", "Uso de inseticidas em residências"],
+    "correta": "Eliminação de caramujos em áreas de risco",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "A técnica do DNA recombinante permite a inserção de genes humanos em bactérias, que passam a produzir substâncias úteis, como a insulina. Essa técnica é possível graças à:",
+    "opcoes": ["Substituição de ácidos nucleicos por proteínas", "Fusão de membranas celulares humanas e bacterianas", "Capacidade das bactérias realizarem mitose", "Similaridade genética entre humanos e bactérias", "Capacidade de expressão de genes heterólogos por organismos geneticamente modificados"],
+    "correta": "Capacidade de expressão de genes heterólogos por organismos geneticamente modificados",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um bloco de 2 kg é solto do alto de uma rampa de 5 m de altura. Desprezando o atrito, qual é sua velocidade ao atingir a base?",
+    "opcoes": ["5 m/s", "7 m/s", "10 m/s", "15 m/s", "20 m/s"],
+    "correta": "10 m/s",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um carro move-se com velocidade constante de 90 km/h em uma estrada reta. Quanto tempo ele leva para percorrer 45 km?",
+    "opcoes": ["15 minutos", "20 minutos", "30 minutos", "45 minutos", "60 minutos"],
+    "correta": "30 minutos",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um corpo de 10 kg está sobre uma superfície horizontal sem atrito. Uma força de 50 N é aplicada sobre ele. Qual será a aceleração do corpo?",
+    "opcoes": ["2 m/s²", "5 m/s²", "10 m/s²", "20 m/s²", "50 m/s²"],
+    "correta": "5 m/s²",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Uma amostra de gás ideal sofre compressão isotérmica. Isso significa que, ao final do processo:",
+    "opcoes": ["A temperatura aumenta", "O volume aumenta", "A energia interna aumenta", "A temperatura permanece constante", "A pressão permanece constante"],
+    "correta": "A temperatura permanece constante",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Três resistores de 6 Ω estão ligados em paralelo. Qual é a resistência equivalente do circuito?",
+    "opcoes": ["2 Ω", "3 Ω", "6 Ω", "12 Ω", "18 Ω"],
+    "correta": "2 Ω",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um objeto é colocado a 30 cm de uma lente convergente de distância focal 20 cm. A imagem formada é:",
+    "opcoes": ["Virtual, direita e maior", "Real, invertida e maior", "Real, invertida e menor", "Virtual, invertida e menor", "Real, direita e maior"],
+    "correta": "Real, invertida e maior",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Aviso em um hotel: Dear guests, please remember to leave your room key at the front desk before going out for the day. This helps us keep track of who is in the building and improves security for all. Pergunta: O aviso tem como principal objetivo:",
+    "opcoes": ["Informar que o hóspede deve pagar antes de sair", "Sugerir que o hóspede mantenha a chave consigo", "Solicitar que o hóspede deixe a chave na recepção ao sair", "Proibir que o hóspede saia durante o dia", "Anunciar um novo sistema de segurança"],
+    "correta": "Solicitar que o hóspede deixe a chave na recepção ao sair",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Citação em blog de viagens: 'You don’t have to be rich to travel well.' '— Eugene Fodor, travel writer' Contexto: A frase aparece no início de um artigo que ensina como fazer viagens econômicas e memoráveis, destacando que o mais importante é o planejamento e a experiência cultural, e não o luxo. Pergunta: De acordo com o autor, o que não é necessário para viajar bem? ",
+    "opcoes": ["Ter passaporte válido", "Estar com boa saúde", "Ter tempo livre", "Ser rico", "Planejar o roteiro"],
+    "correta": "Ser rico",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Campanha ambiental em uma rede social: 'Reduce, Reuse, Recycle. The planet will thank you later. Let’s make sustainability more than just a word — let’s make it a habit.' Pergunta: O objetivo principal dessa postagem é:",
+    "opcoes": ["Promover um novo produto sustentável", "Incentivar comportamentos ecológicos no cotidiano", "Informar sobre uma nova lei ambiental", "Criticar a indústria de embalagens", "Divulgar um evento de reciclagem"],
+    "correta": "Incentivar comportamentos ecológicos no cotidiano",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Frase em uma revista de tecnologia: 'Technology is a useful servant but a dangerous master.' '— Christian Lous Lange' A frase aparece em uma matéria que debate o uso excessivo de dispositivos eletrônicos e algoritmos que moldam comportamentos online. Pergunta: A partir do contexto, a frase expressa que:",
+    "opcoes": ["A tecnologia deve ser evitada sempre que possível", "O ser humano deve obedecer aos avanços tecnológicos", "O controle sobre a tecnologia é essencial para seu bom uso", "O futuro será dominado por máquinas inteligentes", "A tecnologia é inofensiva e sempre benéfica"],
+    "correta": "O controle sobre a tecnologia é essencial para seu bom uso",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Imagem (descrita): Um cartum mostra uma pessoa tentando relaxar em casa, mas o celular exibe várias notificações como: 'New message', 'Hurry, limited offer!', 'You're missing out!', 'Update your app!' A expressão facial da pessoa demonstra ansiedade. Pergunta: Qual crítica social está presente na imagem?",
+    "opcoes": ["A dependência das empresas em notificações pagas", "O uso de celular para fins educativos", "A exaustão mental provocada pelo bombardeio de alertas digitais", "O desenvolvimento de novos aplicativos de saúde", "A eficiência da comunicação moderna"],
+    "correta": "A exaustão mental provocada pelo bombardeio de alertas digitais",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto (editorial adaptado) 'Social media has revolutionized human interaction. While it allows people to connect across continents, it also creates echo chambers that reinforce personal biases and contribute to the polarization of public opinion.' Pergunta: Como o autor se posiciona em relação às redes sociais?",
+    "opcoes": ["Demonstra entusiasmo total quanto aos seus benefícios", "Apresenta uma visão neutra, sem opinião.", "Expõe tanto os aspectos positivos quanto os negativos", "Rejeita completamente o uso das redes sociais", "Ironiza quem usa redes sociais frequentemente"],
+    "correta": "Expõe tanto os aspectos positivos quanto os negativos",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "A cultura pode ser compreendida como o conjunto de conhecimentos, crenças, arte, moral, leis, costumes e todos os outros hábitos e capacidades adquiridos pelo ser humano como membro da sociedade. Essa definição está relacionada à ideia de que:",
+    "opcoes": ["A cultura é natural e transmitida biologicamente", "A cultura é estática e imutável", "A cultura é exclusiva das sociedades industrializadas", "A cultura é aprendida e transmitida socialmente", "A cultura é sinônimo de evolução tecnológica"],
+    "correta": "A cultura é aprendida e transmitida socialmente",
+    "categoria": "Sociologia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "A estratificação social refere-se à divisão da sociedade em camadas hierarquizadas. Um exemplo comum desse fenômeno ocorre quando: ",
+    "opcoes": ["Todos têm o mesmo acesso à educação e saúde", "A renda e os bens materiais são distribuídos de maneira igualitária", "Grupos sociais possuem diferentes níveis de prestígio, poder e riqueza", "As classes sociais deixam de existir por causa da globalização", "O sistema de castas é substituído pela democracia direta"],
+    "correta": "Grupos sociais possuem diferentes níveis de prestígio, poder e riqueza",
+    "categoria": "Sociologia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "No contexto do capitalismo moderno, o sociólogo Karl Marx destacou a alienação do trabalhador. Isso significa que:",
+    "opcoes": ["O trabalhador se sente plenamente realizado no ambiente industrial", "O trabalhador detém os meios de produção e o controle sobre seu trabalho", "O trabalhador reconhece o valor moral do seu patrão.", "O trabalhador perde o controle sobre o processo e o produto do seu trabalho", "O trabalhador não precisa mais vender sua força de trabalho"],
+    "correta": "O trabalhador perde o controle sobre o processo e o produto do seu trabalho",
+    "categoria": "Sociologia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "Os movimentos sociais podem ser compreendidos como formas de ação coletiva que buscam mudanças ou resistem a elas. Um exemplo de movimento social reformista seria:",
+    "opcoes": ["Um grupo que luta por uma revolução armada para derrubar o Estado", "Um coletivo que reivindica melhorias nas condições de trabalho por meio de greves.", "Uma organização que visa restaurar uma monarquia absolutista", "Um grupo que promove o isolamento social e a autossuficiência econômica", "Uma milícia que impõe normas religiosas por meio da violência"],
+    "correta": "Um coletivo que reivindica melhorias nas condições de trabalho por meio de greves.",
+    "categoria": "Sociologia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "Max Weber definiu o Estado como a entidade que detém o monopólio legítimo da força dentro de um território. Para Weber, a legitimidade do poder pode se basear em três tipos de dominação: tradicional, carismática e legal. A dominação legal-racional se caracteriza por: ",
+    "opcoes": ["Lealdade a líderes que possuem carisma e habilidades extraordinárias", "Aceitação de leis codificadas e da autoridade impessoal do cargo", "Tradições milenares que mantêm o respeito à autoridade ancestral", "Religiões organizadas que fundamentam a moral estatal", "Rebeliões populares que desafiam a ordem institucional"],
+    "correta": "Aceitação de leis codificadas e da autoridade impessoal do cargo",
+    "categoria": "Sociologia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "Na contemporaneidade, o sociólogo Stuart Hall aponta que a identidade deixou de ser algo fixo e passou a ser compreendida como múltipla e fragmentada. Essa visão dialoga com o processo de globalização, pois: ",
+    "opcoes": ["A globalização elimina todas as culturas locais e impõe uma identidade única", "A globalização mantém as fronteiras culturais intactas e imutáveis", "A globalização acelera as migrações e o contato com múltiplas referências culturais", "A globalização fortalece o enraizamento identitário exclusivo do Estado-nação", "A globalização leva à total perda de sentido da identidade pessoal"],
+    "correta": "A globalização acelera as migrações e o contato com múltiplas referências culturais",
+    "categoria": "Sociologia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "A globalização é um processo de intensificação das relações econômicas, sociais, culturais e políticas em escala mundial. Sobre esse tema, assinale a alternativa correta:",
+    "opcoes": ["A globalização eliminou as desigualdades entre países desenvolvidos e subdesenvolvidos", "Com a globalização, as fronteiras nacionais deixaram de existir, tornando-se irrelevantes", "A globalização se caracteriza pela ampliação das redes de transporte, comunicação e fluxos financeiros", "O processo de globalização teve início com a Revolução Industrial no século XXI", "A globalização enfraqueceu as multinacionais e fortaleceu apenas empresas locais"],
+    "correta": "A globalização se caracteriza pela ampliação das redes de transporte, comunicação e fluxos financeiros",
+    "categoria": "Geografia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "As ações humanas vêm causando diversos impactos negativos ao meio ambiente, afetando ecossistemas e a qualidade de vida. Sobre os impactos ambientais causados pelas atividades humanas, assinale a alternativa correta:",
+    "opcoes": ["A queimada de florestas tropicais reduz a emissão de gases de efeito estufa e melhora o equilíbrio climático", "O desmatamento contribui para o aumento da biodiversidade local e para a conservação do solo", "O uso excessivo de fertilizantes e agrotóxicos pode contaminar o solo e os corpos d’água, afetando a saúde humana", "A urbanização desordenada promove maior permeabilidade do solo e facilita o escoamento da água da chuva", "As atividades industriais e o transporte não influenciam na poluição atmosférica das grandes cidades"],
+    "correta": "O uso excessivo de fertilizantes e agrotóxicos pode contaminar o solo e os corpos d’água, afetando a saúde humana-",
+    "categoria": "Geografia",
+    "explicacao": ""    
+  },
+  {
+    "pergunta": "",
+    "opcoes": ["", "", "", "", ""],
+    "correta": "",
+    "categoria": "Geografia",
+    "explicacao": ""    
+  }
+  
+]

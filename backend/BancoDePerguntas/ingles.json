@@ -1,0 +1,80 @@
+[
+  {
+    "pergunta": "Texto: Aviso em um hotel: Dear guests, please remember to leave your room key at the front desk before going out for the day. This helps us keep track of who is in the building and improves security for all. Pergunta: O aviso tem como principal objetivo:",
+    "opcoes": [
+      "Informar que o hóspede deve pagar antes de sair",
+      "Sugerir que o hóspede mantenha a chave consigo",
+      "Solicitar que o hóspede deixe a chave na recepção ao sair",
+      "Proibir que o hóspede saia durante o dia",
+      "Anunciar um novo sistema de segurança"
+    ],
+    "correta": "Solicitar que o hóspede deixe a chave na recepção ao sair",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Citação em blog de viagens: 'You don’t have to be rich to travel well.' '— Eugene Fodor, travel writer' Contexto: A frase aparece no início de um artigo que ensina como fazer viagens econômicas e memoráveis, destacando que o mais importante é o planejamento e a experiência cultural, e não o luxo. Pergunta: De acordo com o autor, o que não é necessário para viajar bem? ",
+    "opcoes": [
+      "Ter passaporte válido",
+      "Estar com boa saúde",
+      "Ter tempo livre",
+      "Ser rico",
+      "Planejar o roteiro"
+    ],
+    "correta": "Ser rico",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Campanha ambiental em uma rede social: 'Reduce, Reuse, Recycle. The planet will thank you later. Let’s make sustainability more than just a word — let’s make it a habit.' Pergunta: O objetivo principal dessa postagem é:",
+    "opcoes": [
+      "Promover um novo produto sustentável",
+      "Incentivar comportamentos ecológicos no cotidiano",
+      "Informar sobre uma nova lei ambiental",
+      "Criticar a indústria de embalagens",
+      "Divulgar um evento de reciclagem"
+    ],
+    "correta": "Incentivar comportamentos ecológicos no cotidiano",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto: Frase em uma revista de tecnologia: 'Technology is a useful servant but a dangerous master.' '— Christian Lous Lange' A frase aparece em uma matéria que debate o uso excessivo de dispositivos eletrônicos e algoritmos que moldam comportamentos online. Pergunta: A partir do contexto, a frase expressa que:",
+    "opcoes": [
+      "A tecnologia deve ser evitada sempre que possível",
+      "O ser humano deve obedecer aos avanços tecnológicos",
+      "O controle sobre a tecnologia é essencial para seu bom uso",
+      "O futuro será dominado por máquinas inteligentes",
+      "A tecnologia é inofensiva e sempre benéfica"
+    ],
+    "correta": "O controle sobre a tecnologia é essencial para seu bom uso",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Imagem (descrita): Um cartum mostra uma pessoa tentando relaxar em casa, mas o celular exibe várias notificações como: 'New message', 'Hurry, limited offer!', 'You're missing out!', 'Update your app!' A expressão facial da pessoa demonstra ansiedade. Pergunta: Qual crítica social está presente na imagem?",
+    "opcoes": [
+      "A dependência das empresas em notificações pagas",
+      "O uso de celular para fins educativos",
+      "A exaustão mental provocada pelo bombardeio de alertas digitais",
+      "O desenvolvimento de novos aplicativos de saúde",
+      "A eficiência da comunicação moderna"
+    ],
+    "correta": "A exaustão mental provocada pelo bombardeio de alertas digitais",
+    "categoria": "Inglês",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Texto (editorial adaptado) 'Social media has revolutionized human interaction. While it allows people to connect across continents, it also creates echo chambers that reinforce personal biases and contribute to the polarization of public opinion.' Pergunta: Como o autor se posiciona em relação às redes sociais?",
+    "opcoes": [
+      "Demonstra entusiasmo total quanto aos seus benefícios",
+      "Apresenta uma visão neutra, sem opinião.",
+      "Expõe tanto os aspectos positivos quanto os negativos",
+      "Rejeita completamente o uso das redes sociais",
+      "Ironiza quem usa redes sociais frequentemente"
+    ],
+    "correta": "Expõe tanto os aspectos positivos quanto os negativos",
+    "categoria": "Inglês",
+    "explicacao": ""
+  }
+]

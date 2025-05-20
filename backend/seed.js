@@ -8,36 +8,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const perguntas = [
-  {
-    pergunta: "Qual é a capital do Brasil?",
-    opcoes: ["Brasília", "São Paulo", "Rio de Janeiro", "Salvador"],
-    correta: "Brasília",
-    categoria: "Geografia",
-  },
-  {
-    pergunta: "Quem descobriu o Brasil?",
-    opcoes: ["Pedro Álvares Cabral", "Dom Pedro I", "Tiradentes", "Cabralinho"],
-    correta: "Pedro Álvares Cabral",
-    categoria: "História",
-  },
-  {
-    pergunta: "Qual é o resultado de 9 x 7?",
-    opcoes: ["56", "63", "72", "69"],
-    correta: "63",
-    categoria: "Matemática",
-  },
-  {
-    pergunta: "Qual elemento tem o símbolo químico 'O'?",
-    opcoes: ["Ouro", "Oxigênio", "Ósmio", "Prata"],
-    correta: "Oxigênio",
-    categoria: "Química",
-  },
-  {
-    pergunta: "Quem escreveu Dom Casmurro?",
-    opcoes: ["Machado de Assis", "José de Alencar", "Carlos Drummond", "Manuel Bandeira"],
-    correta: "Machado de Assis",
-    categoria: "Literatura",
-  }
+  
 ];
 
 // Função para inserir

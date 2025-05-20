@@ -1,0 +1,80 @@
+[
+  {
+    "pergunta": "A cultura pode ser compreendida como o conjunto de conhecimentos, crenças, arte, moral, leis, costumes e todos os outros hábitos e capacidades adquiridos pelo ser humano como membro da sociedade. Essa definição está relacionada à ideia de que:",
+    "opcoes": [
+      "A cultura é natural e transmitida biologicamente",
+      "A cultura é estática e imutável",
+      "A cultura é exclusiva das sociedades industrializadas",
+      "A cultura é aprendida e transmitida socialmente",
+      "A cultura é sinônimo de evolução tecnológica"
+    ],
+    "correta": "A cultura é aprendida e transmitida socialmente",
+    "categoria": "Sociologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "A estratificação social refere-se à divisão da sociedade em camadas hierarquizadas. Um exemplo comum desse fenômeno ocorre quando: ",
+    "opcoes": [
+      "Todos têm o mesmo acesso à educação e saúde",
+      "A renda e os bens materiais são distribuídos de maneira igualitária",
+      "Grupos sociais possuem diferentes níveis de prestígio, poder e riqueza",
+      "As classes sociais deixam de existir por causa da globalização",
+      "O sistema de castas é substituído pela democracia direta"
+    ],
+    "correta": "Grupos sociais possuem diferentes níveis de prestígio, poder e riqueza",
+    "categoria": "Sociologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "No contexto do capitalismo moderno, o sociólogo Karl Marx destacou a alienação do trabalhador. Isso significa que:",
+    "opcoes": [
+      "O trabalhador se sente plenamente realizado no ambiente industrial",
+      "O trabalhador detém os meios de produção e o controle sobre seu trabalho",
+      "O trabalhador reconhece o valor moral do seu patrão.",
+      "O trabalhador perde o controle sobre o processo e o produto do seu trabalho",
+      "O trabalhador não precisa mais vender sua força de trabalho"
+    ],
+    "correta": "O trabalhador perde o controle sobre o processo e o produto do seu trabalho",
+    "categoria": "Sociologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Os movimentos sociais podem ser compreendidos como formas de ação coletiva que buscam mudanças ou resistem a elas. Um exemplo de movimento social reformista seria:",
+    "opcoes": [
+      "Um grupo que luta por uma revolução armada para derrubar o Estado",
+      "Um coletivo que reivindica melhorias nas condições de trabalho por meio de greves.",
+      "Uma organização que visa restaurar uma monarquia absolutista",
+      "Um grupo que promove o isolamento social e a autossuficiência econômica",
+      "Uma milícia que impõe normas religiosas por meio da violência"
+    ],
+    "correta": "Um coletivo que reivindica melhorias nas condições de trabalho por meio de greves.",
+    "categoria": "Sociologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Max Weber definiu o Estado como a entidade que detém o monopólio legítimo da força dentro de um território. Para Weber, a legitimidade do poder pode se basear em três tipos de dominação: tradicional, carismática e legal. A dominação legal-racional se caracteriza por: ",
+    "opcoes": [
+      "Lealdade a líderes que possuem carisma e habilidades extraordinárias",
+      "Aceitação de leis codificadas e da autoridade impessoal do cargo",
+      "Tradições milenares que mantêm o respeito à autoridade ancestral",
+      "Religiões organizadas que fundamentam a moral estatal",
+      "Rebeliões populares que desafiam a ordem institucional"
+    ],
+    "correta": "Aceitação de leis codificadas e da autoridade impessoal do cargo",
+    "categoria": "Sociologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Na contemporaneidade, o sociólogo Stuart Hall aponta que a identidade deixou de ser algo fixo e passou a ser compreendida como múltipla e fragmentada. Essa visão dialoga com o processo de globalização, pois: ",
+    "opcoes": [
+      "A globalização elimina todas as culturas locais e impõe uma identidade única",
+      "A globalização mantém as fronteiras culturais intactas e imutáveis",
+      "A globalização acelera as migrações e o contato com múltiplas referências culturais",
+      "A globalização fortalece o enraizamento identitário exclusivo do Estado-nação",
+      "A globalização leva à total perda de sentido da identidade pessoal"
+    ],
+    "correta": "A globalização acelera as migrações e o contato com múltiplas referências culturais",
+    "categoria": "Sociologia",
+    "explicacao": ""
+  }
+]

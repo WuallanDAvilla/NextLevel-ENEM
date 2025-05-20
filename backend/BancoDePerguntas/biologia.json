@@ -1,0 +1,74 @@
+[
+  {
+    "pergunta": "A presença de líquens em determinada região tem sido usada como indicadora de qualidade do ar. Esses organismos são sensíveis a poluentes atmosféricos, especiamente dióxido de enxofre (SO₂), sendo ausentes em locais poluídos. Considerando essa informação, a presença de líquens em uma área urbana indica:",
+    "opcoes": [
+      "Alta biodiversidade vegetal",
+      "Intensa atividade industrial",
+      "Boa qualidade do ar",
+      "Elevado teor de dióxido de carbono",
+      "Aumento da temperatura local"
+    ],
+    "correta": "Boa qualidade do ar",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um casal heterozigoto para a fibrose cística (doença genética recessiva) deseja saber a probabilidade de seus filhos herdarem a doença. A fibrose é causada por um alelo recessivo. Qual a chance de esse casal ter um filho com a doença?",
+    "opcoes": ["0%", "25%", "50%", "75%", "100%"],
+    "correta": "25%",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Durante uma expedição, cientistas observaram duas espécies de aves muito semelhantes vivendo em ambientes distintos. Apesar de suas semelhanças, cada uma apresenta adaptações específicas ao seu ambiente. Esse fenômeno pode ser explicado pela:",
+    "opcoes": [
+      "Deriva genética",
+      "Mutação letal",
+      "Especiação alopátrica",
+      "Irradiação adaptativa",
+      "Seleção artificial"
+    ],
+    "correta": "Especiação alopátrica",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Durante uma maratona, o corpo do atleta aumenta a frequência respiratória e o ritmo cardíaco. Essas alterações fisiológicas têm como principal objetivo:",
+    "opcoes": [
+      "Reduzir o consumo de oxigênio pelas células.",
+      "Elevar a pressão arterial para evitar desmaios",
+      "Aumentar o fornecimento de oxigênio e nutrientes aos tecidos",
+      "Diminuir a produção de ácido lático nos músculos",
+      "Controlar a liberação de hormônios da tireoide"
+    ],
+    "correta": "Aumentar o fornecimento de oxigênio e nutrientes aos tecidos",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "A esquistossomose, também conhecida como barriga d’água, é causada por um verme do gênero Schistosoma. Uma medida eficaz para a prevenção da esquistossomose é:",
+    "opcoes": [
+      "Vacinação da população",
+      "Controle de mosquito vetor",
+      "Tratamento da água com flúor",
+      "Eliminação de caramujos em áreas de risco",
+      "Uso de inseticidas em residências"
+    ],
+    "correta": "Eliminação de caramujos em áreas de risco",
+    "categoria": "Biologia",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "A técnica do DNA recombinante permite a inserção de genes humanos em bactérias, que passam a produzir substâncias úteis, como a insulina. Essa técnica é possível graças à:",
+    "opcoes": [
+      "Substituição de ácidos nucleicos por proteínas",
+      "Fusão de membranas celulares humanas e bacterianas",
+      "Capacidade das bactérias realizarem mitose",
+      "Similaridade genética entre humanos e bactérias",
+      "Capacidade de expressão de genes heterólogos por organismos geneticamente modificados"
+    ],
+    "correta": "Capacidade de expressão de genes heterólogos por organismos geneticamente modificados",
+    "categoria": "Biologia",
+    "explicacao": ""
+  }
+]

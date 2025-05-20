@@ -1,0 +1,62 @@
+[
+  {
+    "pergunta": "Um bloco de 2 kg é solto do alto de uma rampa de 5 m de altura. Desprezando o atrito, qual é sua velocidade ao atingir a base?",
+    "opcoes": ["5 m/s", "7 m/s", "10 m/s", "15 m/s", "20 m/s"],
+    "correta": "10 m/s",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um carro move-se com velocidade constante de 90 km/h em uma estrada reta. Quanto tempo ele leva para percorrer 45 km?",
+    "opcoes": [
+      "15 minutos",
+      "20 minutos",
+      "30 minutos",
+      "45 minutos",
+      "60 minutos"
+    ],
+    "correta": "30 minutos",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um corpo de 10 kg está sobre uma superfície horizontal sem atrito. Uma força de 50 N é aplicada sobre ele. Qual será a aceleração do corpo?",
+    "opcoes": ["2 m/s²", "5 m/s²", "10 m/s²", "20 m/s²", "50 m/s²"],
+    "correta": "5 m/s²",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Uma amostra de gás ideal sofre compressão isotérmica. Isso significa que, ao final do processo:",
+    "opcoes": [
+      "A temperatura aumenta",
+      "O volume aumenta",
+      "A energia interna aumenta",
+      "A temperatura permanece constante",
+      "A pressão permanece constante"
+    ],
+    "correta": "A temperatura permanece constante",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Três resistores de 6 Ω estão ligados em paralelo. Qual é a resistência equivalente do circuito?",
+    "opcoes": ["2 Ω", "3 Ω", "6 Ω", "12 Ω", "18 Ω"],
+    "correta": "2 Ω",
+    "categoria": "Física",
+    "explicacao": ""
+  },
+  {
+    "pergunta": "Um objeto é colocado a 30 cm de uma lente convergente de distância focal 20 cm. A imagem formada é:",
+    "opcoes": [
+      "Virtual, direita e maior",
+      "Real, invertida e maior",
+      "Real, invertida e menor",
+      "Virtual, invertida e menor",
+      "Real, direita e maior"
+    ],
+    "correta": "Real, invertida e maior",
+    "categoria": "Física",
+    "explicacao": ""
+  }
+]
