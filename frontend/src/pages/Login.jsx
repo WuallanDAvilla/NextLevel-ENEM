@@ -99,6 +99,23 @@ function Login() {
               {erro && <div className="login-error">{erro}</div>}
               <button type="submit">ENTRAR</button>
             </form>
+            <button
+              className="register-button"
+              style={{
+                marginTop: "15px",
+                background: "#2a9dba",
+                color: "white",
+                border: "none",
+                borderRadius: "8px",
+                padding: "10px 0",
+                width: "100%",
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+              onClick={() => navigate("/cadastro")}
+            >
+              CADASTRAR-SE
+            </button>
           </div>
         </div>
       )}

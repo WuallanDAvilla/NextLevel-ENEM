@@ -1,44 +1,44 @@
 [
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "A Semana de Arte Moderna de 1922, realizada em São Paulo, foi um marco para a renovação estética no Brasil. Nela, artistas como Mário de Andrade e Anita Malfatti propuseram uma arte com características próprias, rompendo com os padrões acadêmicos.Esse movimento tinha como principal objetivo",
+    "opcoes": ["Valorizar a arte europeia clássica como modelo para os artistas brasileiros", "Propor uma arte alinhada com os padrões barrocos brasileiros", "Rejeitar completamente toda forma de arte tradicional", "Promover a liberdade estética e valorizar a identidade cultural brasileira", "Promover a liberdade estética e valorizar a identidade cultural brasileira"],
+    "correta": "Promover a liberdade estética e valorizar a identidade cultural brasileira",
+    "categoria": "Artes",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "As manifestações culturais populares como o maracatu, o cordel e o bumba-meu-boi fazem parte do patrimônio imaterial brasileiro. Essas expressões são importantes porque",
+    "opcoes": ["Representam exclusivamente a cultura europeia no Brasil", "São praticadas apenas em festas religiosas", "Têm origem exclusivamente indígena", "São formas de expressão da diversidade cultural brasileira", "Foram criadas por artistas plásticos renomados"],
+    "correta": "São formas de expressão da diversidade cultural brasileira",
+    "categoria": "Artes",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "Uma das características da arte contemporânea é a valorização do conceito e a interação com o público, como nas instalações artísticas e nas performances. Esse tipo de arte busca principalmente",
+    "opcoes": ["Imitar com perfeição a natureza", "Representar temas religiosos com rigor técnico", "Transmitir mensagens e provocar reflexões por meio da experiência", "Resgatar valores acadêmicos da Renascença", "Rejeitar totalmente qualquer tipo de tecnologia"],
+    "correta": "Transmitir mensagens e provocar reflexões por meio da experiência",
+    "categoria": "Artes",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "No Renascimento, artistas como Leonardo da Vinci e Michelangelo revolucionaram a arte europeia com novas técnicas e temas. Uma inovação marcante desse período foi",
+    "opcoes": ["A escultura feita com materiais recicláveis", "A pintura abstrata sem perspectiva", "O uso da perspectiva para criar profundidade", "A ausência de representações religiosas", "A valorização do gótico e do medievalismo"],
+    "correta": "O uso da perspectiva para criar profundidade",
+    "categoria": "Artes",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "Atualmente, muitos artistas utilizam softwares, redes sociais e realidade aumentada em suas criações. Essa integração entre arte e tecnologia",
+    "opcoes": ["Impede a criação de obras com valor estético", "Substitui o papel do artista por máquinas", "Amplia as possibilidades de expressão e alcance das obras", "É limitada a exposições físicas em museus", "É restrita à publicidade e ao design gráfico"],
+    "correta": "Amplia as possibilidades de expressão e alcance das obras",
+    "categoria": "Artes",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "O movimento tropicalista, surgido no Brasil nos anos 1960, misturou elementos da cultura popular e erudita com a música internacional. Esse movimento buscava:",
+    "opcoes": ["Impor um único padrão musical nacional", "Rejeitar a música brasileira tradicional", "Valorizar a fusão de estilos e a liberdade criativa", "Eliminar influências estrangeiras da música", "Retornar ao modelo de composição barroca"],
+    "correta": "Valorizar a fusão de estilos e a liberdade criativa",
+    "categoria": "Artes",
     "explicacao": ""
   }
 ]

@@ -1,44 +1,44 @@
 [
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "'Mg + 2 HCl → MgCl₂ + H₂↑' Essa reação é classificada como:",
+    "opcoes": ["De síntese", "De decomposição", "De simples troca", "De dupla troca", "De neutralização"],
+    "correta": "De simples troca",
+    "categoria": "Química",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "'CH₄(g) + H₂O(g) ⇌ CO(g) + 3 H₂(g) (ΔH > 0)' Um aumento na temperatura causa:",
+    "opcoes": ["Deslocamento para a esquerda", "Redução do número de moléculas gasosas", "Deslocamento para a direita", "Nenhuma mudança", "Formação de água líquida"],
+    "correta": "Deslocamento para a direita",
+    "categoria": "Química",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "'C₄H₁₀ + 6,5 O₂ → 4 CO₂ + 5 H₂O'vQuantas moléculas de CO₂ são produzidas para cada molécula de butano?",
+    "opcoes": ["1", "2", "3", "4", "5"],
+    "correta": "4",
+    "categoria": "Química",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "O uso de catalisadores em carros visa diminuir a emissão de monóxido de carbono (CO). Esse gás é perigoso porque:",
+    "opcoes": ["Irrita os olhos", "Provoca chuva ácida", "Provoca chuva ácida", "Causa destruição da camada de ozônio", "É responsável pelo mau cheiro nos combustíveis"],
+    "correta": "Provoca chuva ácida",
+    "categoria": "Química",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "Uma substância tem pH = 2. Isso indica que ela:",
+    "opcoes": ["É uma base forte", "É uma base fraca", "É neutra", "É um ácido fraco", "É um ácido forte"],
+    "correta": "É um ácido forte",
+    "categoria": "Química",
     "explicacao": ""
   },
   {
-    "pergunta": "",
-    "opcoes": ["", "", "", "", ""],
-    "correta": "",
-    "categoria": "",
+    "pergunta": "Ao se colocar álcool sobre a pele, sente-se um frio imediato. Isso ocorre porque:",
+    "opcoes": ["O álcool aquece a pele ao entrar em contato com ela", "O álcool absorve calor ao evaporar", "O álcool reage com o suor", "O álcool impede a transpiração", ""],
+    "correta": "O álcool absorve calor ao evaporar",
+    "categoria": "Química",
     "explicacao": ""
   }
 ]

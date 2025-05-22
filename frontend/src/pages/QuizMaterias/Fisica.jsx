@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { auth } from "../../firebaseConfig";
-// import saveScore from "../../services/quizService"
+import { saveScore } from "../../services/quizService";
 // import "../../styles/materias/Fisica"
 
 export default function Fisica() {
@@ -75,7 +75,7 @@ export default function Fisica() {
       } else {
         setQuizFinalizado(true);
       }
-    }, 800);
+    }, 1000);
   };
 
   // 4. Renderização condicional
