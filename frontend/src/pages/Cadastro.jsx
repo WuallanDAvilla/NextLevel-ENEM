@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
+import "../styles/Cadastro.css"; 
 
 export default function SignUp() {
   const navigate = useNavigate();

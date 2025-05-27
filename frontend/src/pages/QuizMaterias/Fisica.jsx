@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { auth } from "../../firebaseConfig";
 import { saveScore } from "../../services/quizService";
-// import "../../styles/materias/Fisica"
+import "../../styles/QuizMaterias.css"; // <-- Adicione esta linha
 
 export default function Fisica() {
   const [perguntas, setPerguntas] = useState([]);
