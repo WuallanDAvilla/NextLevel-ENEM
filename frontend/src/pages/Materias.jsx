@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom"; // 1. Importe o hook
+import { useNavigate } from "react-router-dom";
 import "../styles/Materias.css";
 
 import Logo from "../assets/Logo.png";
@@ -29,7 +29,7 @@ export default function Materias() {
     imagem: "",
     rota: "",
   });
-  const navigate = useNavigate(); // 2. Inicialize o hook
+  const navigate = useNavigate();
 
   const conteudo = {
     Geografia: {
@@ -136,61 +136,52 @@ export default function Materias() {
     <div onClick={handleClickOutside}>
       <header>
         <div className="logo-container">
-          <h1>
-            <span style={{ color: "white" }}>NextLevel</span>{" "}
-            <span style={{ color: "#fffff" }}>ENEM</span>
-          </h1>
           <img src={Logo} alt="Logo" className="logo-image" />
+          <h1>NextLevelENEM</h1>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+        <div className="user-section">
           <img 
-          src={profileImage || Usuario} 
-          alt="Perfil"
-          className="user-image"
-          onClick={() => fileInputRef.current.click()} 
+            src={profileImage || Usuario} 
+            alt="Perfil"
+            className="user-image"
+            onClick={() => fileInputRef.current.click()} 
           />
           <input 
-          type="file" 
-          id="uploadProfile"
-          ref={fileInputRef}
-          style={{ display: 'none' }}
-          onChange={handleProfileChange}
+            type="file" 
+            id="uploadProfile"
+            ref={fileInputRef}
+            style={{ display: 'none' }}
+            onChange={handleProfileChange}
           />
-          {/* <FiLogOut 
-          size={40}
-          color="black"
-          style={{ cursor: 'pointer' }}
-          title="Sair"
-          /> */}
         </div>
       </header>
 
-    <section className="materias-section">
+      <section className="materias-section">
         <h1><b>Matérias:</b> Sua Escola para o Próximo Nível do ENEM</h1>
         <div className="materiais-container">
-            {Object.keys(conteudo).map((materia) => (
-                <div key={materia} className="materia-card" onClick={() => abrirPopup(materia)}>
-                    <img src={conteudo[materia].imagem} alt={materia} />
-                    <p>{materia}</p>
-                </div>
-            ))}
-        </div> 
-    </section>
-    
-    <footer style={{ backgroundColor: "#208eaf", padding: '25px', textAlign: "center", color: 'white' }}>
-        2025 NextLevelENEM. Todos os direitos reservados.
-    </footer>
-
-    {popupVisible && (
-        <div id="meuPopup" className="popup-overlay">
-            <div className="popup-content">
-                <h2>{popupData.titulo}</h2>
-                <img src={popupData.imagem} alt={popupData.titulo} />
-                <p>{popupData.texto}</p>
-                <button onClick={() => navigate(popupData.rota)}>Iniciar</button>
+          {Object.keys(conteudo).map((materia) => (
+            <div key={materia} className="materia-card" onClick={() => abrirPopup(materia)}>
+              <img src={conteudo[materia].imagem} alt={materia} />
+              <p>{materia}</p>
             </div>
+          ))}
+        </div> 
+      </section>
+      
+      <footer>
+        © 2025 NextLevelENEM - Todos os direitos reservados
+      </footer>
+
+      {popupVisible && (
+        <div id="meuPopup" className="popup-overlay">
+          <div className="popup-content">
+            <h2>{popupData.titulo}</h2>
+            <img src={popupData.imagem} alt={popupData.titulo} />
+            <p>{popupData.texto}</p>
+            <button onClick={() => navigate(popupData.rota)}>Iniciar</button>
+          </div>
         </div>
-    )}
+      )}
     </div>
   );
 };
