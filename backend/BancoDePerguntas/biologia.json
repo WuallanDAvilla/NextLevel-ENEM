@@ -10,14 +10,14 @@
     ],
     "correta": "Boa qualidade do ar",
     "categoria": "Biologia",
-    "explicacao": ""
+    "explicacao": "Líquens são bioindicadores ambientais. Como são sensíveis a poluentes como o dióxido de enxofre (SO₂), sua presença em ambientes urbanos indica baixa poluição e, portanto, boa qualidade do ar."
   },
   {
     "pergunta": "Um casal heterozigoto para a fibrose cística (doença genética recessiva) deseja saber a probabilidade de seus filhos herdarem a doença. A fibrose é causada por um alelo recessivo. Qual a chance de esse casal ter um filho com a doença?",
     "opcoes": ["0%", "25%", "50%", "75%", "100%"],
     "correta": "25%",
     "categoria": "Biologia",
-    "explicacao": ""
+    "explicacao": "Se ambos os pais são heterozigotos (Aa), há 25% de chance de o filho herdar os dois alelos recessivos (aa) e manifestar a doença, conforme o cruzamento mendeliano (Aa × Aa → 25% aa)."
   },
   {
     "pergunta": "Durante uma expedição, cientistas observaram duas espécies de aves muito semelhantes vivendo em ambientes distintos. Apesar de suas semelhanças, cada uma apresenta adaptações específicas ao seu ambiente. Esse fenômeno pode ser explicado pela:",
@@ -30,7 +30,7 @@
     ],
     "correta": "Especiação alopátrica",
     "categoria": "Biologia",
-    "explicacao": ""
+    "explicacao": "Quando duas populações de uma mesma espécie ficam isoladas geograficamente e evoluem separadamente, adaptando-se ao seu ambiente, ocorre especiação alopátrica, gerando novas espécies."
   },
   {
     "pergunta": "Durante uma maratona, o corpo do atleta aumenta a frequência respiratória e o ritmo cardíaco. Essas alterações fisiológicas têm como principal objetivo:",
@@ -43,7 +43,7 @@
     ],
     "correta": "Aumentar o fornecimento de oxigênio e nutrientes aos tecidos",
     "categoria": "Biologia",
-    "explicacao": ""
+    "explicacao": "O aumento da frequência cardíaca e respiratória visa fornecer mais oxigênio e nutrientes aos músculos em atividade, garantindo energia para o esforço físico prolongado."
   },
   {
     "pergunta": "A esquistossomose, também conhecida como barriga d’água, é causada por um verme do gênero Schistosoma. Uma medida eficaz para a prevenção da esquistossomose é:",
@@ -56,7 +56,7 @@
     ],
     "correta": "Eliminação de caramujos em áreas de risco",
     "categoria": "Biologia",
-    "explicacao": ""
+    "explicacao": "A esquistossomose é transmitida por caramujos do gênero Biomphalaria, hospedeiros intermediários do parasita. Eliminar esses caramujos em áreas de risco reduz a transmissão da doença."
   },
   {
     "pergunta": "A técnica do DNA recombinante permite a inserção de genes humanos em bactérias, que passam a produzir substâncias úteis, como a insulina. Essa técnica é possível graças à:",
@@ -69,6 +69,6 @@
     ],
     "correta": "Capacidade de expressão de genes heterólogos por organismos geneticamente modificados",
     "categoria": "Biologia",
-    "explicacao": ""
+    "explicacao": "A técnica do DNA recombinante insere genes humanos em bactérias, que passam a produzir proteínas humanas, como a insulina. Isso é possível porque organismos geneticamente modificados podem expressar genes de outras espécies (genes heterólogos)."
   }
 ]

@@ -4,41 +4,41 @@
     "opcoes": ["Saque flutuante", "Toque", "Cortada de fundo", "Bloqueio triplo", "Manchete aérea"],
     "correta": "Cortada de fundo",
     "categoria": "Educação Física",
-    "explicacao": ""
+    "explicacao": "A cortada de fundo acontece quando um jogador salta de trás da linha de 3 metros para atacar a bola, sendo uma jogada ofensiva comum no vôlei de alto nível."
   },
   {
     "pergunta": "Durante os Jogos Olímpicos, diversos esportes coletivos são disputados. Assinale a alternativa que não corresponde a um esporte coletivo presente nos Jogos Olímpicos:",
     "opcoes": ["Basquetebol", "Polo aquático", "Handebol", "Capoeira", "Rugby"],
     "correta": "Capoeira",
     "categoria": "Educação Física",
-    "explicacao": ""
+    "explicacao": "A capoeira, embora seja uma expressão cultural e luta praticada no Brasil, não faz parte dos esportes coletivos dos Jogos Olímpicos, ao contrário dos outros citados."
   },
   {
     "pergunta": "Uma vida saudável está relacionada a diversos fatores. Assinale a alternativa que apresenta hábitos benéficos para a saúde:",
     "opcoes": ["Prática de exercícios físicos, alimentação equilibrada e sono adequado", "Jejum prolongado, consumo de suplementos sem orientação e sedentarismo", "Dormir menos de 5 horas por dia e treinar em excesso", "Alimentação baseada em dietas restritivas e pílulas para emagrecer", "Evitar o lazer e priorizar a rotina de estudos/trabalho"],
     "correta": "Prática de exercícios físicos, alimentação equilibrada e sono adequado",
     "categoria": "Educação Física",
-    "explicacao": ""
+    "explicacao": "Uma vida saudável está relacionada à prática regular de exercícios físicos, alimentação balanceada e sono adequado, que juntos melhoram o bem-estar físico e mental."
   },
   {
     "pergunta": "A atividade física regular traz diversos benefícios ao organismo, como a melhora do sistema cardiovascular. Esse efeito ocorre principalmente devido à:",
     "opcoes": ["Aumento da força muscular", "Diminuição da produção de lactato", "Aumento da capacidade de transporte de oxigênio pelo sangue", "Redução do volume sanguíneo total", "Aumento da flexibilidade articular"],
     "correta": "Aumento da capacidade de transporte de oxigênio pelo sangue",
     "categoria": "Educação Física",
-    "explicacao": ""
+    "explicacao": "A atividade física regular melhora a eficiência do coração e dos vasos sanguíneos, principalmente por aumentar a capacidade de transporte de oxigênio pelo sangue, beneficiando todo o organismo."
   },
   {
     "pergunta": "A prática regular de atividade física pode ajudar na prevenção de diversas doenças. Uma dessas doenças é o diabetes tipo 2, que é caracterizado pela resistência à insulina. A atividade física ajuda a prevenir o diabetes tipo 2, principalmente porque:",
     "opcoes": ["A prática regular de atividade física pode ajudar na prevenção de diversas doenças. Uma dessas doenças é o diabetes tipo 2, que é caracterizado pela resistência à insulina. A atividade física ajuda a prevenir o diabetes tipo 2, principalmente porque:", "Estimula a produção de insulina pelo pâncreas", "Reduz a quantidade de glicose no sangue por meio de mecanismos musculares e hormonais", "Aumenta o armazenamento de glicose nos músculos e fígado, dificultando a sua liberação para o sangue", "Diminui a produção de hormônios que afetam a insulina"],
     "correta": "Reduz a quantidade de glicose no sangue por meio de mecanismos musculares e hormonais",
     "categoria": "Educação Física",
-    "explicacao": ""
+    "explicacao": "Exercícios físicos reduzem os níveis de glicose no sangue, pois os músculos ativos consomem glicose e melhoram a sensibilidade à insulina, ajudando a prevenir o diabetes tipo 2."
   },
   {
     "pergunta": "Durante atividades físicas intensas, o corpo utiliza predominantemente diferentes fontes de energia. No início de um exercício de alta intensidade, como uma corrida, a principal fonte de energia utilizada pelo corpo é:",
     "opcoes": ["Proteínas, que são quebradas em aminoácidos", "Gorduras, que são metabolizadas para produção de ATP", "Carboidratos, que são convertidos em glicose e geram ATP", "Ácidos graxos, que são utilizados para manter a glicemia estável", "Vitaminas e minerais, que agem como cofatores enzimáticos"],
     "correta": "",
     "categoria": "Educação Física",
-    "explicacao": ""
+    "explicacao": "No início de atividades intensas, o corpo usa preferencialmente carboidratos, pois sua metabolização rápida fornece energia imediata para os músculos sob esforço."
   }
 ]

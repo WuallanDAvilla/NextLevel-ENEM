@@ -4,7 +4,7 @@
     "opcoes": ["5 m/s", "7 m/s", "10 m/s", "15 m/s", "20 m/s"],
     "correta": "10 m/s",
     "categoria": "Física",
-    "explicacao": ""
+    "explicacao": "ela conservação da energia mecânica, toda a energia potencial gravitacional se converte em energia cinética."
   },
   {
     "pergunta": "Um carro move-se com velocidade constante de 90 km/h em uma estrada reta. Quanto tempo ele leva para percorrer 45 km?",
@@ -17,7 +17,7 @@
     ],
     "correta": "30 minutos",
     "categoria": "Física",
-    "explicacao": ""
+    "explicacao": "t= "
   },
   {
     "pergunta": "Um corpo de 10 kg está sobre uma superfície horizontal sem atrito. Uma força de 50 N é aplicada sobre ele. Qual será a aceleração do corpo?",
