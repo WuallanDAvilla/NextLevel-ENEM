@@ -20,7 +20,7 @@ const perguntas = [
     ],
     correta:
       "Promover a liberdade estética e valorizar a identidade cultural brasileira",
-    categoria: "Artes",
+    categoria: "artes",
     explicacao: "",
   },
   {
@@ -34,7 +34,7 @@ const perguntas = [
       "Foram criadas por artistas plásticos renomados",
     ],
     correta: "São formas de expressão da diversidade cultural brasileira",
-    categoria: "Artes",
+    categoria: "artes",
     explicacao: "",
   },
   {
@@ -49,7 +49,7 @@ const perguntas = [
     ],
     correta:
       "Transmitir mensagens e provocar reflexões por meio da experiência",
-    categoria: "Artes",
+    categoria: "artes",
     explicacao: "",
   },
   {
@@ -63,7 +63,7 @@ const perguntas = [
       "A valorização do gótico e do medievalismo",
     ],
     correta: "O uso da perspectiva para criar profundidade",
-    categoria: "Artes",
+    categoria: "artes",
     explicacao: "",
   },
   {
@@ -77,7 +77,7 @@ const perguntas = [
       "É restrita à publicidade e ao design gráfico",
     ],
     correta: "Amplia as possibilidades de expressão e alcance das obras",
-    categoria: "Artes",
+    categoria: "artes",
     explicacao: "",
   },
   {
@@ -91,7 +91,7 @@ const perguntas = [
       "Retornar ao modelo de composição barroca",
     ],
     correta: "Valorizar a fusão de estilos e a liberdade criativa",
-    categoria: "Artes",
+    categoria: "artes",
     explicacao: "",
   },
   {
@@ -105,7 +105,7 @@ const perguntas = [
       "Aumento da temperatura local",
     ],
     correta: "Boa qualidade do ar",
-    categoria: "Biologia",
+    categoria: "biologia",
     explicacao: "",
   },
   {
@@ -113,7 +113,7 @@ const perguntas = [
       "Um casal heterozigoto para a fibrose cística (doença genética recessiva) deseja saber a probabilidade de seus filhos herdarem a doença. A fibrose é causada por um alelo recessivo. Qual a chance de esse casal ter um filho com a doença?",
     opcoes: ["0%", "25%", "50%", "75%", "100%"],
     correta: "25%",
-    categoria: "Biologia",
+    categoria: "biologia",
     explicacao: "",
   },
   {
@@ -127,7 +127,7 @@ const perguntas = [
       "Seleção artificial",
     ],
     correta: "Especiação alopátrica",
-    categoria: "Biologia",
+    categoria: "biologia",
     explicacao: "",
   },
   {
@@ -141,7 +141,7 @@ const perguntas = [
       "Controlar a liberação de hormônios da tireoide",
     ],
     correta: "Aumentar o fornecimento de oxigênio e nutrientes aos tecidos",
-    categoria: "Biologia",
+    categoria: "biologia",
     explicacao: "",
   },
   {
@@ -155,7 +155,7 @@ const perguntas = [
       "Uso de inseticidas em residências",
     ],
     correta: "Eliminação de caramujos em áreas de risco",
-    categoria: "Biologia",
+    categoria: "biologia",
     explicacao: "",
   },
   {
@@ -170,7 +170,7 @@ const perguntas = [
     ],
     correta:
       "Capacidade de expressão de genes heterólogos por organismos geneticamente modificados",
-    categoria: "Biologia",
+    categoria: "biologia",
     explicacao: "",
   },
   {
@@ -184,7 +184,7 @@ const perguntas = [
       "Manchete aérea",
     ],
     correta: "Cortada de fundo",
-    categoria: "Educação Física",
+    categoria: "educação fisica",
     explicacao: "",
   },
   {
@@ -192,7 +192,7 @@ const perguntas = [
       "Durante os Jogos Olímpicos, diversos esportes coletivos são disputados. Assinale a alternativa que não corresponde a um esporte coletivo presente nos Jogos Olímpicos:",
     opcoes: ["Basquetebol", "Polo aquático", "Handebol", "Capoeira", "Rugby"],
     correta: "Capoeira",
-    categoria: "Educação Física",
+    categoria: "educação fisica",
     explicacao: "",
   },
   {
@@ -207,7 +207,7 @@ const perguntas = [
     ],
     correta:
       "Prática de exercícios físicos, alimentação equilibrada e sono adequado",
-    categoria: "Educação Física",
+    categoria: "educação fisica",
     explicacao: "",
   },
   {
@@ -221,7 +221,7 @@ const perguntas = [
       "Aumento da flexibilidade articular",
     ],
     correta: "Aumento da capacidade de transporte de oxigênio pelo sangue",
-    categoria: "Educação Física",
+    categoria: "educação fisica",
     explicacao: "",
   },
   {
@@ -236,7 +236,7 @@ const perguntas = [
     ],
     correta:
       "Reduz a quantidade de glicose no sangue por meio de mecanismos musculares e hormonais",
-    categoria: "Educação Física",
+    categoria: "educação fisica",
     explicacao: "",
   },
   {
@@ -250,7 +250,7 @@ const perguntas = [
       "Vitaminas e minerais, que agem como cofatores enzimáticos",
     ],
     correta: "",
-    categoria: "Educação Física",
+    categoria: "educação fisica",
     explicacao: "",
   },
   {
@@ -258,7 +258,7 @@ const perguntas = [
       "Frase incompleta: Cuando era niño, siempre ______ (jugar) con mis primos en el jardín.",
     opcoes: ["jugué", "juegué", "jugaba", "jugó", "jugando"],
     correta: "jugaba",
-    categoria: "Espanhol",
+    categoria: "espanhol",
     explicacao: "",
   },
   {
@@ -272,7 +272,7 @@ const perguntas = [
       "Limitar la visión del mundo",
     ],
     correta: "Desarrollar una mayor independencia",
-    categoria: "Espanhol",
+    categoria: "espanhol",
     explicacao: "",
   },
   {
@@ -286,7 +286,7 @@ const perguntas = [
       "A submissão como solução pacífica dos conflitos",
     ],
     correta: "A paz como prática constante, não apenas um fim",
-    categoria: "Espanhol",
+    categoria: "espanhol",
     explicacao: "",
   },
   {
@@ -300,7 +300,7 @@ const perguntas = [
       "Nosotros lo decimos a él",
     ],
     correta: "Les dijimos la verdad a ellos",
-    categoria: "Espanhol",
+    categoria: "espanhol",
     explicacao: "",
   },
   {
@@ -314,7 +314,7 @@ const perguntas = [
       "Desinteresse velado",
     ],
     correta: "Certeza e entusiasmo com o evento",
-    categoria: "Espanhol",
+    categoria: "espanhol",
     explicacao: "",
   },
   {
@@ -328,7 +328,7 @@ const perguntas = [
       "Um desfile folclórico indígena",
     ],
     correta: "Um evento cultural e turístico popular",
-    categoria: "Espanhol",
+    categoria: "espanhol",
     explicacao: "",
   },
   {
@@ -343,7 +343,7 @@ const perguntas = [
     ],
     correta:
       "A desigualdade e as instituições que corrompem a liberdade humana",
-    categoria: "Filosofia",
+    categoria: "filosofia",
     explicacao: "",
   },
   {
@@ -358,7 +358,7 @@ const perguntas = [
     ],
     correta:
       " Seu trabalho deixa de ser criativo e se torna repetitivo e automático",
-    categoria: "Filosofia",
+    categoria: "filosofia",
     explicacao: "",
   },
   {
@@ -372,7 +372,7 @@ const perguntas = [
       "Do desprezo pelas paixões e desejos humanos",
     ],
     correta: "Da repetição de ações orientadas pela razão",
-    categoria: "Filosofia",
+    categoria: "filosofia",
     explicacao: "",
   },
   {
@@ -387,7 +387,7 @@ const perguntas = [
     ],
     correta:
       "Estimular a reflexão crítica nos interlocutores, levando-os ao autoconhecimento",
-    categoria: "Filosofia",
+    categoria: "filosofia",
     explicacao: "",
   },
   {
@@ -401,7 +401,7 @@ const perguntas = [
       "Universalidade e particularidade da justiça",
     ],
     correta: "Idealidade e efetividade da moral",
-    categoria: "Filosofia",
+    categoria: "filosofia",
     explicacao: "",
   },
   {
@@ -416,7 +416,7 @@ const perguntas = [
     ],
     correta:
       "A antecipação dos acontecimentos é uma forma de exercer a liberdade plena, segundo Sartre.",
-    categoria: "Filosofia",
+    categoria: "filosofia",
     explicacao: "",
   },
   {
@@ -424,7 +424,7 @@ const perguntas = [
       "Um bloco de 2 kg é solto do alto de uma rampa de 5 m de altura. Desprezando o atrito, qual é sua velocidade ao atingir a base?",
     opcoes: ["5 m/s", "7 m/s", "10 m/s", "15 m/s", "20 m/s"],
     correta: "10 m/s",
-    categoria: "Física",
+    categoria: "fisica",
     explicacao: "",
   },
   {
@@ -438,7 +438,7 @@ const perguntas = [
       "60 minutos",
     ],
     correta: "30 minutos",
-    categoria: "Física",
+    categoria: "fisica",
     explicacao: "",
   },
   {
@@ -446,7 +446,7 @@ const perguntas = [
       "Um corpo de 10 kg está sobre uma superfície horizontal sem atrito. Uma força de 50 N é aplicada sobre ele. Qual será a aceleração do corpo?",
     opcoes: ["2 m/s²", "5 m/s²", "10 m/s²", "20 m/s²", "50 m/s²"],
     correta: "5 m/s²",
-    categoria: "Física",
+    categoria: "fisica",
     explicacao: "",
   },
   {
@@ -460,7 +460,7 @@ const perguntas = [
       "A pressão permanece constante",
     ],
     correta: "A temperatura permanece constante",
-    categoria: "Física",
+    categoria: "fisica",
     explicacao: "",
   },
   {
@@ -468,7 +468,7 @@ const perguntas = [
       "Três resistores de 6 Ω estão ligados em paralelo. Qual é a resistência equivalente do circuito?",
     opcoes: ["2 Ω", "3 Ω", "6 Ω", "12 Ω", "18 Ω"],
     correta: "2 Ω",
-    categoria: "Física",
+    categoria: "fisica",
     explicacao: "",
   },
   {
@@ -482,7 +482,7 @@ const perguntas = [
       "Real, direita e maior",
     ],
     correta: "Real, invertida e maior",
-    categoria: "Física",
+    categoria: "fisica",
     explicacao: "",
   },
   {
@@ -497,7 +497,7 @@ const perguntas = [
     ],
     correta:
       "A globalização se caracteriza pela ampliação das redes de transporte, comunicação e fluxos financeiros",
-    categoria: "Geografia",
+    categoria: "geografia",
     explicacao: "",
   },
   {
@@ -512,7 +512,7 @@ const perguntas = [
     ],
     correta:
       "O uso excessivo de fertilizantes e agrotóxicos pode contaminar o solo e os corpos d’água, afetando a saúde humana",
-    categoria: "Geografia",
+    categoria: "geografia",
     explicacao: "",
   },
   {
@@ -527,7 +527,7 @@ const perguntas = [
     ],
     correta:
       "O controle de rotas comerciais e recursos naturais continua sendo motivo de tensão entre países",
-    categoria: "Geografia",
+    categoria: "geografia",
     explicacao: "",
   },
   {
@@ -541,7 +541,7 @@ const perguntas = [
       "Na região equatorial da África",
     ],
     correta: "Na porção central da América do Norte",
-    categoria: "Geografia",
+    categoria: "geografia",
     explicacao: "",
   },
   {
@@ -549,7 +549,7 @@ const perguntas = [
       "A formação dos blocos econômicos é uma característica da globalização. Um exemplo de bloco que busca a integração econômica e política entre países sul-americanos é:",
     opcoes: ["OTAN", "MERCOSUL", "OPEP", "União Europeia", "Nafta"],
     correta: "MERCOSUL",
-    categoria: "Geografia",
+    categoria: "geografia",
     explicacao: "",
   },
   {
@@ -564,7 +564,7 @@ const perguntas = [
     ],
     correta:
       "A padronização de produtos e marcas reflete a dominação de modelos culturais hegemônicos",
-    categoria: "Geografia",
+    categoria: "geografia",
     explicacao: "",
   },
   {
@@ -578,7 +578,7 @@ const perguntas = [
       "A criação de leis para limitar o trabalho escravo",
     ],
     correta: "O fortalecimento da elite agrária escravista",
-    categoria: "História",
+    categoria: "historia",
     explicacao: "",
   },
   {
@@ -592,7 +592,7 @@ const perguntas = [
       "Estimular o pensamento crítico nas escolas",
     ],
     correta: "",
-    categoria: "História",
+    categoria: "historia",
     explicacao: "",
   },
   {
@@ -607,7 +607,7 @@ const perguntas = [
     ],
     correta:
       "Promover ampliação dos direitos trabalhistas sob um regime autoritário",
-    categoria: "História",
+    categoria: "historia",
     explicacao: "",
   },
   {
@@ -622,7 +622,7 @@ const perguntas = [
     ],
     correta:
       "A Revolução Francesa consolidou o poder absolutista na França sob o comando de Napoleão Bonaparte",
-    categoria: "História",
+    categoria: "historia",
     explicacao: "",
   },
   {
@@ -637,7 +637,7 @@ const perguntas = [
     ],
     correta:
       " Revolta dos Malês, que representou a insatisfação dos escravizados muçulmanos na Bahia",
-    categoria: "História",
+    categoria: "historia",
     explicacao: "",
   },
   {
@@ -652,7 +652,7 @@ const perguntas = [
     ],
     correta:
       "Implementação da Consolidação das Leis do Trabalho (CLT), com direitos como férias e salário mínimo",
-    categoria: "História",
+    categoria: "historia",
     explicacao: "",
   },
   {
@@ -666,7 +666,7 @@ const perguntas = [
       "Anunciar um novo sistema de segurança",
     ],
     correta: "Solicitar que o hóspede deixe a chave na recepção ao sair",
-    categoria: "Inglês",
+    categoria: "ingles",
     explicacao: "",
   },
   {
@@ -680,7 +680,7 @@ const perguntas = [
       "Planejar o roteiro",
     ],
     correta: "Ser rico",
-    categoria: "Inglês",
+    categoria: "ingles",
     explicacao: "",
   },
   {
@@ -694,7 +694,7 @@ const perguntas = [
       "Divulgar um evento de reciclagem",
     ],
     correta: "Incentivar comportamentos ecológicos no cotidiano",
-    categoria: "Inglês",
+    categoria: "ingles",
     explicacao: "",
   },
   {
@@ -708,7 +708,7 @@ const perguntas = [
       "A tecnologia é inofensiva e sempre benéfica",
     ],
     correta: "O controle sobre a tecnologia é essencial para seu bom uso",
-    categoria: "Inglês",
+    categoria: "ingles",
     explicacao: "",
   },
   {
@@ -722,7 +722,7 @@ const perguntas = [
       "A eficiência da comunicação moderna",
     ],
     correta: "A exaustão mental provocada pelo bombardeio de alertas digitais",
-    categoria: "Inglês",
+    categoria: "ingles",
     explicacao: "",
   },
   {
@@ -736,7 +736,7 @@ const perguntas = [
       "Ironiza quem usa redes sociais frequentemente",
     ],
     correta: "Expõe tanto os aspectos positivos quanto os negativos",
-    categoria: "Inglês",
+    categoria: "ingles",
     explicacao: "",
   },
   {
@@ -751,7 +751,7 @@ const perguntas = [
     ],
     correta:
       "o refinamento estético da forma poética e o tratamento metafísico de temas universais",
-    categoria: "Língua Portuguesa",
+    categoria: "lingua portuguesa",
     explicacao: "",
   },
   {
@@ -759,7 +759,7 @@ const perguntas = [
       "Leia o trecho da música Tempo Perdido, da Legião Urbana:“Nosso suor sagrado É bem mais belo que esse sangue amargo”Nesse trecho, a musicalidade dos versos contribui para a expressividade da mensagem. Observa-se a repetição intencional de sons consonantais semelhantes, criando um efeito sonoro que reforça o contraste entre elementos positivos e negativos. A figura de linguagem predominante nesse trecho, relacionada à repetição de sons consonantais, é:",
     opcoes: ["Antítese", "Hipérbole", "Metonímia", "Eufemismo", "Aliteração"],
     correta: "Aliteração",
-    categoria: "Língua Portuguesa",
+    categoria: "lingua portuguesa",
     explicacao: "",
   },
   {
@@ -774,7 +774,7 @@ const perguntas = [
     ],
     correta:
       "O poema descreve uma crítica à repressão feminina no contexto social da época",
-    categoria: "Língua Portuguesa",
+    categoria: "lingua portuguesa",
     explicacao: "",
   },
   {
@@ -788,7 +788,7 @@ const perguntas = [
       "nível social dos participantes da situação",
     ],
     correta: "contexto de comunicação em que a conversa se dá",
-    categoria: "Língua Portuguesa",
+    categoria: "lingua portuguesa",
     explicacao: "",
   },
   {
@@ -802,7 +802,7 @@ const perguntas = [
       "sugere, na ausência da linguagem, a estagnação do tempo",
     ],
     correta: "metaforiza a linguagem como ferramenta de lavoura",
-    categoria: "Língua Portuguesa",
+    categoria: "lingua portuguesa",
     explicacao: "",
   },
   {
@@ -817,7 +817,7 @@ const perguntas = [
     ],
     correta:
       "Realista e crítica, ao reconhecer a força do povo apesar dos problemas",
-    categoria: "Língua Portuguesa",
+    categoria: "lingua portuguesa",
     explicacao: "",
   },
   {
@@ -831,7 +831,7 @@ const perguntas = [
       "A média é 8, a mediana é 7 e a moda é 10",
     ],
     correta: "A moda é 8, pois é a nota que mais se repete",
-    categoria: "Matemática",
+    categoria: "matematica",
     explicacao: "",
   },
   {
@@ -839,7 +839,7 @@ const perguntas = [
       "Uma empresa cobra R$ 50,00 fixo por um serviço mais R$ 30,00 por hora de trabalho. Qual a função que representa o valor total pago f(x) em que x é o número de horas?",
     opcoes: ["f(x)=30x", "f(x)=50x+30", "f(x)=30x+50", "f(x)=80x", "f(x)=50"],
     correta: "f(x)=30x+50",
-    categoria: "Matemática",
+    categoria: "matematica",
     explicacao: "",
   },
   {
@@ -847,21 +847,21 @@ const perguntas = [
       "A razão entre a idade de Ana e a de Bruno é 3:5. Se Bruno tem 40 anos, qual a idade de Ana?",
     opcoes: ["20", "24", "28", "30", "32"],
     correta: "24",
-    categoria: "Matemática",
+    categoria: "matematica",
     explicacao: "",
   },
   {
     pergunta: "Considere a PA: 5, 8, 11, 14, ... Qual é o 15º termo dessa PA?",
     opcoes: ["45", "46", "47", "48", "49"],
     correta: "47",
-    categoria: "Matemática",
+    categoria: "matematica",
     explicacao: "",
   },
   {
     pergunta: "Dada a matriz: A = 3 7 2 / 1 4 5 . Qual é a ordem da matriz A?",
     opcoes: ["2x2", "3x2", "2x3", "3x3", "1x3"],
     correta: "2x3",
-    categoria: "Matemática",
+    categoria: "matematica",
     explicacao: "",
   },
   {
@@ -869,7 +869,7 @@ const perguntas = [
       "Um táxi cobra uma tarifa inicial fixa de R$ 5,00 para começar a corrida. Depois, cobra R$ 2,50 por quilômetro rodado. Se uma pessoa pegar uma corrida de táxi que custou exatamente R$ 32,50, qual foi a distância percorrida em quilômetros?",
     opcoes: ["10km", "11km", "12km", "13km", "14km"],
     correta: "11km",
-    categoria: "Matemática",
+    categoria: "matematica",
     explicacao: "",
   },
   {
@@ -882,7 +882,7 @@ const perguntas = [
       "De neutralização",
     ],
     correta: "De simples troca",
-    categoria: "Química",
+    categoria: "quimica",
     explicacao: "",
   },
   {
@@ -896,7 +896,7 @@ const perguntas = [
       "Formação de água líquida",
     ],
     correta: "Deslocamento para a direita",
-    categoria: "Química",
+    categoria: "quimica",
     explicacao: "",
   },
   {
@@ -904,7 +904,7 @@ const perguntas = [
       "'C₄H₁₀ + 6,5 O₂ → 4 CO₂ + 5 H₂O'vQuantas moléculas de CO₂ são produzidas para cada molécula de butano?",
     opcoes: ["1", "2", "3", "4", "5"],
     correta: "4",
-    categoria: "Química",
+    categoria: "quimica",
     explicacao: "",
   },
   {
@@ -918,7 +918,7 @@ const perguntas = [
       "É responsável pelo mau cheiro nos combustíveis",
     ],
     correta: "Provoca chuva ácida",
-    categoria: "Química",
+    categoria: "quimica",
     explicacao: "",
   },
   {
@@ -931,7 +931,7 @@ const perguntas = [
       "É um ácido forte",
     ],
     correta: "É um ácido forte",
-    categoria: "Química",
+    categoria: "quimica",
     explicacao: "",
   },
   {
@@ -945,7 +945,7 @@ const perguntas = [
       "",
     ],
     correta: "O álcool absorve calor ao evaporar",
-    categoria: "Química",
+    categoria: "quimica",
     explicacao: "",
   },
   {
@@ -959,7 +959,7 @@ const perguntas = [
       "A cultura é sinônimo de evolução tecnológica",
     ],
     correta: "A cultura é aprendida e transmitida socialmente",
-    categoria: "Sociologia",
+    categoria: "sociologia",
     explicacao: "",
   },
   {
@@ -974,7 +974,7 @@ const perguntas = [
     ],
     correta:
       "Grupos sociais possuem diferentes níveis de prestígio, poder e riqueza",
-    categoria: "Sociologia",
+    categoria: "sociologia",
     explicacao: "",
   },
   {
@@ -989,7 +989,7 @@ const perguntas = [
     ],
     correta:
       "O trabalhador perde o controle sobre o processo e o produto do seu trabalho",
-    categoria: "Sociologia",
+    categoria: "sociologia",
     explicacao: "",
   },
   {
@@ -1004,7 +1004,7 @@ const perguntas = [
     ],
     correta:
       "Um coletivo que reivindica melhorias nas condições de trabalho por meio de greves.",
-    categoria: "Sociologia",
+    categoria: "sociologia",
     explicacao: "",
   },
   {
@@ -1018,7 +1018,7 @@ const perguntas = [
       "Rebeliões populares que desafiam a ordem institucional",
     ],
     correta: "Aceitação de leis codificadas e da autoridade impessoal do cargo",
-    categoria: "Sociologia",
+    categoria: "sociologia",
     explicacao: "",
   },
   {
@@ -1033,7 +1033,7 @@ const perguntas = [
     ],
     correta:
       "A globalização acelera as migrações e o contato com múltiplas referências culturais",
-    categoria: "Sociologia",
+    categoria: "sociologia",
     explicacao: "",
   },
 ];
