@@ -35,67 +35,67 @@ export default function Materias() {
     Geografia: {
       texto: "",
       imagem: Geografia,
-      rota: "/materias/geografia",
+      rota: "/materias/Geografia",
     },
     Matemática: {
       texto: "",
       imagem: Matematica,
-      rota: "/materias/matematica",
+      rota: "/materias/Matemática",
     },
     LínguaPortuguesa: {
       texto: "",
       imagem: LinguaPortuguesa,
-      rota: "/materias/linguaportuguesa",
+      rota: "/materias/Língua%20Portuguesa",
     },
     Física: {
       texto: "",
       imagem: Fisica,
-      rota: "/materias/Fisica",
+      rota: "/materias/Física",
     },
     Química: {
       texto: "",
       imagem: Quimica,
-      rota: "/materias/quimica",
+      rota: "/materias/Química",
     },
     História: {
       texto: "",
       imagem: Historia,
-      rota: "/materias/historia",
+      rota: "/materias/História",
     },
     Filosofia: {
       texto: "",
       imagem: Filosofia,
-      rota: "/materias/filosofia",
+      rota: "/materias/Filosofia",
     },
     Sociologia: {
       texto: "",
       imagem: Sociologia,
-      rota: "/materias/sociologia",
+      rota: "/materias/Sociologia",
     },
     Biologia: {
       texto: "",
       imagem: Biologia,
-      rota: "/materias/biologia",
+      rota: "/materias/Biologia",
     },
     Artes: {
       texto: "",
       imagem: Artes,
-      rota: "/materias/artes",
+      rota: "/materias/Artes",
     },
     Inglês: {
       texto: "",
       imagem: Ingles,
-      rota: "/materias/ingles",
+      rota: "/materias/Inglês",
     },
     Espanhol: {
       texto: "",
       imagem: Espanhol,
-      rota: "/materias/espanhol",
+      rota: "/materias/Espanhol",
     },
     EducaçãoFísica: {
       texto: "",
       imagem: EducacaoFisica,
-      rota: "/materias/educacaofisica",
+      rota: "/materias/Educação%20Física",
     },
     Conectivos: {
       texto: "",
@@ -104,13 +104,15 @@ export default function Materias() {
     },
   };
 
-  const abrirPopup = (materia) => {
-    const data = conteudo[materia];
+  const abrirPopup = (materiaKey) => {
+    // materiaKey será "Geografia", "Matemática", etc.
+    const data = conteudo[materiaKey];
     setPopupData({
-      titulo: materia,
+      titulo: materiaKey, // O título pode ser "Matemática"
       texto: data?.texto || "Conteúdo em breve.",
       imagem: data?.imagem || "",
-      rota: data?.rota || "/materias",
+      // A rota já está correta se definida como acima no objeto 'conteudo'
+      rota: data?.rota || `/materias/${materiaKey}`, // Fallback, mas o ideal é ter no objeto 'conteudo'
     });
     setPopupVisible(true);
   };
@@ -140,37 +142,41 @@ export default function Materias() {
           <h1>NextLevelENEM</h1>
         </div>
         <div className="user-section">
-          <img 
-            src={profileImage || Usuario} 
+          <img
+            src={profileImage || Usuario}
             alt="Perfil"
             className="user-image"
-            onClick={() => fileInputRef.current.click()} 
+            onClick={() => fileInputRef.current.click()}
           />
-          <input 
-            type="file" 
+          <input
+            type="file"
             id="uploadProfile"
             ref={fileInputRef}
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             onChange={handleProfileChange}
           />
         </div>
       </header>
 
       <section className="materias-section">
-        <h1><b>Matérias:</b> Sua Escola para o Próximo Nível do ENEM</h1>
+        <h1>
+          <b>Matérias:</b> Sua Escola para o Próximo Nível do ENEM
+        </h1>
         <div className="materiais-container">
           {Object.keys(conteudo).map((materia) => (
-            <div key={materia} className="materia-card" onClick={() => abrirPopup(materia)}>
+            <div
+              key={materia}
+              className="materia-card"
+              onClick={() => abrirPopup(materia)}
+            >
               <img src={conteudo[materia].imagem} alt={materia} />
               <p>{materia}</p>
             </div>
           ))}
-        </div> 
+        </div>
       </section>
-      
-      <footer>
-        © 2025 NextLevelENEM - Todos os direitos reservados
-      </footer>
+
+      <footer>© 2025 NextLevelENEM - Todos os direitos reservados</footer>
 
       {popupVisible && (
         <div id="meuPopup" className="popup-overlay">
@@ -184,4 +190,4 @@ export default function Materias() {
       )}
     </div>
   );
-};
+}
