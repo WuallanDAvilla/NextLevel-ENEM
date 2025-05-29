@@ -50,7 +50,7 @@ export default function Materias() {
     Física: {
       texto: "",
       imagem: Fisica,
-      rota: "/QuizMaterias/Fisica",
+      rota: "/materias/Fisica",
     },
     Química: {
       texto: "",

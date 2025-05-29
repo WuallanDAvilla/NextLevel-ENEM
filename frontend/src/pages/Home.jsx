@@ -111,11 +111,6 @@ function Home() {
               </Link>
             </li>
             <li>
-              <Link to="/quiz" className="nav-link">
-                Quiz
-              </Link>
-            </li>
-            <li>
               <Link to="/ranking" className="nav-link">
                 Ranking
               </Link>

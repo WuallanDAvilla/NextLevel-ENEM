@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import GoogleLogo from "../assets/GoogleLogo.png";
 import "../styles/Login.css";
-import "../App.jsx";
 
 function Login() {
   const navigate = useNavigate();
