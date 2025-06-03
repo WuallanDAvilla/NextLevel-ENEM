@@ -1,15 +1,51 @@
-body {
+/* Materias.css */
+
+/* 
+  IMPORTANTE: Estilos globais de html, body (como font-family, margin, background base)
+  devem ser movidos para um arquivo CSS central (ex: index.css ou App.css)
+  para evitar conflitos e garantir consistência em toda a aplicação.
+  
+  Exemplo do que poderia estar em index.css ou App.css:
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #0d3e63);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+*/
+
+/* Aplicando estilos base ao body se não houver um CSS global */
+body.materias-page-active {
+  /* Adicionar esta classe ao body via JS se precisar isolar */
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #1e90ff, #0d3e63);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.materias-page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #ffffff;
+  /* O background idealmente vem do body global */
 }
 
-/* Header - Seguindo o padrão da Home */
-header {
+/* Header - Estilizado para ser consistente com Home.css */
+.page-header {
+  /* Usando uma classe mais genérica para o header da página */
   background-color: #0f3c61;
   padding: 15px 30px;
   display: flex;
@@ -21,22 +57,15 @@ header {
   z-index: 100;
 }
 
-.logo-container {
+.logo-section {
+  /* Consistente com Home.css */
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-direction: row; /* Removido row-reverse */
-  font-weight: 300;
 }
 
-.logo-container h1 {
-  font-size: 1.8rem;
-  color: #ffffff;
-  font-weight: bold;
-  margin: 0;
-}
-
-.logo-image {
+.logo {
+  /* Consistente com Home.css */
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -44,17 +73,25 @@ header {
   padding: 5px;
   object-fit: contain;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  margin-right: 0; /* Removido margin-right */
 }
 
-/* Seção de usuário - seguindo padrão da Home */
+.logo-section h1 {
+  /* Consistente com Home.css */
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+}
+
 .user-section {
+  /* Consistente com Home.css */
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.user-image {
+.user-avatar {
+  /* Consistente com Home.css (era .user-image) */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -71,75 +108,119 @@ header {
   object-fit: cover;
 }
 
-.user-image:hover {
+.user-avatar:hover {
+  /* Consistente com Home.css */
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Seção de Matérias */
 .materias-section {
-  background-color: #14497c;
-  padding: 30px;
+  background-color: rgba(
+    13,
+    62,
+    99,
+    0.7
+  ); /* Tom sutil sobre o gradiente do body */
+  padding: 40px 30px; /* Aumentado padding vertical */
   text-align: center;
+  flex-grow: 1;
+  animation: fadeInContent 0.7s ease-in-out;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .materias-section h1 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #fdfdfd;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Ajustado clamp */
+  margin-bottom: 40px; /* Aumentado margin */
+  color: #f0f8ff; /* AliceBlue, um branco suave */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: inline-block;
+}
+
+.materias-section h1::after {
+  /* Adicionando um sublinhado estilizado */
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #a0d2ff, #ffffff, #a0d2ff);
+  border-radius: 2px;
 }
 
 .materiais-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
-  max-height: 60vh;
-  overflow-y: auto;
-  padding-bottom: 20px;
+  gap: 30px; /* Espaçamento entre cards */
+  padding-bottom: 30px;
 }
 
 /* Cartões de Matéria */
 .materia-card {
   background-color: #ffffff;
-  color: black;
-  width: 200px;
-  border-radius: 20px;
+  color: #333; /* Cor de texto padrão dentro do card */
+  width: 220px; /* Ligeiramente maior */
+  min-height: 240px; /* Altura mínima para consistência */
+  border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .materia-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
 .materia-card img {
   width: 100%;
-  height: 140px;
+  height: 150px;
   object-fit: cover;
-  border-bottom: 2px solid #2aa7c2;
 }
 
-.materia-card p {
-  margin: 15px 10px;
-  font-weight: bold;
-  font-size: 18px;
-  color: #2a2a2a;
+.materia-card .materia-card-title {
+  /* Classe específica para o título do card */
+  margin: 0;
+  padding: 18px 12px;
+  font-weight: 600; /* Ligeiramente mais forte */
+  font-size: 1.1rem; /* Ajustado */
+  color: #102a43; /* Azul escuro para o título */
+  background-color: #f0f4f8;
+  border-top: 1px solid #ddebf7;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Rodapé */
-footer {
+/* Rodapé - Consistente com Home.css */
+.page-footer {
+  /* Usando uma classe mais genérica para o footer da página */
   background-color: #0f3c61;
   color: white;
   text-align: center;
-  padding: 40px 30px 20px;
-  margin-top: auto;
+  padding: 20px 30px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: auto; /* Garante que fique no rodapé se o conteúdo for pequeno */
 }
 
 /* Popup */
@@ -149,94 +230,184 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75); /* Overlay mais escuro */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
 .popup-content {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  width: 500px;
-  max-width: 90%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 550px; /* Ligeiramente maior */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
   text-align: center;
+  color: #333;
+  position: relative;
+  animation: fadeInPopup 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes fadeInPopup {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 32px;
+  color: #777;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.popup-close-button:hover {
+  color: #e74c3c; /* Vermelho no hover para fechar */
+  transform: rotate(90deg);
 }
 
 .popup-content h2 {
-  color: #0f3c61;
-  margin-bottom: 15px;
+  color: #0d3e63; /* Azul principal do tema */
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .popup-content img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #eee;
 }
 
 .popup-content p {
-  color: #333;
-  margin-bottom: 20px;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-.popup-content button {
-  background: #0f3c61;
+.popup-content button.btn-iniciar-quiz {
+  /* Classe específica para o botão do popup */
+  background: linear-gradient(135deg, #1e90ff, #1565c0);
   color: white;
-  padding: 12px 40px;
+  padding: 14px 35px;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 25px; /* Mais arredondado */
+  font-size: 1.1rem;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
 }
 
-.popup-content button:hover {
-  background-color: #1565c0;
+.popup-content button.btn-iniciar-quiz:hover {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4);
+}
+
+.popup-content button.btn-iniciar-quiz:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  header {
+  .page-header {
     flex-direction: column;
     gap: 15px;
     padding: 15px;
   }
-  
-  .logo-container {
-    width: 100%;
-    justify-content: center;
-  }
-  
+
+  .logo-section,
   .user-section {
     width: 100%;
     justify-content: center;
   }
-  
-  .materias-section {
-    padding: 20px;
+  .user-section {
+    /* Se houver nome de usuário e botão de sair, para alinhar */
+    justify-content: space-between; /* Ou center dependendo do conteúdo */
+    padding: 0 10px;
   }
-  
+
+  .materias-section {
+    padding: 30px 20px;
+  }
+  .materias-section h1 {
+    margin-bottom: 30px;
+  }
   .materiais-container {
     gap: 20px;
   }
-  
+
   .materia-card {
-    width: 150px;
+    width: calc(50% - 10px); /* (100% / 2) - (gap / 2) */
+    max-width: none; /* Remove max-width para permitir que calc funcione */
+    min-height: 220px;
+  }
+  .materia-card img {
+    height: 120px;
+  }
+  .materia-card .materia-card-title {
+    font-size: 1rem;
+    padding: 15px 10px;
+  }
+
+  .popup-content {
+    padding: 25px;
+    max-width: 90%;
+  }
+  .popup-content h2 {
+    font-size: 1.6rem;
+  }
+  .popup-content button.btn-iniciar-quiz {
+    padding: 12px 30px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .materiais-container {
-    flex-direction: column;
-    align-items: center;
+  .materias-section {
+    padding: 20px 15px;
   }
-  
+  .materias-section h1 {
+    font-size: 1.6rem;
+  }
+  .materiais-container {
+    gap: 15px;
+  }
+
   .materia-card {
-    width: 180px;
+    width: 100%; /* Um card por linha */
+    min-height: auto; /* Altura automática */
+  }
+  .materia-card img {
+    height: 130px;
+  }
+  .materia-card .materia-card-title {
+    font-size: 1rem;
+    padding: 12px 10px;
+  }
+
+  .popup-content button.btn-iniciar-quiz {
+    width: 100%;
+    padding: 14px;
   }
 }

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom"; // Importar useParams
 import { auth } from "../firebaseConfig";
 import { saveScore } from "../services/quizService";
 import axios from "axios";
-import "../styles/QuizMaterias.css"; // << SUGESTÃO: Usar um CSS global para os quizzes
+import "../styles/QuizPage.css"; // << SUGESTÃO: Usar um CSS global para os quizzes
 
 export default function QuizPage() {
   const { materia } = useParams(); // Pega o parâmetro 'materia' da URL

@@ -6,26 +6,28 @@
   padding: 0;
 }
 
-html, body {
+html {
   height: 100%;
-  overflow-y: scroll;
 }
 
 body {
-  background: linear-gradient(135deg, #1e90ff, #0d3e63);
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #0d3e63;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   min-height: 100vh;
+  margin: 0;
 }
 
-/* Container principal */
 .home-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(135deg, #1e90ff, #0d3e63);
 }
-/* Cabeçalho */
+
 .home-header {
   background-color: #0f3c61;
   padding: 15px 30px;
@@ -56,7 +58,7 @@ body {
   color: #ffffff;
   font-weight: bold;
 }
-/* Navegação principal */
+
 .main-nav {
   flex: 1;
   display: flex;
@@ -92,7 +94,7 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
-/* Seção de usuário */
+
 .user-section {
   display: flex;
   align-items: center;
@@ -141,29 +143,42 @@ body {
   color: #ff6b6b;
   text-decoration: underline;
 }
-/* Conteúdo principal */
+
+/* Conteúdo principal - MODIFICADO AQUI */
 .home-main {
-  /* flex: 1; */
-  padding: 30px;
+  flex: 1;
+  /* padding: 30px; <-- Alterado */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0; /* Remove padding lateral do container principal do conteúdo */
+  padding-right: 0; /* Remove padding lateral do container principal do conteúdo */
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 40px; /* Espaçamento entre as seções */
   overflow-y: auto;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  /* width: 100%; */
+  /* max-width: 1200px; <-- Removido */
+  /* margin-left: auto; <-- Removido */
+  /* margin-right: auto; <-- Removido */
+  width: 100%; /* Garante que ocupe toda a largura disponível */
 }
-/* Seção de boas-vindas */
+
+/* As seções (.welcome-section, .about-section, etc.) já possuem padding interno,
+   o que vai manter o conteúdo delas afastado das bordas da tela.
+   Seus backgrounds agora se estenderão por toda a largura do .home-main. */
+
 .welcome-section {
   background-color: #0f3c61;
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 20px; /* Mantido, cantos arredondados nas bordas da tela */
+  padding: 30px; /* Padding interno da seção */
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.8s ease-in-out;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Se for a primeira seção, pode-se remover o border-top-left-radius e border-top-right-radius se desejar
+     para alinhar perfeitamente com o header, ou ajustar o padding-top do .home-main
+     ou o margin-top da primeira seção. Por ora, mantemos simples. */
 }
 .welcome-section:hover {
   transform: translateY(-5px);
@@ -193,7 +208,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  margin-left: 20px;
+  margin-left: 20px; /* Pode ser necessário ajustar se .welcome-section for flex-column em telas menores */
 }
 .quote-text {
   font-style: italic;
@@ -206,7 +221,7 @@ body {
   font-size: 0.9rem;
   color: #a0d2ff;
 }
-/* Seção Sobre */
+
 .about-section {
   background-color: #0f3c61;
   border-radius: 20px;
@@ -278,9 +293,12 @@ body {
 .image-icon {
   font-size: 60px;
 }
-/* Cartões de recursos */
+
 .features-section {
   animation: fadeIn 1.2s ease-in-out;
+  /* Adiciona padding para que os cards internos não toquem as bordas do .home-main se este não tiver padding lateral */
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .feature-cards {
   display: grid;
@@ -327,7 +345,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .feature-button:hover {
   background-color: #a0d2ff;
@@ -351,16 +369,17 @@ body {
 .ranking-card {
   background: linear-gradient(135deg, #0f3c61, #43658b);
 }
-.logout-card {
+.study-material-card {
   background: linear-gradient(135deg, #0f3c61, #192841);
 }
-/* Estatísticas de estudo */
+
 .study-stats-section {
   background-color: #0f3c61;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1.4s ease-in-out;
+  /* Se for a última seção, pode-se remover border-bottom-left-radius e border-bottom-right-radius */
 }
 .study-stats-section h2 {
   font-size: 1.8rem;
@@ -402,16 +421,14 @@ body {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-/* Rodapé */
+
 .home-footer {
   background-color: #0f3c61;
   text-align: center;
-  padding: 40px 30px 20px;
-  margin-top: auto;
+  padding: 20px 30px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -422,17 +439,24 @@ body {
     transform: translateY(0);
   }
 }
-/* Responsividade */
+
 @media (max-width: 1024px) {
   .home-main {
-    padding: 20px;
+    /* padding: 20px; <-- Alterado */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .welcome-section {
     flex-direction: column;
     gap: 20px;
+    align-items: stretch;
+    /* Em telas menores, o border-radius pode ser mais pronunciado ou pode-se optar por zerá-lo. */
+    /* Exemplo: border-radius: 0; */
   }
   .daily-quote {
-    margin-left: 0;
+    margin-left: 0; /* Ajuste para quando .welcome-section é column */
     width: 100%;
   }
   .about-content {
@@ -441,45 +465,140 @@ body {
   .about-cards {
     flex-direction: column;
   }
+  /* Ajuste para seções que precisam de padding lateral explícito quando .home-main não tem mais */
+  .features-section,
+  .study-stats-section,
+  .about-section,
+  .welcome-section {
+    padding-left: 20px; /* Ou o valor que desejar para telas menores */
+    padding-right: 20px;
+    /* Para manter border-radius consistente com padding, pode ser necessário
+         que estas seções não sejam as primeiras/últimas filhas diretas do .home-main
+         ou que o .home-main tenha um pequeno padding lateral.
+         Uma alternativa é adicionar um wrapper dentro do .home-main para as seções
+         e aplicar o padding nesse wrapper.
+         Por simplicidade, as seções individuais agora controlam seu padding lateral. */
+  }
+  .welcome-section {
+    /* welcome-section já tem padding:30px, então pode ser ajustado aqui se necessário */
+    padding: 20px;
+  }
+  .about-section {
+    padding: 20px;
+  }
+  .study-stats-section {
+    padding: 20px;
+  }
+  .features-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  } /* Mantém o grid interno com espaço */
 }
+
 @media (max-width: 768px) {
   .home-header {
     flex-direction: column;
     gap: 15px;
-    padding: 15px;
+    padding: 15px; /* Padding geral do header */
+    position: static;
   }
   .main-nav {
     width: 100%;
   }
   .nav-links {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 20px;
   }
   .user-section {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Padding para user-section em telas menores */
   }
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .user-info {
+    align-items: flex-end;
   }
-  .footer-links {
-    justify-content: center;
+  .home-footer {
+    padding: 20px; /* Padding geral do footer */
   }
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
+
+  /* Ajuste do padding lateral das seções para telas médias */
+  .features-section,
+  .study-stats-section,
+  .about-section,
+  .welcome-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .welcome-section {
+    padding: 15px;
+  }
+  .about-section {
+    padding: 15px;
+  }
+  .study-stats-section {
+    padding: 15px;
+  }
+  .features-section {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
+
 @media (max-width: 480px) {
+  .logo-section h1 {
+    font-size: 1.5rem;
+  }
   .nav-links {
-    gap: 15px;
+    gap: 10px;
   }
-  .feature-cards {
-    grid-template-columns: 1fr;
+  .nav-link {
+    font-size: 16px;
   }
+  .feature-cards,
   .stats-cards {
     grid-template-columns: 1fr;
+  }
+  .welcome-content h2 {
+    font-size: 1.6rem;
+  }
+  .welcome-message {
+    font-size: 1rem;
+  }
+  .about-section h2,
+  .study-stats-section h2 {
+    font-size: 1.5rem;
+  }
+  .user-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .user-info {
+    align-items: center;
+  }
+  .home-footer {
+    padding: 15px;
+  }
+  /* Ajuste do padding lateral das seções para telas pequenas */
+  .features-section,
+  .study-stats-section,
+  .about-section,
+  .welcome-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .welcome-section {
+    padding: 10px;
+  }
+  .about-section {
+    padding: 10px;
+  }
+  .study-stats-section {
+    padding: 10px;
+  }
+  .features-section {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

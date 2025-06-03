@@ -4,6 +4,38 @@ import { auth } from "../firebaseConfig";
 import Logo from "../assets/Logo.png";
 import "../styles/Home.css";
 
+// Informações do site (movido para fora do componente)
+const siteInfo = {
+  title: "NextLevelENEM",
+  description:
+    "Uma plataforma dedicada à preparação para o ENEM e outros vestibulares, oferecendo recursos de estudo, quizzes e material de apoio para ajudar estudantes a alcançarem seu potencial máximo.",
+  mission:
+    "Nossa missão é democratizar o acesso a educação de qualidade e auxiliar estudantes em sua jornada acadêmica.",
+  vision:
+    "Ser a principal plataforma de preparação para vestibulares no Brasil, ajudando milhares de estudantes a ingressarem nas melhores universidades do país.",
+};
+
+// Frases de motivação (movido para fora do componente)
+const quotes = [
+  {
+    text: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+    author: "Robert Collier",
+  },
+  {
+    text: "A educação é a arma mais poderosa que você pode usar para mudar o mundo.",
+    author: "Nelson Mandela",
+  },
+  {
+    text: "Nunca é tarde demais para ser aquilo que sempre desejou ser.",
+    author: "George Eliot",
+  },
+  { text: "O conhecimento é poder.", author: "Francis Bacon" },
+  {
+    text: "Quanto mais eu estudo, mais eu aprendo. Quanto mais eu aprendo, mais eu percebo que sei pouco.",
+    author: "Albert Einstein",
+  },
+];
+
 function Home() {
   const [username, setUsername] = useState("");
   const [greeting, setGreeting] = useState("");
@@ -11,88 +43,47 @@ function Home() {
   const [quote, setQuote] = useState({ text: "", author: "" });
   const navigate = useNavigate();
 
-  // Informações do site
-  const siteInfo = {
-    title: "NextLevelENEM",
-    description:
-      "Uma plataforma dedicada à preparação para o ENEM e outros vestibulares, oferecendo recursos de estudo, quizzes e material de apoio para ajudar estudantes a alcançarem seu potencial máximo.",
-    mission:
-      "Nossa missão é democratizar o acesso a educação de qualidade e auxiliar estudantes em sua jornada acadêmica.",
-    vision:
-      "Ser a principal plataforma de preparação para vestibulares no Brasil, ajudando milhares de estudantes a ingressarem nas melhores universidades do país.",
-  };
-
-  // Frases de motivação
-  const quotes = [
-    {
-      text: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
-      author: "Robert Collier",
-    },
-    {
-      text: "A educação é a arma mais poderosa que você pode usar para mudar o mundo.",
-      author: "Nelson Mandela",
-    },
-    {
-      text: "Nunca é tarde demais para ser aquilo que sempre desejou ser.",
-      author: "George Eliot",
-    },
-    { text: "O conhecimento é poder.", author: "Francis Bacon" },
-    {
-      text: "Quanto mais eu estudo, mais eu aprendo. Quanto mais eu aprendo, mais eu percebo que sei pouco.",
-      author: "Albert Einstein",
-    },
-  ];
-
   useEffect(() => {
-    // Colocar o nome de usuário
     const user = auth.currentUser;
     if (user) {
       const displayName = user.displayName || user.email.split("@")[0];
       setUsername(displayName);
     } else {
-      // Redirecionar caso o login não for autenticado
       navigate("/");
     }
 
-    // Dar boas-vindas de acordo com hora do dia
     const hour = new Date().getHours();
     if (hour < 12) setGreeting("Bom dia");
     else if (hour < 18) setGreeting("Boa tarde");
     else setGreeting("Boa noite");
 
-    // Atualizar a hora a cada minuto
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 60000);
 
-    // Select a random quote
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
 
     return () => clearInterval(timer);
-  }, [navigate]);
+  }, [navigate]); // navigate é uma dependência correta aqui devido ao seu uso
 
-  // Formato de tempo de HH:MM
   const formattedTime = currentTime.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
   });
 
-  // Formato de data de dia para semana e dia para mês
   const formattedDate = currentTime.toLocaleDateString("pt-BR", {
     weekday: "long",
     day: "numeric",
     month: "long",
   });
 
-  const handleLogout = () => {
-    auth
-      .signOut()
-      .then(() => {
-        navigate("/");
-      })
-      .catch((error) => {
-        console.error("Erro ao fazer logout:", error);
-      });
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate("/");
+    } catch (error) {
+      console.error("Erro ao fazer logout:", error);
+    }
   };
 
   return (
@@ -115,13 +106,18 @@ function Home() {
                 Ranking
               </Link>
             </li>
+            <li>
+              <Link to="/redacao" className="nav-link">
+                Redação
+              </Link>
+            </li>
           </ul>
         </nav>
 
         <div className="user-section">
           <Link to="/perfil" className="profile-link">
             <div className="user-avatar">
-              {username.charAt(0).toUpperCase()}
+              {username ? username.charAt(0).toUpperCase() : ""}
             </div>
           </Link>
           <div className="user-info">
@@ -152,44 +148,17 @@ function Home() {
           </div>
         </section>
 
-        <section className="about-section">
-          <h2>Sobre o NextLevelENEM</h2>
-          <div className="about-content">
-            <div className="about-text">
-              <p className="about-description">{siteInfo.description}</p>
-
-              <div className="about-cards">
-                <div className="about-card">
-                  <h3>Nossa Missão</h3>
-                  <p>{siteInfo.mission}</p>
-                </div>
-
-                <div className="about-card">
-                  <h3>Nossa Visão</h3>
-                  <p>{siteInfo.vision}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="about-image">
-              <div className="image-placeholder">
-                <span className="image-icon">🎓</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="features-section">
           <div className="feature-cards">
             <div className="feature-card quiz-card">
               <div className="feature-content">
-                <h3>Teste seus conhecimentos</h3>
+                <h3>Redação</h3>
                 <p>
-                  Desafie-se com questões de múltipla escolha e acompanhe seu
+                  Desafie-se com aprendizado sobre redação e acompanhe seu
                   progresso.
                 </p>
-                <Link to="/quiz" className="feature-button">
-                  Iniciar Quiz
+                <Link to="/redacao" className="feature-button">
+                  Ver Redação
                 </Link>
               </div>
               <div className="feature-icon">🧠</div>
@@ -209,7 +178,8 @@ function Home() {
               <div className="feature-icon">🏆</div>
             </div>
 
-            <div className="feature-card logout-card">
+            {/* Classe renomeada de 'logout-card' para 'study-material-card' */}
+            <div className="feature-card study-material-card">
               <div className="feature-content">
                 <h3>Acessar Material de Estudo</h3>
                 <p>
@@ -242,10 +212,34 @@ function Home() {
             </div>
           </div>
         </section>
+
+        <section className="about-section">
+          <h2>Sobre o NextLevelENEM</h2>
+          <div className="about-content">
+            <div className="about-text">
+              <p className="about-description">{siteInfo.description}</p>
+              <div className="about-cards">
+                <div className="about-card">
+                  <h3>Nossa Missão</h3>
+                  <p>{siteInfo.mission}</p>
+                </div>
+                <div className="about-card">
+                  <h3>Nossa Visão</h3>
+                  <p>{siteInfo.vision}</p>
+                </div>
+              </div>
+            </div>
+            <div className="about-image">
+              <div className="image-placeholder">
+                <span className="image-icon">🎓</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="home-footer">
-        <p>© 2025 Prepara Aí - Todos os direitos reservados</p>
+        <p>© 2025 NextLevelENEM - Todos os direitos reservados</p>
       </footer>
     </div>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
-import "../styles/Cadastro.css"; 
+import "../styles/Cadastro.css";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function SignUp() {
     <div className="cadastro-container">
       <div className="cadastro-card">
         <h1 className="cadastro-titulo">Criar Conta</h1>
-        
+
         <form onSubmit={handleSignUp} className="cadastro-form">
           <input
             type="text"
@@ -52,7 +52,7 @@ export default function SignUp() {
             className="cadastro-input"
             required
           />
-          
+
           <input
             type="email"
             placeholder="Seu e-mail"
@@ -61,7 +61,7 @@ export default function SignUp() {
             className="cadastro-input"
             required
           />
-          
+
           <input
             type="password"
             placeholder="Sua senha"
@@ -71,18 +71,20 @@ export default function SignUp() {
             required
             minLength="6"
           />
-          
+
           {senha && (
             <div className={`senha-strength senha-${forcaSenha}`}>
-              Força da senha: {
-                forcaSenha === "fraca" ? "Fraca" :
-                forcaSenha === "media" ? "Média" : "Forte"
-              }
+              Força da senha:{" "}
+              {forcaSenha === "fraca"
+                ? "Fraca"
+                : forcaSenha === "media"
+                ? "Média"
+                : "Forte"}
             </div>
           )}
-          
+
           {erro && <p className="cadastro-erro">{erro}</p>}
-          
+
           <button type="submit" className="cadastro-btn">
             Criar Conta
           </button>
@@ -90,10 +92,7 @@ export default function SignUp() {
 
         <div className="cadastro-login-link">
           <p className="cadastro-login-text">Já possui uma conta?</p>
-          <button 
-            onClick={() => navigate("/")}
-            className="cadastro-login-btn"
-          >
+          <button onClick={() => navigate("/")} className="cadastro-login-btn">
             Fazer Login
           </button>
         </div>

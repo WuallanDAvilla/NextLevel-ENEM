@@ -1,0 +1,362 @@
+/* QuizPage.css */
+
+/*
+  IMPORTANTE: Estilos globais do <body> como font-family, margin, background base
+  devem ser movidos para um arquivo CSS central (ex: index.css ou App.css)
+  para evitar conflitos entre páginas.
+*/
+
+/* Container principal para a página do quiz, garantindo consistência de layout */
+.quiz-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo quando ele é menor que a tela */
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  /* Se o body já tiver o background gradiente global, esta linha abaixo não é necessária.
+     background: linear-gradient(135deg, #1e90ff, #0d3e63); */
+  color: #333; /* Cor de texto padrão para esta página, se diferente do global */
+}
+
+/* Estilos para a tela inicial do quiz */
+.quiz-tela-inicial {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeInScale 0.5s ease-out;
+}
+
+.quiz-tela-inicial h1 {
+  font-size: 2rem;
+  color: #0d47a1; /* Azul escuro para o título */
+  margin-bottom: 10px;
+}
+
+.quiz-tela-inicial .quiz-descricao {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn-start-quiz {
+  /* Botão específico para iniciar o quiz na tela inicial */
+  background-color: #28a745; /* Verde para "Iniciar" */
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 15px; /* Espaçamento antes do botão de voltar */
+}
+
+.btn-start-quiz:hover {
+  background-color: #218838; /* Verde mais escuro no hover */
+  transform: translateY(-2px);
+}
+
+.btn-voltar {
+  /* Estilo para o botão de voltar para matérias */
+  margin-top: 10px; /* Adicionado margin-top para separar do conteúdo acima */
+}
+
+/* Container principal do quiz em andamento */
+.quiz-container {
+  max-width: 700px; /* Aumentado para melhor leitura em telas maiores */
+  width: 100%;
+  margin: 0 auto; /* Centraliza mesmo dentro do flex container da página */
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 15px; /* Borda mais arredondada */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  text-align: left; /* Alinha o texto da pergunta à esquerda */
+  animation: fadeInScale 0.5s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.quiz-header h2 {
+  font-size: 1.6rem;
+  color: #0d47a1;
+  margin: 0;
+}
+
+.quiz-progresso-texto {
+  font-size: 0.9rem;
+  color: #757575;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.quiz-pergunta-container {
+  margin-bottom: 25px;
+}
+
+.pergunta-texto {
+  font-size: 1.25rem; /* Ligeiramente maior */
+  margin-bottom: 15px;
+  font-weight: 500;
+  line-height: 1.6; /* Melhor legibilidade */
+  color: #333;
+}
+
+.pergunta-imagem {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}
+
+.lista-opcoes {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.opcao-resposta {
+  background-color: #f7f9fc; /* Fundo mais suave */
+  padding: 15px 20px; /* Padding aumentado */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  border: 2px solid #e0e0e0; /* Borda sutil */
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+}
+
+.opcao-letra {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #0d47a1;
+}
+
+.opcao-hoveravel:hover {
+  /* Só aplica hover se não houver resposta selecionada */
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+  transform: translateX(5px);
+}
+
+.opcao-correta {
+  background-color: #d4edda !important; /* Verde claro para correta */
+  border-color: #5cb85c !important;
+  color: #155724 !important; /* Texto verde escuro */
+  font-weight: 500;
+}
+.opcao-correta .opcao-letra {
+  color: #155724 !important;
+}
+
+.opcao-incorreta {
+  background-color: #f8d7da !important; /* Vermelho claro para incorreta */
+  border-color: #d9534f !important;
+  color: #721c24 !important; /* Texto vermelho escuro */
+  font-weight: 500;
+}
+.opcao-incorreta .opcao-letra {
+  color: #721c24 !important;
+}
+
+.quiz-footer-info {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #555;
+}
+.quiz-footer-info span {
+  font-weight: bold;
+}
+
+/* Tela Final do Quiz */
+.quiz-tela-final {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  animation: fadeInScale 0.5s ease-out;
+}
+
+.quiz-tela-final h1 {
+  font-size: 2.2rem;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.quiz-tela-final .quiz-resultado {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+.quiz-tela-final .quiz-resultado span {
+  font-weight: bold;
+  color: #1976d2; /* Azul para destacar números */
+}
+
+.quiz-acoes-finais {
+  display: flex;
+  flex-direction: column; /* Botões empilhados em mobile, pode mudar para row em desktop */
+  gap: 15px;
+  align-items: center; /* Centraliza botões se tiverem larguras diferentes */
+}
+
+/* Estilos para botões primários e secundários (consistência) */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: 500;
+  width: 100%; /* Faz os botões ocuparem a largura disponível no container flex */
+  max-width: 300px; /* Limita a largura máxima dos botões */
+  text-align: center;
+  text-decoration: none; /* Para o caso de ser um link estilizado como botão */
+}
+
+.btn-primary {
+  background-color: #1976d2; /* Azul primário */
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #1565c0; /* Azul mais escuro no hover */
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Cinza secundário */
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #5a6268; /* Cinza mais escuro no hover */
+  transform: translateY(-2px);
+}
+
+/* Feedback e Carregamento */
+.quiz-feedback-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+.quiz-feedback-container h2 {
+  font-size: 1.8rem;
+  color: #d9534f; /* Vermelho para erro */
+  margin-bottom: 15px;
+}
+.quiz-feedback-container .error-message {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+.quiz-feedback-container .quiz-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Loader simples */
+.loader {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #1976d2; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+  .quiz-acoes-finais {
+    flex-direction: row; /* Botões lado a lado em telas maiores */
+    justify-content: center;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: auto; /* Permite que os botões tenham larguras baseadas no conteúdo */
+  }
+  .quiz-feedback-container .quiz-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-tela-inicial,
+  .quiz-container,
+  .quiz-tela-final,
+  .quiz-feedback-container {
+    padding: 20px;
+  }
+  .quiz-header h2 {
+    font-size: 1.3rem;
+  }
+  .pergunta-texto {
+    font-size: 1.1rem;
+  }
+  .opcao-resposta {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+  .btn-primary,
+  .btn-secondary,
+  .btn-start-quiz {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+}
