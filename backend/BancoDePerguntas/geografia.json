@@ -3,42 +3,42 @@
     "pergunta": "A globalização é um processo de intensificação das relações econômicas, sociais, culturais e políticas em escala mundial. Sobre esse tema, assinale a alternativa correta:",
     "opcoes": ["A globalização eliminou as desigualdades entre países desenvolvidos e subdesenvolvidos", "Com a globalização, as fronteiras nacionais deixaram de existir, tornando-se irrelevantes", "A globalização se caracteriza pela ampliação das redes de transporte, comunicação e fluxos financeiros", "O processo de globalização teve início com a Revolução Industrial no século XXI", "A globalização enfraqueceu as multinacionais e fortaleceu apenas empresas locais"],
     "correta": "A globalização se caracteriza pela ampliação das redes de transporte, comunicação e fluxos financeiros",
-    "categoria": "Geografia",
+    "categoria": "geografia",
     "explicacao": ""
   },
   {
     "pergunta": "As ações humanas vêm causando diversos impactos negativos ao meio ambiente, afetando ecossistemas e a qualidade de vida. Sobre os impactos ambientais causados pelas atividades humanas, assinale a alternativa correta:",
     "opcoes": ["A queimada de florestas tropicais reduz a emissão de gases de efeito estufa e melhora o equilíbrio climático", "O desmatamento contribui para o aumento da biodiversidade local e para a conservação do solo", "O uso excessivo de fertilizantes e agrotóxicos pode contaminar o solo e os corpos d’água, afetando a saúde humana", "A urbanização desordenada promove maior permeabilidade do solo e facilita o escoamento da água da chuva", "As atividades industriais e o transporte não influenciam na poluição atmosférica das grandes cidades"],
     "correta": "O uso excessivo de fertilizantes e agrotóxicos pode contaminar o solo e os corpos d’água, afetando a saúde humana",
-    "categoria": "Geografia",
+    "categoria": "geografia",
     "explicacao": ""
   },
   {
     "pergunta": "A geopolítica estuda as relações de poder entre os Estados e suas estratégias para controlar territórios, recursos e populações. Um exemplo atual é a disputa por áreas estratégicas e recursos naturais. Assinale a alternativa correta sobre a geopolítica mundial:",
     "opcoes": ["A geopolítica perdeu importância com a globalização, já que hoje todos os países têm relações igualitárias", "A disputa por recursos como petróleo e água não influencia conflitos armados no século XXI", "A Guerra Fria foi um exemplo de confronto direto entre EUA e URSS, com batalhas em seus próprios territórios", "O controle de rotas comerciais e recursos naturais continua sendo motivo de tensão entre países", "A Organização das Nações Unidas (ONU) tem autoridade militar sobre todos os países e pode intervir sem restrições"],
     "correta": "O controle de rotas comerciais e recursos naturais continua sendo motivo de tensão entre países",
-    "categoria": "Geografia",
+    "categoria": "geografia",
     "explicacao": ""
   },
   {
     "pergunta": "Observe a descrição: 'Clima com verões quentes e úmidos e invernos frios e secos. A vegetação original predominante é de campos e florestas decíduas.' Esse tipo climático é mais comum:",
     "opcoes": ["No sertão nordestino brasileiro", "Na região Sudeste do Brasil", "Na porção central da América do Norte", "No litoral do norte africano", "Na região equatorial da África"],
     "correta": "Na porção central da América do Norte",
-    "categoria": "Geografia",
+    "categoria": "geografia",
     "explicacao": ""
   },
   {
     "pergunta": "A formação dos blocos econômicos é uma característica da globalização. Um exemplo de bloco que busca a integração econômica e política entre países sul-americanos é:",
     "opcoes": ["OTAN", "MERCOSUL", "OPEP", "União Europeia", "Nafta"],
     "correta": "MERCOSUL",
-    "categoria": "Geografia",
+    "categoria": "geografia",
     "explicacao": ""
   },
   {
     "pergunta": "Leia o texto a seguir:'A expansão da globalização intensificou o consumo de bens em escala global, padronizando gostos e comportamentos em diferentes partes do mundo. Redes de lojas, marcas e produtos tornaram-se símbolos de status e modernidade, ainda que, muitas vezes, desconsiderem as realidades culturais e econômicas locais.'Com base no texto, é correto afirmar que:",
     "opcoes": ["A globalização reduziu o consumo ao mínimo necessário, promovendo modos de vida sustentáveis", "O consumismo global é uma tendência homogênea que respeita a diversidade cultural", "A padronização de produtos e marcas reflete a dominação de modelos culturais hegemônicos", "O consumo globalizado promove a autonomia econômica das comunidades locais", "A globalização impediu a formação de mercados internacionais de bens simbólicos"],
     "correta": "A padronização de produtos e marcas reflete a dominação de modelos culturais hegemônicos",
-    "categoria": "Geografia",
+    "categoria": "geografia",
     "explicacao": ""
   }
 ]
