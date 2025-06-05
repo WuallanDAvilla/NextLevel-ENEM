@@ -25,86 +25,80 @@ const conteudoMatriz = {
     nomeExibicao: "Geografia",
     texto: "Explore os continentes, climas e culturas do nosso planeta.",
     imagem: Geografia,
-    rota: "/materias/Geografia", // Rota para o quiz da matéria
+    rota: "/materias/geografia", // Rota para o quiz da matéria
   },
   Matematica: {
     nomeExibicao: "Matemática",
     texto: "Desvende os segredos dos números, formas e equações.",
     imagem: Matematica,
-    rota: "/materias/Matematica",
+    rota: "/materias/matematica",
   },
   LinguaPortuguesa: {
     nomeExibicao: "Língua Portuguesa",
     texto: "Aprimore sua gramática, interpretação e escrita.",
     imagem: LinguaPortuguesaImg,
-    rota: "/materias/Língua Portuguesa", // Manter o nome da matéria na rota
+    rota: "/materias/linguaportuguesa", // Manter o nome da matéria na rota
   },
   Fisica: {
     nomeExibicao: "Física",
     texto: "Entenda as leis que regem o universo, do átomo às galáxias.",
     imagem: Fisica,
-    rota: "/materias/Fisica",
+    rota: "/materias/fisica",
   },
   Quimica: {
     nomeExibicao: "Química",
     texto: "Descubra as transformações da matéria e suas propriedades.",
     imagem: Quimica,
-    rota: "/materias/Quimica",
+    rota: "/materias/quimica",
   },
   Historia: {
     nomeExibicao: "História",
     texto: "Viaje pelo tempo e compreenda os eventos que moldaram o mundo.",
     imagem: Historia,
-    rota: "/materias/Historia",
+    rota: "/materias/historia",
   },
   Filosofia: {
     nomeExibicao: "Filosofia",
     texto:
       "Reflita sobre as grandes questões da existência e do conhecimento.",
     imagem: Filosofia,
-    rota: "/materias/Filosofia",
+    rota: "/materias/filosofia",
   },
   Sociologia: {
     nomeExibicao: "Sociologia",
     texto: "Analise as estruturas sociais e as relações humanas.",
     imagem: Sociologia,
-    rota: "/materias/Sociologia",
+    rota: "/materias/sociologia",
   },
   Biologia: {
     nomeExibicao: "Biologia",
     texto: "Estude a vida em todas as suas formas e complexidades.",
     imagem: Biologia,
-    rota: "/materias/Biologia",
+    rota: "/materias/biologia",
   },
   Artes: {
     nomeExibicao: "Artes",
     texto: "Explore a criatividade e as diversas manifestações artísticas.",
     imagem: Artes,
-    rota: "/materias/Artes",
+    rota: "/materias/artes",
   },
   Ingles: {
     nomeExibicao: "Inglês",
     texto: "Desenvolva suas habilidades na língua global da comunicação.",
     imagem: Ingles,
-    rota: "/materias/Ingles",
+    rota: "/materias/ingles",
   },
   Espanhol: {
     nomeExibicao: "Espanhol",
     texto: "Aprenda uma das línguas mais faladas no mundo.",
     imagem: Espanhol,
-    rota: "/materias/Espanhol",
+    rota: "/materias/espanhol",
   },
   EducacaoFisica: {
     nomeExibicao: "Educação Física",
     texto: "Movimente-se e aprenda sobre saúde e bem-estar.",
     imagem: EducacaoFisicaImg,
-    rota: "/materias/Educação Física",
-  },
-  Conectivos: {
-    nomeExibicao: "Conectivos (Redação)",
-    texto: "Domine os elementos de coesão para uma redação nota mil.",
-    imagem: Conectivos,
-    rota: "/materias/Conectivos", // Rota para um quiz específico de conectivos
+    rota: "/materias/educacaofisica",
   },
 };
 
