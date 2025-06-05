@@ -14,14 +14,18 @@ export default function Ranking() {
     setError(null);
     fetchRanking()
       .then((data) => {
-        // Ordena por pontos (maior para menor) e depois por nome (A-Z) como critério de desempate
-        const sortedData = data.sort((a, b) => {
-          if (b.pontos === a.pontos) {
-            return a.name.localeCompare(b.name);
-          }
-          return b.pontos - a.pontos;
-        });
-        setLista(sortedData.slice(0, 10)); // Garante que apenas o top 10 seja exibido
+        if (Array.isArray(data)) {
+          // Ordena por pontos (maior para menor) e depois por nome (A-Z) como critério de desempate
+          const sortedData = data.sort((a, b) => {
+            if (b.pontos === a.pontos) {
+              return a.name.localeCompare(b.name);
+            }
+            return b.pontos - a.pontos;
+          });
+          setLista(sortedData.slice(0, 10)); // Garante que apenas o top 10 seja exibido
+        } else {
+          throw new Error("Dados inválidos recebidos do servidor.");
+        }
       })
       .catch((err) => {
         console.error("Erro ao buscar ranking:", err);
