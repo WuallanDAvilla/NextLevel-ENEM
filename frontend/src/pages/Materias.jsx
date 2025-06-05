@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig"; // autenticação
 import Logo from "../assets/Logo.png"; 
@@ -26,7 +26,7 @@ const conteudoMatriz = {
     nomeExibicao: "Geografia",
     texto: "Explore os continentes, climas e culturas do nosso planeta.",
     imagem: Geografia,
-    rota: "/materias/Geografia", // Rota para o quiz da matéria
+    rota: "/materias/geografia", // Rota para o quiz da matéria
   },
   Matematica: {
     nomeExibicao: "Matemática",
@@ -38,7 +38,7 @@ const conteudoMatriz = {
     nomeExibicao: "Língua Portuguesa",
     texto: "Aprimore sua gramática, interpretação e escrita.",
     imagem: LinguaPortuguesaImg,
-    rota: "/materias/Língua Portuguesa", // Manter o nome da matéria na rota
+    rota: "/materias/linguaportuguesa", // Manter o nome da matéria na rota
   },
   Fisica: {
     nomeExibicao: "Física",
@@ -80,7 +80,7 @@ const conteudoMatriz = {
     nomeExibicao: "Artes",
     texto: "Explore a criatividade e as diversas manifestações artísticas.",
     imagem: Artes,
-    rota: "/materias/Artes",
+    rota: "/materias/artes",
   },
   Ingles: {
     nomeExibicao: "Inglês",
@@ -100,11 +100,9 @@ const conteudoMatriz = {
     imagem: EducacaoFisicaImg,
     rota: "/materias/educacaofisica",
   },
-};
+}; // Certifique-se de fechar o objeto aqui
 
 export default function Materias() {
-  const fileInputRef = useRef(null);
-  const [profileImage, setProfileImage] = useState(null);
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupData, setPopupData] = useState({
     titulo: "",
@@ -156,13 +154,6 @@ export default function Materias() {
   const handleClickOutsidePopup = (event) => {
     if (event.target.id === "popupOverlay") {
       fecharPopup();
-    }
-  };
-
-  const handleProfileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setProfileImage(URL.createObjectURL(file));
     }
   };
 
