@@ -3,42 +3,42 @@
     "pergunta": "Frase incompleta: Cuando era niño, siempre ______ (jugar) con mis primos en el jardín.",
     "opcoes": ["jugué", "juegué", "jugaba", "jugó", "jugando"],
     "correta": "jugaba",
-    "categoria": "Espanhol",
+    "categoria": "espanhol",
     "explicacao": "O pretérito imperfeito (jugaba) é usado para ações habituais no passado. A frase expressa um costume da infância."
   },
   {
     "pergunta": "Cada vez son más los jóvenes que optan por viajar al extranjero para estudiar. Esta experiencia les permite no solo mejorar sus conocimientos académicos, sino también ampliar su visión del mundo y adquirir una valiosa independencia. Según el texto, ¿cuál es una ventaja de estudiar en el extranjero",
     "opcoes": ["Disminuir el nivel académico", "Conocer solamente nuevas materias", "Aumentar la dependencia familiar", "Desarrollar una mayor independencia", "Limitar la visión del mundo"],
     "correta": "Desarrollar una mayor independencia",
-    "categoria": "Espanhol",
+    "categoria": "espanhol",
     "explicacao": "Segundo o texto, além dos conhecimentos acadêmicos, uma vantagem clara é a autonomia pessoal, ou seja, a independência."
   },
   {
     "pergunta": "Texto: “No hay camino para la paz, la paz es el camino.”— Mahatma Gandhi. A frase apresentada revela uma visão de mundo que valoriza:",
     "opcoes": ["A guerra como meio de alcançar a paz", "A paz como um objetivo inalcançável", "A paz como prática constante, não apenas um fim", "A violência como caminho necessário à mudança", "A submissão como solução pacífica dos conflitos"],
     "correta": "A paz como prática constante, não apenas um fim",
-    "categoria": "Espanhol",
+    "categoria": "espanhol",
     "explicacao": "A frase mostra que a paz não é um objetivo distante, mas uma forma de agir no presente."
   },
   {
     "pergunta": "¿Cuál de las siguientes frases está gramaticalmente correcta en español?",
     "opcoes": ["Yo lo dije a ella el secreto", "Él me lo regaló un libro", "Les dijimos la verdad a ellos", "Te lo conté a tú", "Nosotros lo decimos a él"],
     "correta": "Les dijimos la verdad a ellos",
-    "categoria": "Espanhol",
+    "categoria": "espanhol",
     "explicacao": "A estrutura está correta: pronome indireto (les) + verbo + objeto direto (la verdad) + complemento (a ellos). As outras têm erros de ordem ou concordância."
   },
   {
     "pergunta": "Leia o trecho de uma conversa informal entre amigos em um grupo de WhatsApp: ¿Vas a venir a la fiesta mañana? ¡Obvio que sí! ¡No me la pierdo por nada! Nesse contexto, a expressão “¡Obvio que sí!” indica:",
     "opcoes": ["Dúvida em relação ao convite", "Rejeição disfarçada da proposta", "Certeza e entusiasmo com o evento", "Indiferença sobre a festa", "Desinteresse velado"],
     "correta": "Certeza e entusiasmo com o evento",
-    "categoria": "Espanhol",
+    "categoria": "espanhol",
     "explicacao": "“¡Obvio que sí!” é uma resposta afirmativa forte e entusiasmada, mostrando que a pessoa com certeza vai."
   },
   {
     "pergunta": "As festas de “La Tomatina”, realizadas na cidade de Buñol, Espanha, consistem em uma grande batalha de tomates, onde milhares de pessoas participam. Essa festividade é exemplo de:",
     "opcoes": ["Uma prática agrícola tradicional", "Uma forma de protesto político", "Um evento cultural e turístico popular", "Um ritual religioso da Semana Santa", "Um desfile folclórico indígena"],
     "correta": "Um evento cultural e turístico popular",
-    "categoria": "Espanhol",
+    "categoria": "espanhol",
     "explicacao": "La Tomatina é uma festa tradicional e famosa na Espanha, atraindo turistas do mundo todo. Não tem caráter religioso nem agrícola."
   }
 ]

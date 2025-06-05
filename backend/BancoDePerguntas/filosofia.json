@@ -3,42 +3,42 @@
     "pergunta": "“O homem nasce livre, e por toda parte encontra-se acorrentado.” (ROUSSEAU, Do Contrato Social)",
     "opcoes": ["A liberdade individual e a necessidade do absolutismo", "A desigualdade e as instituições que corrompem a liberdade humana", "O estado natural como causa dos males sociais", "A democracia como regime que oprime o cidadão", " O contrato social como forma de dominação burguesa"],
     "correta": "A desigualdade e as instituições que corrompem a liberdade humana",
-    "categoria": "Filosofia",
+    "categoria": "filosofia",
     "explicacao": "Rousseau defendia que, no estado de natureza, o homem era livre e bom, mas as instituições sociais e políticas corromperam essa liberdade, criando desigualdade e dominação."
   },
   {
     "pergunta": "“O operário torna-se tanto mais pobre quanto mais riqueza produz. [...] O trabalhador se torna um apêndice da máquina.” (MARX, Manuscritos Econômico-Filosóficos) Para Marx, a alienação do trabalhador ocorre quando:",
     "opcoes": ["Ele tem controle total sobre seu processo de trabalho", "Ele participa democraticamente das decisões da empresa", " Ele possui os meios de produção e é dono do seu tempo", " Seu trabalho deixa de ser criativo e se torna repetitivo e automático.", "A produção ocorre de forma artesanal e individual"],
     "correta": " Seu trabalho deixa de ser criativo e se torna repetitivo e automático",
-    "categoria": "Filosofia",
+    "categoria": "filosofia",
     "explicacao": "Para Marx, o trabalhador alienado perde o controle sobre o processo produtivo. Ele não se reconhece no que produz, pois seu trabalho se torna mecânico, repetitivo e subordinado à lógica do capital."
   },
   {
     "pergunta": "“A virtude moral é adquirida pelo hábito: é praticando a justiça que nos tornamos justos, é praticando a temperança que nos tornamos temperantes, é praticando a coragem que nos tornamos corajosos.” (ARISTÓTELES, Ética a Nicômaco) Com base na concepção ética de Aristóteles, é correto afirmar que a formação do caráter virtuoso depende:",
     "opcoes": ["Da contemplação pura das ideias", "De uma fé cega nas tradições religiosas", "De punições severas para corrigir vícios", "Da repetição de ações orientadas pela razão", "Do desprezo pelas paixões e desejos humanos"],
     "correta": "Da repetição de ações orientadas pela razão",
-    "categoria": "Filosofia",
+    "categoria": "filosofia",
     "explicacao": "A virtude, segundo Aristóteles, é adquirida pelo hábito. O caráter virtuoso se forma pela prática constante de boas ações, guiadas pela razão, até que se tornem naturais ao indivíduo."
   },
   {
     "pergunta": "“Uma conversação de tal natureza transforma o ouvinte; o contato de Sócrates paralisa e embaraça; leva a refletir sobre si mesmo, a imprimir à atenção uma direção incomum: os temperamentais, como Alcibíades, sabem que encontrarão junto dele todo o bem de que são capazes, mas fogem porque receiam essa influência poderosa, que os leva a se censurarem.”  Com base no texto, a atitude de Sócrates caracteriza-se por:",
     "opcoes": ["Impor suas ideias aos interlocutores, desconsiderando suas opiniões", "Utilizar a retórica para persuadir os ouvintes a aceitarem suas crenças", "Estimular a reflexão crítica nos interlocutores, levando-os ao autoconhecimento", "Evitar confrontos dialéticos para manter a harmonia nas conversações", "Transmitir conhecimentos prontos, sem questionar as crenças dos ouvintes"],
     "correta": "Estimular a reflexão crítica nos interlocutores, levando-os ao autoconhecimento",
-    "categoria": "Filosofia",
+    "categoria": "filosofia",
     "explicacao": "Sócrates não impunha ideias, mas usava o diálogo (maiêutica) para que os interlocutores chegassem ao conhecimento por si mesmos. Isso promovia o autoconhecimento e a consciência crítica."
   },
   {
     "pergunta": "“Porque dos homens que se pode dizer, duma maneira geral, que são ingratos, volúveis, simuladores, covardes e ávidos de lucro, e enquanto lhes fazes bem são inteiramente teus, oferecem-te o sangue, os bens, a vida e os filhos, quando, como acima disse, o perigo está longe; mas quando ele chega, revoltam-se.” O texto aponta uma inovação na teoria política na época moderna expressa na distinção entre: ",
     "opcoes": ["Idealidade e efetividade da moral", "Nulidade e preservabilidade da liberdade", "Ilegalidade e legitimidade do governante", "Verificabilidade e possibilidade da verdade", "Universalidade e particularidade da justiça"],
     "correta": "Idealidade e efetividade da moral",
-    "categoria": "Filosofia",
+    "categoria": "filosofia",
     "explicacao": "Maquiavel rompe com a moral tradicional ao separar o que é ideal do que é eficaz. Ele propõe que, na política, o governante deve agir conforme a realidade (efetividade), mesmo que isso vá contra os princípios morais ideais."
   },
   {
     "pergunta": "“Gerineldo dorme porque já está conformado com o seu mundo. Porque já sabe tudo o que lhe pode acontecer após haver submetido todos os objetos que o rodeiam a um minucioso inventário de possibilidades. Seu apartamento, mais que um apartamento, é uma teoria de sorte e de azar. Melhor que ninguém, Gerineldo conhece o coeficiente da dilatação de suas janelas e mantém marcado no termômetro, com uma linha vermelha, o ponto em que se quebrarão os vidros, despedaçados em estilhaços de morte. Sabe que os arquitetos e os engenheiros já previram tudo, menos o que nunca já aconteceu.” A postura determinista adotada pelo personagem Gerineldo contrasta com a ideia existencialista contida no pensamento filosófico de Sartre porque:",
     "opcoes": ["O determinismo nega a liberdade humana, enquanto Sartre afirma que o homem está condenado a ser livre", "A previsibilidade dos eventos reforça a autonomia individual, segundo Sartre", "A conformidade com o mundo é uma expressão da liberdade autêntica para Sartre", "O existencialismo de Sartre defende que o ser humano deve se submeter às estruturas pré-estabelecidas", "A antecipação dos acontecimentos é uma forma de exercer a liberdade plena, segundo Sartre"],
     "correta": "A antecipação dos acontecimentos é uma forma de exercer a liberdade plena, segundo Sartre.",
-    "categoria": "Filosofia",
+    "categoria": "filosofia",
     "explicacao": "Sartre afirma que o ser humano está 'condenado a ser livre', ou seja, ele é responsável por suas escolhas e não pode se esconder atrás do determinismo. Gerineldo representa a fuga dessa liberdade, ao viver sob uma lógica de previsibilidade total."
   }
 ]

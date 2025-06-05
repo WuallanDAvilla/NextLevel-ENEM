@@ -3,7 +3,7 @@
     "pergunta": "Um bloco de 2 kg é solto do alto de uma rampa de 5 m de altura. Desprezando o atrito, qual é sua velocidade ao atingir a base?",
     "opcoes": ["5 m/s", "7 m/s", "10 m/s", "15 m/s", "20 m/s"],
     "correta": "10 m/s",
-    "categoria": "Física",
+    "categoria": "fisica",
     "explicacao": "ela conservação da energia mecânica, toda a energia potencial gravitacional se converte em energia cinética."
   },
   {
@@ -16,14 +16,14 @@
       "60 minutos"
     ],
     "correta": "30 minutos",
-    "categoria": "Física",
+    "categoria": "fisica",
     "explicacao": "t= "
   },
   {
     "pergunta": "Um corpo de 10 kg está sobre uma superfície horizontal sem atrito. Uma força de 50 N é aplicada sobre ele. Qual será a aceleração do corpo?",
     "opcoes": ["2 m/s²", "5 m/s²", "10 m/s²", "20 m/s²", "50 m/s²"],
     "correta": "5 m/s²",
-    "categoria": "Física",
+    "categoria": "fisica",
     "explicacao": ""
   },
   {
@@ -36,14 +36,14 @@
       "A pressão permanece constante"
     ],
     "correta": "A temperatura permanece constante",
-    "categoria": "Física",
+    "categoria": "fisica",
     "explicacao": ""
   },
   {
     "pergunta": "Três resistores de 6 Ω estão ligados em paralelo. Qual é a resistência equivalente do circuito?",
     "opcoes": ["2 Ω", "3 Ω", "6 Ω", "12 Ω", "18 Ω"],
     "correta": "2 Ω",
-    "categoria": "Física",
+    "categoria": "fisica",
     "explicacao": ""
   },
   {
@@ -56,7 +56,7 @@
       "Real, direita e maior"
     ],
     "correta": "Real, invertida e maior",
-    "categoria": "Física",
+    "categoria": "fisica",
     "explicacao": ""
   }
 ]

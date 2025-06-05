@@ -26,7 +26,7 @@ const conteudoMatriz = {
     nomeExibicao: "Geografia",
     texto: "Explore os continentes, climas e culturas do nosso planeta.",
     imagem: Geografia,
-    rota: "/materias/geografia",
+    rota: "/materias/Geografia", // Rota para o quiz da matéria
   },
   Matematica: {
     nomeExibicao: "Matemática",
@@ -38,7 +38,7 @@ const conteudoMatriz = {
     nomeExibicao: "Língua Portuguesa",
     texto: "Aprimore sua gramática, interpretação e escrita.",
     imagem: LinguaPortuguesaImg,
-    rota: "/materias/linguaportuguesa",
+    rota: "/materias/Língua Portuguesa", // Manter o nome da matéria na rota
   },
   Fisica: {
     nomeExibicao: "Física",
@@ -80,7 +80,7 @@ const conteudoMatriz = {
     nomeExibicao: "Artes",
     texto: "Explore a criatividade e as diversas manifestações artísticas.",
     imagem: Artes,
-    rota: "/materias/artess",
+    rota: "/materias/Artes",
   },
   Ingles: {
     nomeExibicao: "Inglês",

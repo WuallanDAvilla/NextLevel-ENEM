@@ -3,42 +3,42 @@
     "pergunta": "Um professor registrou as notas de 9 alunos em uma prova de Matemática, conforme os dados abaixo: Notas: 4, 6, 7, 7, 8, 8, 8, 9, 10. Com base nesses dados, assinale a alternativa correta:",
     "opcoes": ["A média, a mediana e a moda possuem valores iguais", "A moda é 8, pois é a nota que mais se repete", "A mediana é 7, pois está no meio da distribuição", "A média é 7,5 e a moda é 6", "A média é 8, a mediana é 7 e a moda é 10"],
     "correta": "A moda é 8, pois é a nota que mais se repete",
-    "categoria": "Matemática",
+    "categoria": "matematica",
     "explicacao": ""
   },
   {
     "pergunta": "Uma empresa cobra R$ 50,00 fixo por um serviço mais R$ 30,00 por hora de trabalho. Qual a função que representa o valor total pago f(x) em que x é o número de horas?",
     "opcoes": ["f(x)=30x", "f(x)=50x+30", "f(x)=30x+50", "f(x)=80x", "f(x)=50"],
     "correta": "f(x)=30x+50",
-    "categoria": "Matemática",
+    "categoria": "matematica",
     "explicacao": ""
   },
   {
     "pergunta": "A razão entre a idade de Ana e a de Bruno é 3:5. Se Bruno tem 40 anos, qual a idade de Ana?",
     "opcoes": ["20", "24", "28", "30", "32"],
     "correta": "24",
-    "categoria": "Matemática",
+    "categoria": "matematica",
     "explicacao": ""
   },
   {
     "pergunta": "Considere a PA: 5, 8, 11, 14, ... Qual é o 15º termo dessa PA?",
     "opcoes": ["45", "46", "47", "48", "49"],
     "correta": "47",
-    "categoria": "Matemática",
+    "categoria": "matematica",
     "explicacao": ""
   },
   {
     "pergunta": "Dada a matriz: A = 3 7 2 / 1 4 5 . Qual é a ordem da matriz A?",
     "opcoes": ["2x2", "3x2", "2x3", "3x3", "1x3"],
     "correta": "2x3",
-    "categoria": "Matemática",
+    "categoria": "matematica",
     "explicacao": ""
   },
   {
     "pergunta": "Um táxi cobra uma tarifa inicial fixa de R$ 5,00 para começar a corrida. Depois, cobra R$ 2,50 por quilômetro rodado. Se uma pessoa pegar uma corrida de táxi que custou exatamente R$ 32,50, qual foi a distância percorrida em quilômetros?",
     "opcoes": ["10km", "11km", "12km", "13km", "14km"],
     "correta": "11km",
-    "categoria": "Matemática",
+    "categoria": "matematica",
     "explicacao": ""
   }
 ]

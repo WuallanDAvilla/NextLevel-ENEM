@@ -93,11 +93,6 @@ function Login() {
                 onChange={(e) => setSenha(e.target.value)}
                 required
               />
-              <a href="#" className="reset-password">
-                {" "}
-                {/* Manter href="#" se não implementado, ou linkar para rota de redefinição */}
-                Redefinir Senha
-              </a>
               {erro && <div className="login-error">{erro}</div>}
               <button type="submit" className="btn-submit-login">
                 ENTRAR
