@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // Importar useParams e useNavigate
 import { auth } from "../firebaseConfig";
@@ -241,6 +242,15 @@ export default function QuizPage() {
       </ul>
       <div className="quiz-progresso">
         <span>Acertos: {acertos}</span>
+      </div>
+      {/* BOTÃO ADICIONADO PARA VOLTAR/DESISTIR DO QUIZ */}
+      <div style={{ marginTop: "25px", display: 'flex', justifyContent: 'center' }}>
+        <button
+          onClick={() => navigate("/materias")}
+          className="btn-secondary"
+        >
+          Voltar para Matérias
+        </button>
       </div>
     </div>
   );
