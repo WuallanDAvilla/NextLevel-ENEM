@@ -4,7 +4,7 @@ import { auth } from "../firebaseConfig";
 import Logo from "../assets/Logo.png";
 import "../styles/Home.css";
 
-// Informações do site (movido para fora do componente)
+// Informações do site
 const siteInfo = {
   title: "NextLevelENEM",
   description:
@@ -15,7 +15,7 @@ const siteInfo = {
     "Ser a principal plataforma de preparação para vestibulares no Brasil, ajudando milhares de estudantes a ingressarem nas melhores universidades do país.",
 };
 
-// Frases de motivação (movido para fora do componente)
+// Frases de motivação
 const quotes = [
   {
     text: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
@@ -64,7 +64,7 @@ function Home() {
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
 
     return () => clearInterval(timer);
-  }, [navigate]); // navigate é uma dependência correta aqui devido ao seu uso
+  }, [navigate]);
 
   const formattedTime = currentTime.toLocaleTimeString([], {
     hour: "2-digit",
@@ -178,7 +178,6 @@ function Home() {
               <div className="feature-icon">🏆</div>
             </div>
 
-            {/* Classe renomeada de 'logout-card' para 'study-material-card' */}
             <div className="feature-card study-material-card">
               <div className="feature-content">
                 <h3>Acessar Material de Estudo</h3>
@@ -235,6 +234,13 @@ function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* ✅ Botão "Voltar ao Início" */}
+        <section className="back-to-home">
+          <Link to="/home" className="back-home-button">
+            Voltar ao Início
+          </Link>
         </section>
       </main>
 

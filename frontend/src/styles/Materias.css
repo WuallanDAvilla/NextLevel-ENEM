@@ -1,46 +1,19 @@
-/* Materias.css */
-
-/* 
-  IMPORTANTE: Estilos globais de html, body (como font-family, margin, background base)
-  devem ser movidos para um arquivo CSS central (ex: index.css ou App.css)
-  para evitar conflitos e garantir consistência em toda a aplicação.
-  
-  Exemplo do que poderia estar em index.css ou App.css:
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    height: 100%;
-  }
-  body {
-    height: 100%;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #1e90ff, #0d3e63);
-    color: #ffffff;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-*/
-
-/* Aplicando estilos base ao body se não houver um CSS global */
 body.materias-page-active {
-  /* Adicionar esta classe ao body via JS se precisar isolar */
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #1e90ff, #0d3e63);
-  color: #ffffff;
-  min-height: 100vh;
+  padding: 0;
+  width: 100vw;
+  height: 150vh;
   overflow-x: hidden;
 }
 
 .materias-page-container {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  /* O background idealmente vem do body global */
 }
 
 /* Header - Estilizado para ser consistente com Home.css */
@@ -230,14 +203,17 @@ body.materias-page-active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75); /* Overlay mais escuro */
+
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
-  backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+
+  background: transparent;
+  backdrop-filter: none;
+
 }
 
 .popup-content {
@@ -348,7 +324,7 @@ body.materias-page-active {
   }
 
   .materias-section {
-    padding: 30px 20px;
+    padding: 40px 0px;
   }
   .materias-section h1 {
     margin-bottom: 30px;
@@ -410,4 +386,5 @@ body.materias-page-active {
     width: 100%;
     padding: 14px;
   }
+
 }
