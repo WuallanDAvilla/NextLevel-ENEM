@@ -1,6 +1,11 @@
 /* Cadastro.css */
 
-/* Reset específico para a página de cadastro */
+/*
+  Reset específico para a página de cadastro.
+  Considerar um reset global de box-sizing no seu CSS principal
+  (ex: html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; })
+  para consistência em todo o projeto.
+*/
 .cadastro-container * {
   box-sizing: border-box;
 }
@@ -26,7 +31,7 @@
   max-width: 450px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   animation: slideUp 0.8s ease-in-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Mantido, pois afeta diretamente o :hover */
 }
 
 .cadastro-card:hover {
@@ -72,8 +77,11 @@
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */ /* Original */
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease, transform 0.3s ease; /* Sugestão */
   backdrop-filter: blur(10px);
+  /* Recomenda-se testar o contraste das cores do input e placeholder com o fundo para acessibilidade */
 }
 
 .cadastro-input::placeholder {
@@ -99,7 +107,8 @@
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */ /* Original */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Sugestão */
   margin-top: 10px;
 }
 
@@ -149,7 +158,8 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */ /* Original */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Sugestão */
   text-decoration: none;
   display: inline-block;
 }
@@ -191,9 +201,16 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
 }
 
 /* Responsividade */
@@ -201,16 +218,16 @@
   .cadastro-container {
     padding: 15px;
   }
-  
+
   .cadastro-card {
     padding: 30px 25px;
   }
-  
+
   .cadastro-titulo {
     font-size: 24px;
     margin-bottom: 25px;
   }
-  
+
   .cadastro-input,
   .cadastro-btn {
     padding: 12px;
@@ -222,7 +239,7 @@
   .cadastro-card {
     padding: 25px 20px;
   }
-  
+
   .cadastro-titulo {
     font-size: 22px;
   }

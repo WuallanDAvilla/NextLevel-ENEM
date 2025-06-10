@@ -3,42 +3,42 @@
     "pergunta": "Texto: “O Brasil, no Segundo Reinado, viu o café tornar-se o principal produto de exportação. Esse crescimento esteve associado ao uso intensivo da mão de obra escravizada.” (Adaptado de Boris Fausto) Uma consequência da economia cafeeira no Segundo Reinado foi:",
     "opcoes": ["A abolição imediata da escravidão", "A substituição do latifúndio pelo minifúndio", "O fortalecimento da elite agrária escravista", "A industrialização da região Norte", "A criação de leis para limitar o trabalho escravo"],
     "correta": "O fortalecimento da elite agrária escravista",
-    "categoria": "História",
+    "categoria": "historia",
     "explicacao": ""
   },
   {
     "pergunta": "Texto: “Durante o regime militar no Brasil, a censura foi uma ferramenta comum. Notícias, músicas e filmes eram vetados por contrariar os interesses do governo.” (Fonte: Comissão da Verdade) A função da censura no regime militar era:",
     "opcoes": ["Fortalecer o pluralismo cultural", "Proteger os direitos civis dos artistas", "Controlar a informação e eliminar críticas ao regime", "Incentivar a produção artística independente", "Estimular o pensamento crítico nas escolas"],
     "correta": "",
-    "categoria": "História",
+    "categoria": "historia",
     "explicacao": ""
   },
   {
     "pergunta": "Texto: “Durante o Estado Novo, Vargas consolidou seu poder por meio da centralização administrativa, da propaganda oficial e do controle sobre sindicatos e imprensa.” (Fonte: Arquivo Nacional) O paradoxo do governo Vargas no Estado Novo reside em: ",
     "opcoes": ["Defender o liberalismo econômico enquanto adotava políticas socialistas", "Promover ampliação dos direitos trabalhistas sob um regime autoritário", "Incentivar o federalismo e a autonomia dos estados", "Adotar o comunismo como forma de governo", "Romper totalmente com o apoio das massas urbanas"],
     "correta": "Promover ampliação dos direitos trabalhistas sob um regime autoritário",
-    "categoria": "História",
+    "categoria": "historia",
     "explicacao": ""
   },
   {
     "pergunta": "A Revolução Francesa (1789) marcou uma ruptura com o Antigo Regime e influenciou transformações políticas e sociais no mundo ocidental. Sobre esse processo histórico, assinale a alternativa correta:",
     "opcoes": ["A Revolução teve apoio exclusivo da nobreza, que buscava ampliar seus privilégios frente ao poder absolutista", "A queda da Bastilha simbolizou a vitória do rei sobre os ideais iluministas", "O lema 'Liberdade, Igualdade, Fraternidade' expressava os ideais iluministas incorporados pelos revolucionários", "O processo revolucionário francês não teve impacto sobre as colônias europeias nas Américas", "A Revolução Francesa consolidou o poder absolutista na França sob o comando de Napoleão Bonaparte"],
     "correta": "A Revolução Francesa consolidou o poder absolutista na França sob o comando de Napoleão Bonaparte",
-    "categoria": "História",
+    "categoria": "historia",
     "explicacao": ""
   },
   {
     "pergunta": "No Segundo Reinado (1840–1889), o Brasil viveu um período de estabilidade política relativa e desenvolvimento do café como principal produto da economia. No entanto, esse período também foi marcado por tensões sociais. Assinale a alternativa que apresenta um desses conflitos sociais:",
     "opcoes": ["Revolta da Vacina, causada pela imposição da vacinação obrigatória no Rio de Janeiro", "Revolução Praieira, com forte influência do anarquismo e da luta contra a escravidão", "Guerra dos Farrapos, motivada por tensões comerciais e pela resistência à centralização imperial", "Confederação do Equador, promovida pela oposição ao processo de independência", " Revolta dos Malês, que representou a insatisfação dos escravizados muçulmanos na Bahia"],
     "correta": " Revolta dos Malês, que representou a insatisfação dos escravizados muçulmanos na Bahia",
-    "categoria": "História",
+    "categoria": "historia",
     "explicacao": ""
   },
   {
     "pergunta": "O governo de Getúlio Vargas (1930–1945) implementou importantes mudanças no Brasil, especialmente no campo das relações de trabalho. Entre as medidas adotadas por Vargas, assinale a alternativa que melhor caracteriza sua política trabalhista: ",
     "opcoes": ["Criação de sindicatos livres e independentes, sem interferência do Estado", "Legalização da jornada de trabalho de 12 horas diárias sem descanso semanal", " Implementação da Consolidação das Leis do Trabalho (CLT), com direitos como férias e salário mínimo", "Extinção do Ministério do Trabalho e redução do papel do Estado nas relações trabalhistas", "Fim da carteira de trabalho e substituição por contratos verbais entre patrões e empregados"],
     "correta": "Implementação da Consolidação das Leis do Trabalho (CLT), com direitos como férias e salário mínimo",
-    "categoria": "História",
+    "categoria": "historia",
     "explicacao": ""
   }
 ]

@@ -39,14 +39,15 @@ function Login() {
       <div className="login-card">
         <div className="login-left">
           <div className="login-logo">
-            <img src={Logo} alt="imagem" />
+            <img src={Logo} alt="NextLevelENEM Logo" />{" "}
+            {/* Adicionado nome do projeto ao alt text */}
           </div>
           <div className="buttons-container">
             <button onClick={() => setShowPopup(true)} className="btn-entrar">
               Entrar
             </button>
             <img
-              src={GoogleLogo} // Substitua pelo caminho correto do logo do Google
+              src={GoogleLogo}
               alt="Login com Google"
               className="google-login"
               onClick={handleLoginGoogle}
@@ -74,43 +75,32 @@ function Login() {
         <div className="popup-overlay">
           <div className="popup-content">
             <button className="popup-close" onClick={() => setShowPopup(false)}>
-              &times;
+              ×
             </button>
             <h2>Área de Login</h2>
             <form onSubmit={handleLoginEmailSenha} className="login-form">
               <input
                 type="email"
-                placeholder="insira seu e-mail"
+                placeholder="Insira seu e-mail" /* Corrigido placeholder */
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <input
                 type="password"
-                placeholder="insira sua senha"
+                placeholder="Insira sua senha" /* Corrigido placeholder */
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
                 required
               />
-              <a href="#" className="reset-password">
-                Redefinir Senha
-              </a>
               {erro && <div className="login-error">{erro}</div>}
-              <button type="submit">ENTRAR</button>
+              <button type="submit" className="btn-submit-login">
+                ENTRAR
+              </button>{" "}
+              {/* Adicionada classe para estilização específica se necessário */}
             </form>
             <button
-              className="register-button"
-              style={{
-                marginTop: "15px",
-                background: "#2a9dba",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                padding: "10px 0",
-                width: "100%",
-                cursor: "pointer",
-                fontWeight: "bold",
-              }}
+              className="register-button" // Estilos agora no Login.css
               onClick={() => navigate("/cadastro")}
             >
               CADASTRAR-SE
