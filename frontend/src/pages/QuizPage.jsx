@@ -21,47 +21,56 @@ export default function QuizPage() {
   const materiaDoQuiz = materia; // Usa o parâmetro da URL
 
   // 1. Carrega as perguntas apenas uma vez, filtrando pela matéria
-  useEffect(() => {
-    async function carregarPerguntas() {
-      if (!materiaDoQuiz) {
-        setErroCarregamento("Matéria não especificada.");
+useEffect(() => {
+  async function carregarPerguntas() {
+    if (!materiaDoQuiz) {
+      setErroCarregamento("Matéria não especificada.");
+      return;
+    }
+    setErroCarregamento(null);
+    try {
+      // Use import.meta.env para acessar a variável de ambiente do Vite
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+      if (!API_BASE_URL) {
+        // Adicione uma verificação para garantir que a variável de ambiente está definida
+        console.error("VITE_API_BASE_URL não está definida nas variáveis de ambiente.");
+        setErroCarregamento("Erro de configuração: Endereço da API não encontrado.");
         return;
       }
-      setErroCarregamento(null);
-      try {
-        const host = window.location.hostname;
-        const res = await axios.get(
-          `http://${host}:3000/api/perguntas?categoria=${encodeURIComponent(
-            materiaDoQuiz
-          )}`
-        ); // encodeURIComponent para segurança
-        if (res.data && res.data.length > 0) {
-          setPerguntas(res.data);
-        } else {
-          setPerguntas([]);
-          setErroCarregamento(
-            `Nenhuma pergunta de ${materiaDoQuiz} encontrada. Verifique o cadastro de perguntas.`
-          );
-          console.warn(`Nenhuma pergunta de ${materiaDoQuiz} encontrada.`);
-        }
-      } catch (error) {
-        console.error(`Erro ao carregar perguntas de ${materiaDoQuiz}:`, error);
-        if (error.response && error.response.status === 404) {
-          setErroCarregamento(
-            `Nenhuma pergunta de ${materiaDoQuiz} encontrada no servidor.`
-          );
-        } else {
-          setErroCarregamento(
-            `Falha ao carregar perguntas de ${materiaDoQuiz}. Tente novamente mais tarde.`
-          );
-        }
+
+      const res = await axios.get(
+        `${API_BASE_URL}/perguntas?categoria=${encodeURIComponent(
+          materiaDoQuiz
+        )}`
+      ); // encodeURIComponent para segurança
+      if (res.data && res.data.length > 0) {
+        setPerguntas(res.data);
+      } else {
         setPerguntas([]);
+        setErroCarregamento(
+          `Nenhuma pergunta de ${materiaDoQuiz} encontrada. Verifique o cadastro de perguntas.`
+        );
+        console.warn(`Nenhuma pergunta de ${materiaDoQuiz} encontrada.`);
       }
+    } catch (error) {
+      console.error(`Erro ao carregar perguntas de ${materiaDoQuiz}:`, error);
+      if (error.response && error.response.status === 404) {
+        setErroCarregamento(
+          `Nenhuma pergunta de ${materiaDoQuiz} encontrada no servidor.`
+        );
+      } else {
+        setErroCarregamento(
+          `Falha ao carregar perguntas de ${materiaDoQuiz}. Tente novamente mais tarde.`
+        );
+      }
+      setPerguntas([]);
     }
-    if (quizIniciado && !quizFinalizado) {
-      carregarPerguntas();
-    }
-  }, [quizIniciado, quizFinalizado, materiaDoQuiz]);
+  }
+  if (quizIniciado && !quizFinalizado) {
+    carregarPerguntas();
+  }
+}, [quizIniciado, quizFinalizado, materiaDoQuiz]);
 
   // 2. Dispara o saveScore **uma vez** quando quizFinalizado virar true
   useEffect(() => {
