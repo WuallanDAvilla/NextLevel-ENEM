@@ -25,8 +25,8 @@ app.use(cors({ origin: process.env.FRONTEND_URL_DEPLOYED || "*" }));
 app.use(express.json());
 
 // Importando as rotas
-const scoresRouter = require("./routes/scores");
-const perguntasRouter = require("./routes/perguntas");
+const scoresRouter = require("../routes/scores");
+const perguntasRouter = require("../routes/perguntas");
 
 // Registrando as rotas (sem o /api na frente, como você definiu)
 app.use("/scores", scoresRouter);
