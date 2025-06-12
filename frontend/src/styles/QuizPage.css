@@ -9,6 +9,8 @@
   padding: 20px;
   box-sizing: border-box;
   color: #333;
+  /* Fundo em gradiente suave para um visual mais moderno */
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
 }
 
 /* === ESTILOS ATUALIZADOS PARA TELA INICIAL === */
@@ -52,6 +54,9 @@
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: 500;
+  margin-bottom: 10px;
+}
+.quiz-info:last-of-type {
   margin-bottom: 30px;
 }
 
@@ -114,7 +119,7 @@
 
 .quiz-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
@@ -126,6 +131,16 @@
   color: #0d47a1;
   margin: 0;
   overflow-wrap: break-word;
+}
+
+.quiz-timer {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex-shrink: 0;
 }
 
 .quiz-pergunta-container {
@@ -207,22 +222,6 @@
   background-color: #f5c6cb;
 }
 
-.quiz-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 25px;
-  padding-top: 15px;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.question-info,
-.score-info {
-  font-weight: bold;
-}
-
 .quiz-navigation {
   margin-top: 25px;
   text-align: center;
@@ -247,72 +246,183 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* === ESTILOS REFINADOS PARA TELA FINAL === */
 .quiz-tela-final {
   background-color: #ffffff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   text-align: center;
-  max-width: 550px;
+  max-width: 500px;
   width: 100%;
-  animation: fadeInScale 0.5s ease-out;
+  animation: fadeInScale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-final-icon {
+  color: #ffc107; /* Cor de ouro para o troféu */
+  margin-bottom: 1rem;
 }
 
 .quiz-tela-final h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #0d47a1;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
-.quiz-tela-final .quiz-resultado {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 30px;
+.quiz-final-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 25px;
+  max-width: 400px; /* Garante melhor quebra de linha */
+  line-height: 1.5;
 }
-.quiz-tela-final .quiz-resultado span {
-  font-weight: bold;
+
+.score-progress-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto 30px auto;
+}
+
+.score-progress-circle {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Inicia o círculo no topo */
+  transform-origin: 50% 50%;
+}
+
+.progress-bg,
+.progress-value {
+  fill: none;
+  stroke-width: 14; /* Espessura da linha */
+}
+
+.progress-bg {
+  stroke: #e3f2fd; /* Cor do fundo do círculo */
+}
+
+.progress-value {
+  stroke: #1976d2; /* Cor da barra de progresso */
+  stroke-linecap: round; /* Bordas arredondadas */
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.score-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.score-text-overlay .score-acertos {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #0d47a1;
+  line-height: 1;
+}
+
+.score-text-overlay .score-total {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: -5px; /* Ajuste para aproximar do número de acertos */
+}
+
+.score-text-overlay .score-label {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #1976d2;
+  letter-spacing: 0.5px;
 }
 
+/* === LAYOUT DOS BOTÕES DA TELA FINAL (SEÇÃO ALTERADA) === */
 .quiz-acoes-finais {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   align-items: center;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 30px;
+}
+
+.botoes-secundarios-wrapper {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.botoes-secundarios-wrapper .btn-secondary {
+  flex: 1; /* Faz os botões dividirem o espaço igualmente */
 }
 
 .btn-primary,
 .btn-secondary {
-  padding: 12px 20px;
+  padding: 14px 20px;
   font-size: 1rem;
-  border: none;
-  border-radius: 8px;
+  border-radius: 12px; /* Bordas mais arredondadas */
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  font-weight: 500;
+  transition: all 0.25s ease;
+  font-weight: 600;
   width: 100%;
-  max-width: 300px;
   text-align: center;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.btn-primary svg,
+.btn-secondary svg {
+  width: 20px;
+  height: 20px;
+  transition: fill 0.25s ease;
 }
 
 .btn-primary {
   background-color: #1976d2;
   color: white;
+  border: 2px solid transparent;
 }
 .btn-primary:hover {
   background-color: #1565c0;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
 }
 
 .btn-secondary {
-  background-color: #6c757d;
-  color: white;
+  background-color: #ffffff;
+  color: #495057;
+  border: 2px solid #e0e0e0;
 }
+
 .btn-secondary:hover {
-  background-color: #5a6268;
-  transform: translateY(-2px);
+  background-color: #f8f9fa;
+  border-color: #1976d2;
+  color: #1976d2;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
+.btn-secondary svg {
+  fill: currentColor;
+}
+/* === FIM DA SEÇÃO ALTERADA === */
+
 
 .quiz-feedback-container {
   background-color: #fff;
@@ -404,14 +514,7 @@
 }
 
 @media (min-width: 600px) {
-  .quiz-acoes-finais {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .btn-primary,
-  .btn-secondary {
-    width: auto;
-  }
+  /* Mantém o layout dos botões da tela final, mas ajusta o container de feedback */
   .quiz-feedback-container .quiz-actions {
     flex-direction: row;
     justify-content: center;
@@ -443,13 +546,17 @@
   .quiz-container,
   .quiz-tela-final,
   .explanation-container {
-    padding: 20px;
+    padding: 25px 20px;
+  }
+  .quiz-header {
+    flex-direction: column;
+    gap: 10px;
   }
   .quiz-header h2 {
     font-size: 1.3rem;
     width: 100%;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .pergunta-texto {
     font-size: 1.1rem;
