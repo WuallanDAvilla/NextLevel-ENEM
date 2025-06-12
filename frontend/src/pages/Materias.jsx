@@ -198,9 +198,12 @@ export default function Materias() {
 
         {user && (
           <div className="user-section">
-            <div className="user-avatar">
-              {username ? username.charAt(0).toUpperCase() : "U"}
-            </div>
+            {/* ALTERADO: Link para o perfil envolvendo o avatar */}
+            <Link to="/perfil" title="Ver Perfil">
+              <div className="user-avatar">
+                {username ? username.charAt(0).toUpperCase() : "U"}
+              </div>
+            </Link>
             <div className="user-info">
               <span className="username">{username}</span>
               <button onClick={handleLogout} className="logout-btn">

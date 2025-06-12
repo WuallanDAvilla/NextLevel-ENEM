@@ -208,8 +208,11 @@ function Home() {
           </ul>
         </nav>
         <div className="user-section">
-          <Link to="/perfil" className="profile-link">
-            <div className="user-avatar">C</div>
+          {/* ALTERADO: Link para o perfil envolvendo o avatar */}
+          <Link to="/perfil" className="profile-link" title="Ver Perfil">
+            <div className="user-avatar">
+              {username.charAt(0).toUpperCase()}
+            </div>
           </Link>
           <div className="user-info">
             <span className="username">{username}</span>

@@ -1,43 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Ranking from "./pages/Ranking";
+// src/App.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
-import PrivateRoute from "./pages/PrivateRoute";
+import Home from "./pages/Home";
 import Materias from "./pages/Materias";
-import QuizPage from "./pages/QuizPage";
+import Ranking from "./pages/Ranking";
 import Redacao from "./pages/Redacao";
+import QuizPage from "./pages/QuizPage";
+import Perfil from "./pages/Perfil"; // Importa a nova página de perfil
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route
-          path="/redacao"
-          element={
-            <PrivateRoute>
-              {" "}
-              <Redacao />{" "}
-            </PrivateRoute>
-          }
-        />
+        {/* Rotas Públicas */}
         <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
+
+        {/* Rotas Privadas (Protegidas) */}
         <Route
           path="/home"
           element={
             <PrivateRoute>
-              {" "}
-              <Home />{" "}
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/ranking"
-          element={
-            <PrivateRoute>
-              {" "}
-              <Ranking />{" "}
+              <Home />
             </PrivateRoute>
           }
         />
@@ -45,21 +31,46 @@ function App() {
           path="/materias"
           element={
             <PrivateRoute>
-              {" "}
-              <Materias />{" "}
+              <Materias />
             </PrivateRoute>
           }
         />
         <Route
-          path="/materias/:materia" // :materia é o parâmetro dinâmico
+          path="/materias/:materia"
           element={
             <PrivateRoute>
               <QuizPage />
             </PrivateRoute>
           }
         />
+        <Route
+          path="/ranking"
+          element={
+            <PrivateRoute>
+              <Ranking />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/redacao"
+          element={
+            <PrivateRoute>
+              <Redacao />
+            </PrivateRoute>
+          }
+        />
+
+        {/* NOVA ROTA DE PERFIL */}
+        <Route
+          path="/perfil"
+          element={
+            <PrivateRoute>
+              <Perfil />
+            </PrivateRoute>
+          }
+        />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
