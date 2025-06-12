@@ -11,16 +11,15 @@
 html,
 body {
   height: 100%;
-  overflow: hidden; /* A correção principal: previne o scroll no body */
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   background-color: #0d3e63;
+  padding: 0 !important;
 }
 
 .home-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   background: linear-gradient(135deg, #1e90ff, #0d3e63);
 }
 
@@ -298,6 +297,6 @@ body {
 .home-footer {
   background-color: #0f3c61;
   text-align: center;
-  padding: 20px 20px; /* Alterado de 30px para 20px */
+  padding: 20px 20px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 }
