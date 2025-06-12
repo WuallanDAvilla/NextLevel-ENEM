@@ -115,7 +115,6 @@ const quotes = [
 function Home() {
   const [username, setUsername] = useState("");
   const [greeting, setGreeting] = useState("");
-  const [currentTime, setCurrentTime] = useState(new Date());
   const [quote, setQuote] = useState({ text: "", author: "" });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -145,15 +144,9 @@ function Home() {
 
     setGreeting(getGreeting());
 
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-      setGreeting(getGreeting());
-    }, 60000);
-
     setQuote(getRandomQuote());
 
     return () => {
-      clearInterval(timer);
       unsubscribe();
     };
   }, [navigate]);
