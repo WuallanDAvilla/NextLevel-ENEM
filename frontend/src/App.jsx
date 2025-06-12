@@ -6,11 +6,21 @@ import Cadastro from "./pages/Cadastro";
 import PrivateRoute from "./pages/PrivateRoute";
 import Materias from "./pages/Materias";
 import QuizPage from "./pages/QuizPage";
+import Redacao from "./pages/Redacao";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route
+          path="/redacao"
+          element={
+            <PrivateRoute>
+              {" "}
+              <Redacao />{" "}
+            </PrivateRoute>
+          }
+        />
         <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route
