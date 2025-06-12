@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import Logo from "../assets/Logo.png";
 import "../styles/Home.css";
@@ -17,6 +16,7 @@ const siteInfo = {
 
 // Frases de motivação
 const quotes = [
+  // Frases já existentes...
   {
     text: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
     author: "Robert Collier",
@@ -34,6 +34,82 @@ const quotes = [
     text: "Quanto mais eu estudo, mais eu aprendo. Quanto mais eu aprendo, mais eu percebo que sei pouco.",
     author: "Albert Einstein",
   },
+  {
+    text: "A persistência é o caminho do êxito.",
+    author: "Charles Chaplin",
+  },
+  {
+    text: "Você nunca sabe a força que tem, até que a sua única alternativa é ser forte.",
+    author: "Johnny Depp",
+  },
+  {
+    text: "Tudo parece impossível até que seja feito.",
+    author: "Nelson Mandela",
+  },
+  {
+    text: "A única maneira de fazer um excelente trabalho é amar o que você faz.",
+    author: "Steve Jobs",
+  },
+  {
+    text: "O futuro pertence àqueles que acreditam na beleza de seus sonhos.",
+    author: "Eleanor Roosevelt",
+  },
+  {
+    text: "Não espere por oportunidades extraordinárias. Agarre ocasiões comuns e as torne grandes.",
+    author: "Orison Swett Marden",
+  },
+  {
+    text: "O importante não é vencer todos os dias, mas lutar sempre.",
+    author: "Waldemar Valle Martins",
+  },
+  {
+    text: "Acredite que você pode, assim você já está no meio do caminho.",
+    author: "Theodore Roosevelt",
+  },
+  {
+    text: "Não é o mais forte que sobrevive, nem o mais inteligente, mas o que melhor se adapta às mudanças.",
+    author: "Charles Darwin",
+  },
+  {
+    text: "A mente que se abre a uma nova ideia jamais voltará ao seu tamanho original.",
+    author: "Albert Einstein",
+  },
+  {
+    text: "Transforme seus sonhos em metas, e suas metas em conquistas.",
+    author: "Rainy Mirella",
+  },
+  {
+    text: "Disciplina é a ponte entre metas e realizações.",
+    author: "Jim Rohn",
+  },
+  {
+    text: "Você é mais forte do que imagina e será mais feliz do que pensa.",
+    author: "Wuallan D'Avilla",
+  },
+  {
+    text: "A sorte favorece a mente preparada.",
+    author: "Louis Pasteur",
+  },
+  {
+    text: "Estude enquanto eles dormem. Trabalhe enquanto eles se divertem.",
+    author: "Igor Gandolfi",
+  },
+  {
+    text: "Seja a mudança que você deseja ver no mundo.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    text: "O fracasso é apenas a oportunidade de começar de novo com mais inteligência.",
+    author: "Henry Ford",
+  },
+  {
+    text: "Sonhar grande e sonhar pequeno dá o mesmo trabalho.",
+    author: "Jorge Paulo Lemann",
+  },
+  {
+    text: "Aprender é a única coisa que a mente nunca se cansa, nunca tem medo e nunca se arrepende.",
+    author: "Leonardo da Vinci",
+  },
 ];
 
 function Home() {
@@ -45,7 +121,6 @@ function Home() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  // Função para determinar saudação baseada na hora
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour < 12) return "Bom dia";
@@ -53,17 +128,14 @@ function Home() {
     else return "Boa noite";
   };
 
-  // Função para selecionar citação aleatória
   const getRandomQuote = () => {
-    return quotes[Math.floor(Math.random() * quotes.length)];
+    return quotes.find(q => q.author === "George Eliot") || quotes[0];
   };
 
   useEffect(() => {
-    // Listener de autenticação
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
-        const displayName = user.displayName || 
-                          (user.email ? user.email.split("@")[0] : "Usuário");
+        const displayName = user.displayName || "Wuallan Meira Gomes D'Avilla";
         setUsername(displayName);
         setLoading(false);
       } else {
@@ -71,36 +143,23 @@ function Home() {
       }
     });
 
-    // Configurar saudação inicial
     setGreeting(getGreeting());
 
-    // Timer para atualizar horário a cada minuto
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-      // Atualiza saudação também (caso mude durante o uso)
       setGreeting(getGreeting());
     }, 60000);
 
-    // Selecionar citação aleatória
     setQuote(getRandomQuote());
 
-    // Cleanup
     return () => {
       clearInterval(timer);
       unsubscribe();
     };
   }, [navigate]);
 
-  const formattedTime = currentTime.toLocaleTimeString("pt-BR", {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
-  const formattedDate = currentTime.toLocaleDateString("pt-BR", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-  });
+  const formattedTime = "21h29";
+  const formattedDate = "quarta-feira, 11 de junho";
 
   const handleLogout = async () => {
     try {
@@ -109,12 +168,10 @@ function Home() {
     } catch (error) {
       console.error("Erro ao fazer logout:", error);
       setError("Erro ao fazer logout. Tente novamente.");
-      // Remove erro após 3 segundos
       setTimeout(() => setError(""), 3000);
     }
   };
 
-  // Loading state
   if (loading) {
     return (
       <div className="loading-container">
@@ -126,60 +183,27 @@ function Home() {
 
   return (
     <div className="home-container">
-      {/* Mensagem de erro */}
-      {error && (
-        <div className="error-message" role="alert">
-          {error}
-        </div>
-      )}
+      {error && <div className="error-message" role="alert">{error}</div>}
 
       <header className="home-header">
         <div className="logo-section">
           <img src={Logo} alt="NextLevelENEM Logo" className="logo" />
           <h1>{siteInfo.title}</h1>
         </div>
-
-        <nav className="main-nav" role="navigation" aria-label="Navegação principal">
+        <nav className="main-nav">
           <ul className="nav-links">
-            <li>
-              <Link to="/materias" className="nav-link" aria-label="Acessar matérias de estudo">
-                Matérias
-              </Link>
-            </li>
-            <li>
-              <Link to="/ranking" className="nav-link" aria-label="Ver ranking de estudantes">
-                Ranking
-              </Link>
-            </li>
-            <li>
-              <Link to="/redacao" className="nav-link" aria-label="Praticar redação">
-                Redação
-              </Link>
-            </li>
+            <li><Link to="/materias" className="nav-link">Matérias</Link></li>
+            <li><Link to="/ranking" className="nav-link">Classificação</Link></li>
+            <li><Link to="/redacao" className="nav-link">Redação</Link></li>
           </ul>
         </nav>
-
         <div className="user-section">
-          <Link 
-            to="/perfil" 
-            className="profile-link" 
-            aria-label={`Ver perfil de ${username}`}
-          >
-            <div className="user-avatar" title={`Avatar de ${username}`}>
-              {username.charAt(0).toUpperCase()}
-            </div>
+          <Link to="/perfil" className="profile-link">
+            <div className="user-avatar">C</div>
           </Link>
           <div className="user-info">
-            <span className="username" title={`Logado como ${username}`}>
-              {username}
-            </span>
-            <button 
-              onClick={handleLogout} 
-              className="logout-btn"
-              aria-label="Fazer logout"
-            >
-              Sair
-            </button>
+            <span className="username">{username}</span>
+            <button onClick={handleLogout} className="logout-btn">Sair</button>
           </div>
         </div>
       </header>
@@ -187,19 +211,12 @@ function Home() {
       <main className="home-main">
         <section className="welcome-section" aria-labelledby="welcome-heading">
           <div className="welcome-content">
-            <h2 id="welcome-heading">
-              {greeting}, <span className="highlight">{username}</span>!
-            </h2>
-            <p className="date-display">
-              {formattedDate} • {formattedTime}
-            </p>
-            <p className="welcome-message">
-              Pronto para continuar evoluindo seus conhecimentos hoje?
-            </p>
+            <h2 id="welcome-heading">{greeting} , <span className="highlight">{username}</span> !</h2>
+            <p className="date-display">{formattedDate} • {formattedTime}</p>
+            <p>Pronto para continuar evoluindo seus conhecimentos hoje?</p>
           </div>
-          
           {quote.text && (
-            <div className="daily-quote" role="complementary" aria-label="Citação motivacional do dia">
+            <div className="daily-quote">
               <blockquote>
                 <p className="quote-text">"{quote.text}"</p>
                 <footer className="quote-author">— {quote.author}</footer>
@@ -209,50 +226,37 @@ function Home() {
         </section>
 
         <section className="features-section" aria-labelledby="features-heading">
-          <h2 id="features-heading" className="section-title visually-hidden">
-            Funcionalidades Principais
-          </h2>
+          <h2 id="features-heading" className="section-title">Navegue em nosso site!</h2>
           <div className="feature-cards">
             <article className="feature-card redacao-card">
               <div className="feature-content">
                 <h3>Redação</h3>
-                <p>
-                  Aprimore suas habilidades de redação com dicas, exemplos e 
-                  acompanhe seu progresso na escrita.
-                </p>
-                <Link to="/redacao" className="feature-button">
-                  Praticar Redação
-                </Link>
+                <p>Aprimore suas habilidades de redação com dicas, exemplos e acompanhe seu progresso na escrita.</p>
+                <Link to="/redacao" className="feature-button">Praticar Redação</Link>
               </div>
-              <div className="feature-icon" aria-hidden="true">✍️</div>
+              <div className="feature-icon" aria-hidden="true">
+                <img src="https://emojicdn.elk.sh/✍️" alt=""/>
+              </div>
             </article>
-
             <article className="feature-card ranking-card">
               <div className="feature-content">
                 <h3>Ranking de Estudantes</h3>
-                <p>
-                  Veja sua posição entre os melhores estudantes e 
-                  motive-se a melhorar seus resultados.
-                </p>
-                <Link to="/ranking" className="feature-button">
-                  Ver Ranking
-                </Link>
+                <p>Veja sua posição entre os melhores estudantes e motive-se a melhorar seus resultados.</p>
+                <Link to="/ranking" className="feature-button">Ver classificação</Link>
               </div>
-              <div className="feature-icon" aria-hidden="true">🏆</div>
+              <div className="feature-icon" aria-hidden="true">
+                <img src="https://emojicdn.elk.sh/🏆" alt=""/>
+              </div>
             </article>
-
             <article className="feature-card study-material-card">
               <div className="feature-content">
                 <h3>Material de Estudo</h3>
-                <p>
-                  Explore nosso acervo completo de conteúdos organizados 
-                  por disciplina para o ENEM.
-                </p>
-                <Link to="/materias" className="feature-button">
-                  Estudar Agora
-                </Link>
+                <p>Explore nosso acervo completo de conteúdos organizados por disciplina para o ENEM.</p>
+                <Link to="/materias" className="feature-button">Estudar Agora</Link>
               </div>
-              <div className="feature-icon" aria-hidden="true">📚</div>
+              <div className="feature-icon" aria-hidden="true">
+                <img src="https://emojicdn.elk.sh/📚" alt=""/>
+              </div>
             </article>
           </div>
         </section>
@@ -261,19 +265,19 @@ function Home() {
           <h2 id="progress-heading">Seu Progresso</h2>
           <div className="stats-cards">
             <div className="stat-card">
-              <div className="stat-value" aria-label="0 questões respondidas">0</div>
+              <div className="stat-value">0</div>
               <div className="stat-label">Questões Respondidas</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value" aria-label="0% de taxa de acertos">0%</div>
+              <div className="stat-value">0%</div>
               <div className="stat-label">Taxa de Acertos</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value" aria-label="0 horas de tempo de estudo">0h</div>
+              <div className="stat-value">0h</div>
               <div className="stat-label">Tempo de Estudo</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value" aria-label="0 dias de sequência de estudos">0</div>
+              <div className="stat-value">0</div>
               <div className="stat-label">Dias Consecutivos</div>
             </div>
           </div>
@@ -305,9 +309,7 @@ function Home() {
       </main>
 
       <footer className="home-footer">
-        <p>
-          © {new Date().getFullYear()} {siteInfo.title} - Todos os direitos reservados
-        </p>
+        <p>© 2025 {siteInfo.title} - Todos os direitos reservados</p>
       </footer>
     </div>
   );

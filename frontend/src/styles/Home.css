@@ -1,3 +1,5 @@
+--- START OF FILE Home.css ---
+
 /* Home.css */
 
 * {
@@ -6,38 +8,29 @@
   padding: 0;
 }
 
-html {
-  height: 100%;
-}
-
+html,
 body {
   height: 100%;
-  overflow-x: hidden;
-  background-color: #0d3e63;
+  overflow: hidden; /* A correção principal: previne o scroll no body */
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  min-height: 100vh;
-  margin: 0;
+  background-color: #0d3e63;
 }
 
 .home-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
   background: linear-gradient(135deg, #1e90ff, #0d3e63);
 }
 
 .home-header {
   background-color: #0f3c61;
-  padding: 15px 30px;
+  padding: 15px 20px; /* Alterado de 30px para 20px */
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 .logo-section {
   display: flex;
@@ -47,18 +40,10 @@ body {
 .logo {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
-  background-color: #f4f4f4;
-  padding: 5px;
-  object-fit: contain;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .logo-section h1 {
   font-size: 1.8rem;
-  color: #ffffff;
-  font-weight: bold;
 }
-
 .main-nav {
   flex: 1;
   display: flex;
@@ -74,34 +59,11 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  position: relative;
-  padding: 8px 0;
-  transition: color 0.3s ease;
 }
-.nav-link:hover {
-  color: #a0d2ff;
-}
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ffffff;
-  transition: width 0.3s ease;
-}
-.nav-link:hover::after {
-  width: 100%;
-}
-
 .user-section {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-.profile-link {
-  text-decoration: none;
 }
 .user-avatar {
   width: 40px;
@@ -114,21 +76,11 @@ body {
   align-items: center;
   font-size: 20px;
   font-weight: bold;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.user-avatar:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .user-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.username {
-  font-weight: 500;
-  color: #ffffff;
 }
 .logout-btn {
   background: none;
@@ -137,55 +89,44 @@ body {
   font-size: 14px;
   cursor: pointer;
   padding: 0;
-  transition: color 0.3s ease;
-}
-.logout-btn:hover {
-  color: #ff6b6b;
-  text-decoration: underline;
 }
 
-/* Conteúdo principal - MODIFICADO AQUI */
 .home-main {
   flex: 1;
-  /* padding: 30px; <-- Alterado */
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 0; /* Remove padding lateral do container principal do conteúdo */
-  padding-right: 0; /* Remove padding lateral do container principal do conteúdo */
+  padding: 40px 20px; /* Alterado de 30px para 20px */
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Espaçamento entre as seções */
-  overflow-y: auto;
-  /* max-width: 1200px; <-- Removido */
-  /* margin-left: auto; <-- Removido */
-  /* margin-right: auto; <-- Removido */
-  width: 100%; /* Garante que ocupe toda a largura disponível */
+  gap: 40px;
+  overflow-y: auto; /* A barra de rolagem interna desejada */
+  width: 100%;
 }
 
-/* As seções (.welcome-section, .about-section, etc.) já possuem padding interno,
-   o que vai manter o conteúdo delas afastado das bordas da tela.
-   Seus backgrounds agora se estenderão por toda a largura do .home-main. */
+.home-main::-webkit-scrollbar {
+  width: 12px;
+}
+.home-main::-webkit-scrollbar-track {
+  background: #0d3e63;
+}
+.home-main::-webkit-scrollbar-thumb {
+  background-color: #a0d2ff;
+  border-radius: 20px;
+  border: 3px solid #0d3e63;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 
 .welcome-section {
   background-color: #0f3c61;
-  border-radius: 20px; /* Mantido, cantos arredondados nas bordas da tela */
-  padding: 30px; /* Padding interno da seção */
+  border-radius: 20px;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.8s ease-in-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Se for a primeira seção, pode-se remover o border-top-left-radius e border-top-right-radius se desejar
-     para alinhar perfeitamente com o header, ou ajustar o padding-top do .home-main
-     ou o margin-top da primeira seção. Por ora, mantemos simples. */
-}
-.welcome-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
-.welcome-content {
-  flex: 2;
+  gap: 20px;
 }
 .welcome-content h2 {
   font-size: 2rem;
@@ -193,49 +134,92 @@ body {
 }
 .highlight {
   color: #a0d2ff;
-  font-weight: bold;
 }
 .date-display {
-  font-size: 1rem;
   color: #a0d2ff;
   margin-bottom: 15px;
 }
-.welcome-message {
-  font-size: 1.2rem;
-}
 .daily-quote {
-  flex: 1;
+  flex-basis: 40%;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  margin-left: 20px; /* Pode ser necessário ajustar se .welcome-section for flex-column em telas menores */
 }
 .quote-text {
   font-style: italic;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  line-height: 1.5;
 }
 .quote-author {
   text-align: right;
-  font-size: 0.9rem;
+  margin-top: 10px;
   color: #a0d2ff;
 }
 
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  background-color: #0f3c61;
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+.feature-content {
+  z-index: 1;
+  flex-grow: 1;
+}
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.feature-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #0f3c61;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-start;
+}
+.feature-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.3;
+  z-index: 0;
+}
+.feature-icon img {
+  width: 48px;
+  height: 48px;
+}
+.ranking-card {
+  background: linear-gradient(135deg, #0f3c61, #43658b);
+}
+
+.study-stats-section,
 .about-section {
   background-color: #0f3c61;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1s ease-in-out;
 }
-.about-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  position: relative;
+#progress-heading,
+#about-heading {
   display: inline-block;
+  position: relative;
 }
-.about-section h2::after {
+#progress-heading::after,
+#about-heading::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -244,9 +228,32 @@ body {
   height: 3px;
   background: linear-gradient(90deg, #a0d2ff, transparent);
 }
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #a0d2ff;
+}
+.stat-label {
+  font-size: 0.9rem;
+}
+
 .about-content {
   display: flex;
   gap: 30px;
+  margin-top: 20px;
 }
 .about-text {
   flex: 3;
@@ -254,7 +261,6 @@ body {
 .about-description {
   line-height: 1.6;
   margin-bottom: 20px;
-  font-size: 1rem;
 }
 .about-cards {
   display: flex;
@@ -265,15 +271,10 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  transition: transform 0.3s ease;
-}
-.about-card:hover {
-  transform: translateY(-5px);
 }
 .about-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
   color: #a0d2ff;
+  margin-bottom: 10px;
 }
 .about-image {
   flex: 1;
@@ -294,311 +295,9 @@ body {
   font-size: 60px;
 }
 
-.features-section {
-  animation: fadeIn 1.2s ease-in-out;
-  /* Adiciona padding para que os cards internos não toquem as bordas do .home-main se este não tiver padding lateral */
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.feature-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-.feature-card {
-  background-color: #0f3c61;
-  border-radius: 20px;
-  padding: 25px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
-.feature-content {
-  flex: 1;
-  z-index: 1;
-}
-.feature-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-.feature-card p {
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-}
-.feature-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  color: #0f3c61;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.feature-button:hover {
-  background-color: #a0d2ff;
-  transform: scale(1.05);
-}
-.feature-icon {
-  font-size: 48px;
-  opacity: 0.3;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.feature-card:hover .feature-icon {
-  opacity: 0.5;
-  transform: scale(1.2);
-}
-.quiz-card {
-  background: linear-gradient(135deg, #0f3c61, #185a9d);
-}
-.ranking-card {
-  background: linear-gradient(135deg, #0f3c61, #43658b);
-}
-.study-material-card {
-  background: linear-gradient(135deg, #0f3c61, #192841);
-}
-
-.study-stats-section {
-  background-color: #0f3c61;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1.4s ease-in-out;
-  /* Se for a última seção, pode-se remover border-bottom-left-radius e border-bottom-right-radius */
-}
-.study-stats-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-.study-stats-section h2::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #a0d2ff, transparent);
-}
-.stats-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-.stat-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-.stat-value {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #a0d2ff;
-}
-.stat-label {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .home-footer {
   background-color: #0f3c61;
   text-align: center;
-  padding: 20px 30px;
+  padding: 20px 20px; /* Alterado de 30px para 20px */
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 1024px) {
-  .home-main {
-    /* padding: 20px; <-- Alterado */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .welcome-section {
-    flex-direction: column;
-    gap: 20px;
-    align-items: stretch;
-    /* Em telas menores, o border-radius pode ser mais pronunciado ou pode-se optar por zerá-lo. */
-    /* Exemplo: border-radius: 0; */
-  }
-  .daily-quote {
-    margin-left: 0; /* Ajuste para quando .welcome-section é column */
-    width: 100%;
-  }
-  .about-content {
-    flex-direction: column;
-  }
-  .about-cards {
-    flex-direction: column;
-  }
-  /* Ajuste para seções que precisam de padding lateral explícito quando .home-main não tem mais */
-  .features-section,
-  .study-stats-section,
-  .about-section,
-  .welcome-section {
-    padding-left: 20px; /* Ou o valor que desejar para telas menores */
-    padding-right: 20px;
-    /* Para manter border-radius consistente com padding, pode ser necessário
-         que estas seções não sejam as primeiras/últimas filhas diretas do .home-main
-         ou que o .home-main tenha um pequeno padding lateral.
-         Uma alternativa é adicionar um wrapper dentro do .home-main para as seções
-         e aplicar o padding nesse wrapper.
-         Por simplicidade, as seções individuais agora controlam seu padding lateral. */
-  }
-  .welcome-section {
-    /* welcome-section já tem padding:30px, então pode ser ajustado aqui se necessário */
-    padding: 20px;
-  }
-  .about-section {
-    padding: 20px;
-  }
-  .study-stats-section {
-    padding: 20px;
-  }
-  .features-section {
-    padding-left: 20px;
-    padding-right: 20px;
-  } /* Mantém o grid interno com espaço */
-}
-
-@media (max-width: 768px) {
-  .home-header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px; /* Padding geral do header */
-    position: static;
-  }
-  .main-nav {
-    width: 100%;
-  }
-  .nav-links {
-    width: 100%;
-    justify-content: space-around;
-    gap: 20px;
-  }
-  .user-section {
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 10px; /* Padding para user-section em telas menores */
-  }
-  .user-info {
-    align-items: flex-end;
-  }
-  .home-footer {
-    padding: 20px; /* Padding geral do footer */
-  }
-
-  /* Ajuste do padding lateral das seções para telas médias */
-  .features-section,
-  .study-stats-section,
-  .about-section,
-  .welcome-section {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .welcome-section {
-    padding: 15px;
-  }
-  .about-section {
-    padding: 15px;
-  }
-  .study-stats-section {
-    padding: 15px;
-  }
-  .features-section {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-section h1 {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    gap: 10px;
-  }
-  .nav-link {
-    font-size: 16px;
-  }
-  .feature-cards,
-  .stats-cards {
-    grid-template-columns: 1fr;
-  }
-  .welcome-content h2 {
-    font-size: 1.6rem;
-  }
-  .welcome-message {
-    font-size: 1rem;
-  }
-  .about-section h2,
-  .study-stats-section h2 {
-    font-size: 1.5rem;
-  }
-  .user-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .user-info {
-    align-items: center;
-  }
-  .home-footer {
-    padding: 15px;
-  }
-  /* Ajuste do padding lateral das seções para telas pequenas */
-  .features-section,
-  .study-stats-section,
-  .about-section,
-  .welcome-section {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .welcome-section {
-    padding: 10px;
-  }
-  .about-section {
-    padding: 10px;
-  }
-  .study-stats-section {
-    padding: 10px;
-  }
-  .features-section {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }

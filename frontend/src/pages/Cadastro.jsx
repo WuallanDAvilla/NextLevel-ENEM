@@ -2,99 +2,116 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
-import "../styles/Cadastro.css";
+import Logo from "../assets/Logo.png"; // Importando a logo
+import "../styles/Login.css"; // Importa o CSS base do login
+import "../styles/Cadastro.css"; // Importa os estilos específicos do cadastro
 
 export default function SignUp() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [nome, setNome] = useState(""); // <- campo extra para displayName
+  const [nome, setNome] = useState("");
   const [erro, setErro] = useState("");
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    setErro("");
+    if (senha.length < 6) {
+      setErro("A senha deve ter no mínimo 6 caracteres.");
+      return;
+    }
     try {
-      // 1 cria o usuário
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         senha
       );
-      // 2 atualiza o displayName
       await updateProfile(userCredential.user, { displayName: nome });
-      // 3 redireciona
       navigate("/home");
     } catch (err) {
-      setErro("Erro ao criar conta: " + err.message);
+      if (err.code === "auth/email-already-in-use") {
+        setErro("Este e-mail já está em uso.");
+      } else {
+        setErro("Erro ao criar conta. Tente novamente.");
+      }
     }
   };
 
-  // Função para verificar força da senha
   const verificarForcaSenha = (senha) => {
+    if (!senha) return "";
     if (senha.length < 6) return "fraca";
     if (senha.length >= 6 && senha.length < 10) return "media";
-    if (senha.length >= 10) return "forte";
+    return "forte";
   };
 
   const forcaSenha = verificarForcaSenha(senha);
 
   return (
-    <div className="cadastro-container">
-      <div className="cadastro-card">
-        <h1 className="cadastro-titulo">Criar Conta</h1>
+    // Reutilizando a estrutura da tela de Login
+    <div className="login-container">
+      <div className="login-card">
+        {/* Lado Esquerdo: Logo e link para voltar */}
+        <div className="login-left">
+          <div className="login-logo">
+            <img src={Logo} alt="NextLevelENEM Logo" />
+          </div>
+          <div className="back-to-login-container">
+            <p>Já possui uma conta?</p>
+            <button onClick={() => navigate("/")} className="btn-back-to-login">
+              Fazer Login
+            </button>
+          </div>
+        </div>
 
-        <form onSubmit={handleSignUp} className="cadastro-form">
-          <input
-            type="text"
-            placeholder="Seu nome completo"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            className="cadastro-input"
-            required
-          />
+        {/* Lado Direito: Formulário de Cadastro */}
+        <div className="cadastro-right-panel">
+          <h1 className="cadastro-titulo">Criar Conta</h1>
 
-          <input
-            type="email"
-            placeholder="Seu e-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="cadastro-input"
-            required
-          />
+          <form onSubmit={handleSignUp} className="cadastro-form">
+            <input
+              type="text"
+              placeholder="Seu nome completo"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              className="cadastro-input"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="cadastro-input"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Sua senha (mínimo 6 caracteres)"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              className="cadastro-input"
+              required
+            />
 
-          <input
-            type="password"
-            placeholder="Sua senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            className="cadastro-input"
-            required
-            minLength="6"
-          />
+            {senha && (
+              <div className={`senha-strength senha-${forcaSenha}`}>
+                Força da senha:{" "}
+                <span>
+                  {forcaSenha === "fraca"
+                    ? "Fraca"
+                    : forcaSenha === "media"
+                    ? "Média"
+                    : "Forte"}
+                </span>
+              </div>
+            )}
 
-          {senha && (
-            <div className={`senha-strength senha-${forcaSenha}`}>
-              Força da senha:{" "}
-              {forcaSenha === "fraca"
-                ? "Fraca"
-                : forcaSenha === "media"
-                ? "Média"
-                : "Forte"}
-            </div>
-          )}
+            {erro && <p className="cadastro-erro">{erro}</p>}
 
-          {erro && <p className="cadastro-erro">{erro}</p>}
-
-          <button type="submit" className="cadastro-btn">
-            Criar Conta
-          </button>
-        </form>
-
-        <div className="cadastro-login-link">
-          <p className="cadastro-login-text">Já possui uma conta?</p>
-          <button onClick={() => navigate("/")} className="cadastro-login-btn">
-            Fazer Login
-          </button>
+            <button type="submit" className="cadastro-btn">
+              Criar Conta
+            </button>
+          </form>
         </div>
       </div>
     </div>

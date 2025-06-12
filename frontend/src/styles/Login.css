@@ -1,45 +1,38 @@
 /* Login.css */
 
-/*
-  Este reset é bom, mas considere colocá-lo em um arquivo CSS global/base
-  para ser aplicado a todo o projeto, evitando redundância.
-*/
+/* --- Reset & Base Styles --- */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ajuste geral para centralização */
 body {
   background: linear-gradient(135deg, #1e90ff, #0d3e63);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Use min-height para permitir scroll se necessário */
-  margin: 0;
-  padding: 20px; /* Adicionado padding ao body para evitar que o card toque as bordas em telas pequenas */
+  min-height: 100vh;
+  padding: 20px;
   font-family: "Poppins", sans-serif;
-  /* overflow: hidden; */ /* Removido ou comentado - permitir scroll se o conteúdo exceder */
   color: #ffffff;
 }
 
-/* Container principal */
+/* --- Main Login Screen --- */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1100px; /* Limita a largura máxima */
-  /* padding: 20px; */ /* Padding movido para o body ou mantido se preferir controle aqui */
-  gap: 40px;
+  max-width: 1100px;
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Cartão de login */
 .login-card {
   background-color: #0f3c61;
   color: #ffffff;
   display: flex;
-  flex-direction: row; /* Será alterado para column em telas menores */
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
@@ -56,13 +49,12 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
-/* Coluna da esquerda */
 .login-left {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  flex-shrink: 0; /* Evita que a coluna da logo encolha demais */
+  flex-shrink: 0;
 }
 
 .login-logo img {
@@ -80,14 +72,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 100%; /* Para que os botões ocupem a largura disponível na coluna */
+  width: 100%;
 }
 
 .btn-entrar {
-  /* Removida a classe .btn-conectar não utilizada */
-  padding: 14px 20px; /* Ajustado padding para ser mais flexível com o width 100% */
+  padding: 14px 20px;
   width: 100%;
-  max-width: 220px; /* Limita a largura máxima do botão */
+  max-width: 220px;
   font-size: 18px;
   background-color: #ffffff;
   border: 2px solid #001d3d;
@@ -95,22 +86,19 @@ body {
   cursor: pointer;
   color: #001d3d;
   font-weight: bold;
-  /* transition: all 0.3s ease; */ /* Original */
   transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease; /* Sugestão */
+    box-shadow 0.3s ease;
   text-align: center;
 }
 
 .btn-entrar:hover {
   background-color: #e6e6e6;
-  transform: scale(1.05); /* Ajustado para um scale menor */
+  transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Coluna da direita */
 .login-description {
-  /* max-width: 500px; */ /* Removido max-width para permitir que o flexbox gerencie melhor */
-  flex-grow: 1; /* Permite que a descrição ocupe o espaço restante */
+  flex-grow: 1;
   font-size: 18px;
   line-height: 1.8;
   text-align: justify;
@@ -118,152 +106,12 @@ body {
   opacity: 0.9;
 }
 
-/* Pop-up de login */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  animation: fadeIn 0.5s ease-in-out;
-  padding: 20px; /* Adicionado padding para o overlay em telas pequenas */
-}
-
-.popup-content {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  width: 100%; /* Alterado para 100% para ser responsivo com o padding do overlay */
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  position: relative;
-  animation: slideDown 0.4s ease-in-out;
-}
-
-/* Título do pop-up */
-.popup-content h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333333;
-}
-
-/* Link de redefinição de senha */
-.popup-content .reset-password {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #1e90ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.popup-content .reset-password:hover {
-  color: #0d3e63;
-  text-decoration: underline;
-}
-
-/* Botão de fechar */
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #666;
-  z-index: 10;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.popup-close:hover {
-  color: #ff6b6b;
-  transform: scale(1.2) rotate(10deg);
-}
-
-/* Formulário */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Reduzido gap */
-  margin-top: 20px;
-}
-
-.login-form input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  color: #333; /* Adicionado cor do texto para inputs */
-}
-
-.login-form input:focus {
-  border-color: #4caf50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
-  outline: none;
-}
-
-/* Botão de submit do formulário de login */
-.btn-submit-login, /* Estilo compartilhado para o botão de Entrar do popup */
-.register-button {
-  /* Estilos para o botão CADASTRAR-SE movidos do inline */
-  margin-top: 15px;
-  background: #2a9dba; /* Cor padrão, pode ser sobrescrita para btn-submit-login se necessário */
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 0; /* Aumentado padding vertical */
-  width: 100%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 16px; /* Adicionado font-size */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-submit-login {
-  background: #1e90ff; /* Cor específica para o botão de login */
-}
-
-.btn-submit-login:hover,
-.register-button:hover {
-  background-color: #238ca6; /* Um pouco mais escuro para hover */
-  transform: translateY(-2px);
-}
-
-.btn-submit-login:active,
-.register-button:active {
-  transform: translateY(0);
-}
-
-/* Mensagem de erro */
-.login-error {
-  color: #ff6b6b;
-  font-size: 14px;
-  text-align: center;
-  background: rgba(255, 107, 107, 0.15); /* Tom de vermelho mais suave */
-  padding: 8px; /* Aumentado padding */
-  border-radius: 5px;
-  border: 1px solid rgba(255, 107, 107, 0.3); /* Adicionada borda sutil */
-  margin-top: 10px; /* Adicionado margin-top */
-}
-
-/* Google Login */
 .google-login {
   width: 50px;
   height: 50px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50%; /* Para um efeito de sombra mais suave se o logo for redondo */
+  border-radius: 50%;
 }
 
 .google-login:hover {
@@ -271,7 +119,203 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Animações */
+/* ===== INÍCIO DAS MELHORIAS NO POP-UP DE LOGIN ===== */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fundo um pouco mais escuro para focar no pop-up */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+  padding: 20px;
+}
+
+.popup-content {
+  background-color: #ffffff;
+  padding: 40px; /* Mais espaçamento interno */
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); /* Sombra mais suave */
+  position: relative;
+  animation: slideDown 0.4s ease-out; /* Animação mais suave */
+}
+
+/* Título do pop-up */
+.popup-content h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1c3c5a; /* Tom de azul escuro alinhado com a paleta */
+}
+
+/* Link de redefinição de senha */
+.reset-password-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.reset-password-link:hover {
+  color: #0d3e63;
+  text-decoration: underline;
+}
+
+/* Botão de fechar (X) */
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #adb5bd; /* Cor cinza suave */
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: #ff6b6b; /* Vermelho no hover para indicar ação destrutiva/fechar */
+  transform: scale(1.2);
+}
+
+/* Formulário e Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Estilo moderno para os inputs */
+.login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #dbe2ea;
+  background-color: #f9fafb;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input::placeholder {
+  color: #90a4ae;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #1e90ff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
+}
+
+/* Container para o input de senha e o ícone */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-input-container input {
+  padding-right: 50px; /* Espaço para o ícone não sobrepor o texto */
+}
+
+/* Ícone de visibilidade da senha */
+.password-toggle-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #90a4ae;
+  transition: color 0.2s ease-in-out;
+}
+.password-toggle-icon:hover {
+  color: #1c3c5a;
+}
+.password-toggle-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Botões do pop-up (Entrar e Cadastrar) */
+.btn-submit-login,
+.register-button {
+  margin-top: 8px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 0;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit-login:hover,
+.register-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão primário (Entrar) */
+.btn-submit-login {
+  background: linear-gradient(45deg, #1e90ff, #3a7bd5);
+}
+.btn-submit-login:hover {
+  background: linear-gradient(45deg, #3a7bd5, #1e90ff);
+}
+
+/* Botão secundário (Cadastrar-se) - Estilo "Outline" */
+.register-button {
+  background: transparent;
+  border: 2px solid #1e90ff;
+  color: #1e90ff;
+}
+.register-button:hover {
+  background: #1e90ff;
+  color: #ffffff;
+}
+
+/* Mensagem de erro */
+.login-error {
+  color: #d93025; /* Vermelho forte para erro */
+  font-size: 14px;
+  text-align: center;
+  background: #f8d7da; /* Fundo rosa claro */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+}
+
+/* ===== FIM DAS MELHORIAS NO POP-UP ===== */
+
+/* --- Animações --- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -283,81 +327,61 @@ body {
 
 @keyframes slideDown {
   from {
-    transform: translateY(-20px);
+    transform: translateY(-30px) scale(0.95);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
 
-/* Responsividade */
+/* --- Responsividade --- */
 @media (max-width: 768px) {
   .login-card {
-    flex-direction: column; /* Empilha as colunas */
+    flex-direction: column;
     padding: 30px;
     gap: 30px;
   }
-
-  .login-left {
-    width: 100%; /* Ocupa toda a largura no modo coluna */
-  }
-
   .login-logo img {
-    width: 150px; /* Reduz tamanho da logo */
+    width: 150px;
     height: 150px;
   }
-
   .login-description {
-    text-align: left; /* Alinha o texto à esquerda em telas menores para melhor leitura */
-    font-size: 16px; /* Reduz tamanho da fonte da descrição */
-  }
-
-  .popup-content h2 {
-    font-size: 22px; /* Reduz título do popup */
+    text-align: left;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    padding: 10px; /* Reduz padding do body */
+    padding: 10px;
   }
-
   .login-card {
-    padding: 20px; /* Reduz padding do card */
+    padding: 20px;
   }
-
   .login-logo img {
-    width: 120px; /* Reduz mais a logo */
+    width: 120px;
     height: 120px;
   }
-
   .btn-entrar {
     font-size: 16px;
     padding: 12px 20px;
   }
-
   .login-description {
     font-size: 15px;
   }
 
+  /* Ajustes responsivos para o pop-up */
   .popup-content {
-    padding: 20px; /* Reduz padding do popup */
+    padding: 25px;
   }
-
   .popup-content h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
-
-  .login-form input {
-    font-size: 15px;
-    padding: 10px;
-  }
-
+  .login-form input,
   .btn-submit-login,
   .register-button {
     font-size: 15px;
-    padding: 10px 0;
   }
 }

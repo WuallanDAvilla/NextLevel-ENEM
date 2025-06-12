@@ -2,8 +2,9 @@ body.materias-page-active {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 150vh;
+  min-height: 100vh; /* Alterado de height: 150vh para min-height para evitar scroll desnecessário */
   overflow-x: hidden;
+  background: #153d61; /* Fundo base caso o gradiente não carregue */
 }
 
 .materias-page-container {
@@ -14,13 +15,13 @@ body.materias-page-active {
   padding: 0;
   display: flex;
   flex-direction: column;
+  background: #0d3251; /* Cor de fundo principal */
 }
 
 /* Header - Estilizado para ser consistente com Home.css */
 .page-header {
-  /* Usando uma classe mais genérica para o header da página */
   background-color: #0f3c61;
-  padding: 15px 30px;
+  padding: 10px 40px; /* Ajuste no padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,17 +29,16 @@ body.materias-page-active {
   position: sticky;
   top: 0;
   z-index: 100;
+  gap: 20px;
 }
 
 .logo-section {
-  /* Consistente com Home.css */
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
 .logo {
-  /* Consistente com Home.css */
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -49,22 +49,92 @@ body.materias-page-active {
 }
 
 .logo-section h1 {
-  /* Consistente com Home.css */
   font-size: 1.8rem;
   color: #ffffff;
   font-weight: bold;
   margin: 0;
 }
 
+/* --- INÍCIO: NOVOS ESTILOS PARA NAVEGAÇÃO E USUÁRIO (ESCOPADOS) --- */
+.main-nav .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.main-nav .nav-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a0d2ff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+  color: #ffffff;
+}
+
+.main-nav .nav-link:hover::after,
+.main-nav .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .user-section {
-  /* Consistente com Home.css */
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+.user-info .username {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.user-info .logout-btn {
+  background: none;
+  border: none;
+  color: #b0dfff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.85rem;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.user-info .logout-btn:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* --- FIM: NOVOS ESTILOS --- */
+
 .user-avatar {
-  /* Consistente com Home.css (era .user-image) */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -76,26 +146,12 @@ body.materias-page-active {
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  object-fit: cover;
-}
-
-.user-avatar:hover {
-  /* Consistente com Home.css */
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Seção de Matérias */
 .materias-section {
-  background-color: rgba(
-    13,
-    62,
-    99,
-    0.7
-  ); /* Tom sutil sobre o gradiente do body */
-  padding: 40px 30px; /* Aumentado padding vertical */
+  padding: 50px 40px; /* Aumentado padding vertical */
   text-align: center;
   flex-grow: 1;
   animation: fadeInContent 0.7s ease-in-out;
@@ -113,19 +169,19 @@ body.materias-page-active {
 }
 
 .materias-section h1 {
-  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Ajustado clamp */
-  margin-bottom: 40px; /* Aumentado margin */
-  color: #f0f8ff; /* AliceBlue, um branco suave */
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 50px; /* Aumentado margin */
+  color: #f0f8ff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   position: relative;
   display: inline-block;
+  padding-bottom: 15px;
 }
 
 .materias-section h1::after {
-  /* Adicionando um sublinhado estilizado */
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
@@ -138,16 +194,15 @@ body.materias-page-active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px; /* Espaçamento entre cards */
+  gap: 30px;
   padding-bottom: 30px;
 }
 
 /* Cartões de Matéria */
 .materia-card {
   background-color: #ffffff;
-  color: #333; /* Cor de texto padrão dentro do card */
-  width: 220px; /* Ligeiramente maior */
-  min-height: 240px; /* Altura mínima para consistência */
+  color: #333;
+  width: 220px;
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
@@ -166,34 +221,31 @@ body.materias-page-active {
 
 .materia-card img {
   width: 100%;
-  height: 150px;
+  height: 140px; /* Ajustado */
   object-fit: cover;
 }
 
 .materia-card .materia-card-title {
-  /* Classe específica para o título do card */
-  margin: 0;
-  padding: 18px 12px;
-  font-weight: 600; /* Ligeiramente mais forte */
-  font-size: 1.1rem; /* Ajustado */
-  color: #102a43; /* Azul escuro para o título */
+  padding: 20px 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #102a43;
   background-color: #f0f4f8;
-  border-top: 1px solid #ddebf7;
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid #ddebf7;
 }
 
-/* Rodapé - Consistente com Home.css */
+/* Rodapé */
 .page-footer {
-  /* Usando uma classe mais genérica para o footer da página */
   background-color: #0f3c61;
   color: white;
   text-align: center;
   padding: 20px 30px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-  margin-top: auto; /* Garante que fique no rodapé se o conteúdo for pequeno */
+  margin-top: auto;
 }
 
 /* Popup */
@@ -203,17 +255,15 @@ body.materias-page-active {
   left: 0;
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
-
-  background: transparent;
-  backdrop-filter: none;
-
+  /* Melhoria: Fundo semi-transparente para focar no popup */
+  background: rgba(13, 39, 63, 0.6);
+  backdrop-filter: blur(5px);
 }
 
 .popup-content {
@@ -221,7 +271,7 @@ body.materias-page-active {
   padding: 30px;
   border-radius: 16px;
   width: 100%;
-  max-width: 550px; /* Ligeiramente maior */
+  max-width: 550px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: #333;
@@ -251,12 +301,12 @@ body.materias-page-active {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 .popup-close-button:hover {
-  color: #e74c3c; /* Vermelho no hover para fechar */
+  color: #e74c3c;
   transform: rotate(90deg);
 }
 
 .popup-content h2 {
-  color: #0d3e63; /* Azul principal do tema */
+  color: #0d3e63;
   margin-top: 0;
   margin-bottom: 25px;
   font-size: 2rem;
@@ -280,12 +330,11 @@ body.materias-page-active {
 }
 
 .popup-content button.btn-iniciar-quiz {
-  /* Classe específica para o botão do popup */
   background: linear-gradient(135deg, #1e90ff, #1565c0);
   color: white;
   padding: 14px 35px;
   border: none;
-  border-radius: 25px; /* Mais arredondado */
+  border-radius: 25px;
   font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
@@ -305,63 +354,52 @@ body.materias-page-active {
 }
 
 /* Responsividade */
+@media (max-width: 992px) {
+  .page-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+  .main-nav {
+    order: 3; /* Move a navegação para a próxima linha */
+    width: 100%;
+    margin-top: 15px;
+  }
+  .main-nav .nav-links {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
+  .materias-section {
+    padding: 40px 20px;
+  }
+  .materiais-container {
+    gap: 20px;
+  }
+  .materia-card {
+    width: calc(50% - 20px);
+  }
+  .popup-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
   .page-header {
     flex-direction: column;
     gap: 15px;
     padding: 15px;
   }
-
-  .logo-section,
-  .user-section {
-    width: 100%;
-    justify-content: center;
+  .main-nav {
+    order: 2;
+    margin-top: 5px;
   }
   .user-section {
-    /* Se houver nome de usuário e botão de sair, para alinhar */
-    justify-content: space-between; /* Ou center dependendo do conteúdo */
-    padding: 0 10px;
+    order: 3;
   }
-
   .materias-section {
-    padding: 40px 0px;
-  }
-  .materias-section h1 {
-    margin-bottom: 30px;
-  }
-  .materiais-container {
-    gap: 20px;
-  }
-
-  .materia-card {
-    width: calc(50% - 10px); /* (100% / 2) - (gap / 2) */
-    max-width: none; /* Remove max-width para permitir que calc funcione */
-    min-height: 220px;
-  }
-  .materia-card img {
-    height: 120px;
-  }
-  .materia-card .materia-card-title {
-    font-size: 1rem;
-    padding: 15px 10px;
-  }
-
-  .popup-content {
-    padding: 25px;
-    max-width: 90%;
-  }
-  .popup-content h2 {
-    font-size: 1.6rem;
-  }
-  .popup-content button.btn-iniciar-quiz {
-    padding: 12px 30px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .materias-section {
-    padding: 20px 15px;
+    padding: 30px 15px;
   }
   .materias-section h1 {
     font-size: 1.6rem;
@@ -369,22 +407,7 @@ body.materias-page-active {
   .materiais-container {
     gap: 15px;
   }
-
   .materia-card {
     width: 100%; /* Um card por linha */
-    min-height: auto; /* Altura automática */
   }
-  .materia-card img {
-    height: 130px;
-  }
-  .materia-card .materia-card-title {
-    font-size: 1rem;
-    padding: 12px 10px;
-  }
-
-  .popup-content button.btn-iniciar-quiz {
-    width: 100%;
-    padding: 14px;
-  }
-
 }

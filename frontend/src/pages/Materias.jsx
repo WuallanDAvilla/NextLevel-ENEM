@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig"; // autenticação
-import Logo from "../assets/Logo.png"; 
-import UsuarioAsset from "../assets/Usuario.png";
+import Logo from "../assets/Logo.png";
 import "../styles/Materias.css";
 
+// Importando imagens das matérias
 import Geografia from "../assets/Materias/Geografia.png";
 import Matematica from "../assets/Materias/Matematica.png";
 import LinguaPortuguesaImg from "../assets/Materias/LinguaPortuguesa.png";
@@ -18,7 +18,6 @@ import Espanhol from "../assets/Materias/Espanhol.png";
 import Fisica from "../assets/Materias/Fisica.png";
 import Quimica from "../assets/Materias/Quimica.png";
 import EducacaoFisicaImg from "../assets/Materias/EducacaoFisica.png";
-import Conectivos from "../assets/Materias/Conectivos.png";
 
 // Conteúdo das matérias
 const conteudoMatriz = {
@@ -26,7 +25,7 @@ const conteudoMatriz = {
     nomeExibicao: "Geografia",
     texto: "Explore os continentes, climas e culturas do nosso planeta.",
     imagem: Geografia,
-    rota: "/materias/geografia", // Rota para o quiz da matéria
+    rota: "/materias/geografia",
   },
   Matematica: {
     nomeExibicao: "Matemática",
@@ -38,7 +37,7 @@ const conteudoMatriz = {
     nomeExibicao: "Língua Portuguesa",
     texto: "Aprimore sua gramática, interpretação e escrita.",
     imagem: LinguaPortuguesaImg,
-    rota: "/materias/linguaportuguesa", // Manter o nome da matéria na rota
+    rota: "/materias/linguaportuguesa",
   },
   Fisica: {
     nomeExibicao: "Física",
@@ -100,7 +99,7 @@ const conteudoMatriz = {
     imagem: EducacaoFisicaImg,
     rota: "/materias/educacaofisica",
   },
-}; // Certifique-se de fechar o objeto aqui
+};
 
 export default function Materias() {
   const [popupVisible, setPopupVisible] = useState(false);
@@ -111,18 +110,18 @@ export default function Materias() {
     rota: "",
   });
 
-  const [username, setUsername] = useState("");
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  // Carregar dados do usuário autenticado, similar ao Home.jsx
   useEffect(() => {
-    const user = auth.currentUser;
-    if (user) {
-      const displayName = user.displayName || user.email.split("@")[0];
-      setUsername(displayName);
-    } else {
-      navigate("/"); // Redireciona se não estiver logado
-    }
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+      } else {
+        navigate("/"); // Redireciona se não estiver logado
+      }
+    });
+    return () => unsubscribe();
   }, [navigate]);
 
   useEffect(() => {
@@ -166,9 +165,11 @@ export default function Materias() {
     }
   };
 
+  const username = user?.displayName || user?.email?.split("@")[0] || "";
+
   return (
     <div className="materias-page-container">
-      <header className="home-header">
+      <header className="page-header">
         <div className="logo-section">
           <img src={Logo} alt="Next Level ENEM" className="logo" />
           <h1>NextLevelENEM</h1>
@@ -178,12 +179,13 @@ export default function Materias() {
           <ul className="nav-links">
             <li>
               <Link to="/home" className="nav-link active">
-                Inicio
+                Início
               </Link>
             </li>
             <li>
+              {/* Mapeando para "Classificação" como na imagem, mas mantendo a rota /ranking */}
               <Link to="/ranking" className="nav-link">
-                Ranking
+                Classificação
               </Link>
             </li>
             <li>
@@ -194,22 +196,21 @@ export default function Materias() {
           </ul>
         </nav>
 
-        <div className="user-section">
-          <Link to="/perfil" className="profile-link">
+        {user && (
+          <div className="user-section">
             <div className="user-avatar">
-              {username ? username.charAt(0).toUpperCase() : ""}
+              {username ? username.charAt(0).toUpperCase() : "U"}
             </div>
-          </Link>
-          <div className="user-info">
-            <span className="username">{username}</span>
-            <button onClick={handleLogout} className="logout-btn">
-              Sair
-            </button>
+            <div className="user-info">
+              <span className="username">{username}</span>
+              <button onClick={handleLogout} className="logout-btn">
+                Sair
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </header>
 
-      {/* Conteúdo original da página Materias, sem alteração */}
       <main className="materias-section">
         <h1>Matérias: Sua Jornada para o Próximo Nível no ENEM</h1>
         <div className="materiais-container">
@@ -226,20 +227,18 @@ export default function Materias() {
                 src={conteudoMatriz[materiaKey].imagem}
                 alt={`Ícone da matéria de ${conteudoMatriz[materiaKey].nomeExibicao}`}
               />
-              <p className="materia-card-title">
+              <div className="materia-card-title">
                 {conteudoMatriz[materiaKey].nomeExibicao}
-              </p>
+              </div>
             </div>
           ))}
         </div>
       </main>
 
-      {/* Rodapé copiado do Home.jsx */}
-      <footer className="home-footer">
+      <footer className="page-footer">
         <p>© 2025 NextLevelENEM - Todos os direitos reservados</p>
       </footer>
 
-      {/* Popup para detalhes da matéria */}
       {popupVisible && (
         <div
           id="popupOverlay"
@@ -247,7 +246,11 @@ export default function Materias() {
           onClick={handleClickOutsidePopup}
         >
           <div className="popup-content">
-            <span className="popup-close-button" onClick={fecharPopup} title="Fechar">
+            <span
+              className="popup-close-button"
+              onClick={fecharPopup}
+              title="Fechar"
+            >
               ×
             </span>
             <h2>{popupData.titulo}</h2>
@@ -262,7 +265,7 @@ export default function Materias() {
               className="btn-iniciar-quiz"
               onClick={() => navigate(popupData.rota)}
             >
-              Iniciar Quiz de {popupData.titulo}
+              Iniciar Quiz
             </button>
           </div>
         </div>
