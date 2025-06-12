@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import Logo from "../assets/Logo.png";
 import "../styles/Home.css";
@@ -115,7 +116,6 @@ const quotes = [
 function Home() {
   const [username, setUsername] = useState("");
   const [greeting, setGreeting] = useState("");
-  const [currentTime, setCurrentTime] = useState(new Date());
   const [quote, setQuote] = useState({ text: "", author: "" });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -129,11 +129,11 @@ function Home() {
   };
 
   const getRandomQuote = () => {
-    return quotes.find(q => q.author === "George Eliot") || quotes[0];
+    return quotes.find((q) => q.author === "George Eliot") || quotes[0];
   };
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         const displayName = user.displayName || "Wuallan Meira Gomes D'Avilla";
         setUsername(displayName);
@@ -145,15 +145,9 @@ function Home() {
 
     setGreeting(getGreeting());
 
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-      setGreeting(getGreeting());
-    }, 60000);
-
     setQuote(getRandomQuote());
 
     return () => {
-      clearInterval(timer);
       unsubscribe();
     };
   }, [navigate]);
@@ -183,7 +177,11 @@ function Home() {
 
   return (
     <div className="home-container">
-      {error && <div className="error-message" role="alert">{error}</div>}
+      {error && (
+        <div className="error-message" role="alert">
+          {error}
+        </div>
+      )}
 
       <header className="home-header">
         <div className="logo-section">
@@ -192,18 +190,35 @@ function Home() {
         </div>
         <nav className="main-nav">
           <ul className="nav-links">
-            <li><Link to="/materias" className="nav-link">Matérias</Link></li>
-            <li><Link to="/ranking" className="nav-link">Classificação</Link></li>
-            <li><Link to="/redacao" className="nav-link">Redação</Link></li>
+            <li>
+              <Link to="/materias" className="nav-link">
+                Matérias
+              </Link>
+            </li>
+            <li>
+              <Link to="/ranking" className="nav-link">
+                Classificação
+              </Link>
+            </li>
+            <li>
+              <Link to="/redacao" className="nav-link">
+                Redação
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="user-section">
-          <Link to="/perfil" className="profile-link">
-            <div className="user-avatar">C</div>
+          {/* ALTERADO: Link para o perfil envolvendo o avatar */}
+          <Link to="/perfil" className="profile-link" title="Ver Perfil">
+            <div className="user-avatar">
+              {username.charAt(0).toUpperCase()}
+            </div>
           </Link>
           <div className="user-info">
             <span className="username">{username}</span>
-            <button onClick={handleLogout} className="logout-btn">Sair</button>
+            <button onClick={handleLogout} className="logout-btn">
+              Sair
+            </button>
           </div>
         </div>
       </header>
@@ -211,8 +226,12 @@ function Home() {
       <main className="home-main">
         <section className="welcome-section" aria-labelledby="welcome-heading">
           <div className="welcome-content">
-            <h2 id="welcome-heading">{greeting} , <span className="highlight">{username}</span> !</h2>
-            <p className="date-display">{formattedDate} • {formattedTime}</p>
+            <h2 id="welcome-heading">
+              {greeting} , <span className="highlight">{username}</span> !
+            </h2>
+            <p className="date-display">
+              {formattedDate} • {formattedTime}
+            </p>
             <p>Pronto para continuar evoluindo seus conhecimentos hoje?</p>
           </div>
           {quote.text && (
@@ -225,61 +244,59 @@ function Home() {
           )}
         </section>
 
-        <section className="features-section" aria-labelledby="features-heading">
-          <h2 id="features-heading" className="section-title">Navegue em nosso site!</h2>
+        <section
+          className="features-section"
+          aria-labelledby="features-heading"
+        >
+          <h2 id="features-heading" className="section-title">
+            Navegue em nosso site!
+          </h2>
           <div className="feature-cards">
             <article className="feature-card redacao-card">
               <div className="feature-content">
                 <h3>Redação</h3>
-                <p>Aprimore suas habilidades de redação com dicas, exemplos e acompanhe seu progresso na escrita.</p>
-                <Link to="/redacao" className="feature-button">Praticar Redação</Link>
+                <p>
+                  Aprimore suas habilidades de redação com dicas, exemplos e
+                  acompanhe seu progresso na escrita.
+                </p>
+                <Link to="/redacao" className="feature-button">
+                  Praticar Redação
+                </Link>
               </div>
               <div className="feature-icon" aria-hidden="true">
-                <img src="https://emojicdn.elk.sh/✍️" alt=""/>
+                <img src="https://emojicdn.elk.sh/✍️" alt="" />
               </div>
             </article>
             <article className="feature-card ranking-card">
               <div className="feature-content">
                 <h3>Ranking de Estudantes</h3>
-                <p>Veja sua posição entre os melhores estudantes e motive-se a melhorar seus resultados.</p>
-                <Link to="/ranking" className="feature-button">Ver classificação</Link>
+                <p>
+                  Veja sua posição entre os melhores estudantes e motive-se a
+                  melhorar seus resultados.
+                </p>
+                <Link to="/ranking" className="feature-button">
+                  Ver classificação
+                </Link>
               </div>
               <div className="feature-icon" aria-hidden="true">
-                <img src="https://emojicdn.elk.sh/🏆" alt=""/>
+                <img src="https://emojicdn.elk.sh/🏆" alt="" />
               </div>
             </article>
             <article className="feature-card study-material-card">
               <div className="feature-content">
                 <h3>Material de Estudo</h3>
-                <p>Explore nosso acervo completo de conteúdos organizados por disciplina para o ENEM.</p>
-                <Link to="/materias" className="feature-button">Estudar Agora</Link>
+                <p>
+                  Explore nosso acervo completo de conteúdos organizados por
+                  disciplina para o ENEM.
+                </p>
+                <Link to="/materias" className="feature-button">
+                  Estudar Agora
+                </Link>
               </div>
               <div className="feature-icon" aria-hidden="true">
-                <img src="https://emojicdn.elk.sh/📚" alt=""/>
+                <img src="https://emojicdn.elk.sh/📚" alt="" />
               </div>
             </article>
-          </div>
-        </section>
-
-        <section className="study-stats-section" aria-labelledby="progress-heading">
-          <h2 id="progress-heading">Seu Progresso</h2>
-          <div className="stats-cards">
-            <div className="stat-card">
-              <div className="stat-value">0</div>
-              <div className="stat-label">Questões Respondidas</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-value">0%</div>
-              <div className="stat-label">Taxa de Acertos</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-value">0h</div>
-              <div className="stat-label">Tempo de Estudo</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-value">0</div>
-              <div className="stat-label">Dias Consecutivos</div>
-            </div>
           </div>
         </section>
 
@@ -300,8 +317,14 @@ function Home() {
               </div>
             </div>
             <div className="about-image">
-              <div className="image-placeholder" role="img" aria-label="Ícone representando educação">
-                <span className="image-icon" aria-hidden="true">🎓</span>
+              <div
+                className="image-placeholder"
+                role="img"
+                aria-label="Ícone representando educação"
+              >
+                <span className="image-icon" aria-hidden="true">
+                  🎓
+                </span>
               </div>
             </div>
           </div>
