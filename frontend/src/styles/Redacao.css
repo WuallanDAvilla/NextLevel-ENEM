@@ -1,12 +1,12 @@
 
 /* --- Container Principal --- */
 .redacao-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1e90ff, #0d3e63);
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
+}
+.redacao-page #root {
+  height: 100%;
 }
 
 /* --- Header Padrão (copiado de Materias.css para consistência) --- */
@@ -293,3 +293,4 @@
     padding: 40px 20px;
   }
 }
+

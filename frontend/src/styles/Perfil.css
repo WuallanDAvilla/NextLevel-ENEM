@@ -7,9 +7,6 @@ html, body {
   padding: 0;
 }
 
-#root {
-  height: 100%;
-}
 
 .perfil-page-container {
   width: 100%;
@@ -41,6 +38,7 @@ html, body {
 .perfil-logo-img {
   width: 45px;
   height: 45px;
+  border-radius: 50%; /* Faz a borda totalmente arredondada (círculo) */
 }
 
 .perfil-title-header {
@@ -283,4 +281,7 @@ html, body {
   .perfil-info-column, .perfil-chart-column {
     padding: 25px;
   }
+}
+.perfil-page #root {
+  height: 100%;
 }

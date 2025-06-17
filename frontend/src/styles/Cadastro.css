@@ -1,16 +1,12 @@
-/* Cadastro.css */
-
-/* Painel direito que contém o formulário de cadastro */
-.cadastro-right-panel {
-  flex-grow: 1; /* Permite que o painel ocupe o espaço restante */
+.cadastro-page .cadastro-right-panel {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 40px; /* Adiciona um espaçamento do lado esquerdo */
+  padding-left: 40px;
 }
 
-/* Título do formulário */
-.cadastro-titulo {
+.cadastro-page .cadastro-titulo {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
@@ -18,18 +14,16 @@
   color: #ffffff;
 }
 
-/* Formulário de cadastro */
-.cadastro-form {
+.cadastro-page .cadastro-form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espaçamento entre os inputs */
+  gap: 20px;
   width: 100%;
-  max-width: 400px; /* Limita a largura do formulário */
-  margin: 0 auto; /* Centraliza o formulário no painel direito */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* Inputs com efeito "glassmorphism" que funciona bem no fundo escuro */
-.cadastro-input {
+.cadastro-page .cadastro-input {
   width: 100%;
   padding: 15px;
   font-size: 16px;
@@ -40,18 +34,17 @@
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.cadastro-input::placeholder {
+.cadastro-page .cadastro-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.cadastro-input:focus {
+.cadastro-page .cadastro-input:focus {
   outline: none;
   border-color: #a0d2ff;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Botão de criar conta (primário) */
-.cadastro-btn {
+.cadastro-page .cadastro-btn {
   width: 100%;
   padding: 15px;
   font-size: 18px;
@@ -65,24 +58,22 @@
   margin-top: 10px;
 }
 
-.cadastro-btn:hover {
+.cadastro-page .cadastro-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Container para o link de 'Voltar para Login' */
-.back-to-login-container {
+.cadastro-page .back-to-login-container {
   margin-top: 20px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.back-to-login-container p {
+.cadastro-page .back-to-login-container p {
   margin-bottom: 10px;
 }
 
-/* Botão 'Fazer Login' (secundário) */
-.btn-back-to-login {
+.cadastro-page .btn-back-to-login {
   background: none;
   border: 2px solid #ffffff;
   color: #ffffff;
@@ -93,34 +84,32 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-back-to-login:hover {
+.cadastro-page .btn-back-to-login:hover {
   background-color: #ffffff;
   color: #0f3c61;
 }
 
-/* Indicador de força da senha */
-.senha-strength {
+.cadastro-page .senha-strength {
   font-size: 13px;
   text-align: left;
   color: #ddd;
 }
 
-.senha-strength span {
+.cadastro-page .senha-strength span {
   font-weight: bold;
 }
 
-.senha-fraca span {
+.cadastro-page .senha-fraca span {
   color: #ff6b6b;
 }
-.senha-media span {
+.cadastro-page .senha-media span {
   color: #ffd93d;
 }
-.senha-forte span {
+.cadastro-page .senha-forte span {
   color: #6bcf7f;
 }
 
-/* Mensagem de erro */
-.cadastro-erro {
+.cadastro-page .cadastro-erro {
   background-color: rgba(255, 107, 107, 0.15);
   color: #ff6b6b;
   padding: 12px;
@@ -130,9 +119,8 @@
   border: 1px solid rgba(255, 107, 107, 0.3);
 }
 
-/* Ajustes para telas menores */
 @media (max-width: 768px) {
-  .cadastro-right-panel {
+  .cadastro-page .cadastro-right-panel {
     padding-left: 0;
     padding-top: 30px;
   }
