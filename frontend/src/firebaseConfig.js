@@ -1,3 +1,5 @@
+// ARQUIVO: frontend/src/firebaseConfig.js (JÁ ESTÁ PERFEITO! ✅)
+
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -7,10 +9,11 @@ import {
 } from "firebase/auth";
 
 // Configuração do Firebase usando variáveis de ambiente
+// Agora ele vai encontrar as variáveis corretas no seu arquivo .env!
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
+  apiKey: import.meta.env.VITE_API_KEY, // Busca por VITE_API_KEY
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN, // Busca por VITE_AUTH_DOMAIN
+  projectId: import.meta.env.VITE_PROJECT_ID, // ...e assim por diante!
   storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_APP_ID,
@@ -29,4 +32,3 @@ setPersistence(auth, browserLocalPersistence).catch((error) => {
 });
 
 export { app, auth, googleProvider };
-
