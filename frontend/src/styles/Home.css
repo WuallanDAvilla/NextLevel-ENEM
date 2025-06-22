@@ -1,8 +1,6 @@
---- START OF FILE Home.css ---
-
 /* Home.css */
 
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,9 +16,9 @@ body {
 }
 
 .home-container {
+  height: 100vh; /* altura da tela */
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #1e90ff, #0d3e63);
 }
 
 .home-header {
@@ -63,6 +61,9 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.home-container #root {
+  height: 100%;
 }
 .user-avatar {
   width: 40px;

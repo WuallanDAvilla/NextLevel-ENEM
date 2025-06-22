@@ -3,8 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png"; // Importando a logo
-import "../styles/Login.css"; // Importa o CSS base do login
-import "../styles/Cadastro.css"; // Importa os estilos específicos do cadastro
+import "../styles/Cadastro.css"; // Estilo com escopo isolado
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -47,71 +46,73 @@ export default function SignUp() {
   const forcaSenha = verificarForcaSenha(senha);
 
   return (
-    // Reutilizando a estrutura da tela de Login
-    <div className="login-container">
-      <div className="login-card">
-        {/* Lado Esquerdo: Logo e link para voltar */}
-        <div className="login-left">
-          <div className="login-logo">
-            <img src={Logo} alt="NextLevelENEM Logo" />
+    <div className="cadastro-page">
+      <div className="login-container">
+        <div className="login-card">
+          <div className="login-left">
+            <div className="login-logo">
+              <img src={Logo} alt="NextLevelENEM Logo" />
+            </div>
+            <div className="back-to-login-container">
+              <p>Já possui uma conta?</p>
+              <button
+                onClick={() => navigate("/")}
+                className="btn-back-to-login"
+              >
+                Fazer Login
+              </button>
+            </div>
           </div>
-          <div className="back-to-login-container">
-            <p>Já possui uma conta?</p>
-            <button onClick={() => navigate("/")} className="btn-back-to-login">
-              Fazer Login
-            </button>
+
+          <div className="cadastro-right-panel">
+            <h1 className="cadastro-titulo">Criar Conta</h1>
+
+            <form onSubmit={handleSignUp} className="cadastro-form">
+              <input
+                type="text"
+                placeholder="Seu nome completo"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                className="cadastro-input"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Seu e-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="cadastro-input"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Sua senha (mínimo 6 caracteres)"
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}
+                className="cadastro-input"
+                required
+              />
+
+              {senha && (
+                <div className={`senha-strength senha-${forcaSenha}`}>
+                  Força da senha:{" "}
+                  <span>
+                    {forcaSenha === "fraca"
+                      ? "Fraca"
+                      : forcaSenha === "media"
+                      ? "Média"
+                      : "Forte"}
+                  </span>
+                </div>
+              )}
+
+              {erro && <p className="cadastro-erro">{erro}</p>}
+
+              <button type="submit" className="cadastro-btn">
+                Criar Conta
+              </button>
+            </form>
           </div>
-        </div>
-
-        {/* Lado Direito: Formulário de Cadastro */}
-        <div className="cadastro-right-panel">
-          <h1 className="cadastro-titulo">Criar Conta</h1>
-
-          <form onSubmit={handleSignUp} className="cadastro-form">
-            <input
-              type="text"
-              placeholder="Seu nome completo"
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-              className="cadastro-input"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Seu e-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="cadastro-input"
-              required
-            />
-            <input
-              type="password"
-              placeholder="Sua senha (mínimo 6 caracteres)"
-              value={senha}
-              onChange={(e) => setSenha(e.target.value)}
-              className="cadastro-input"
-              required
-            />
-
-            {senha && (
-              <div className={`senha-strength senha-${forcaSenha}`}>
-                Força da senha:{" "}
-                <span>
-                  {forcaSenha === "fraca"
-                    ? "Fraca"
-                    : forcaSenha === "media"
-                    ? "Média"
-                    : "Forte"}
-                </span>
-              </div>
-            )}
-
-            {erro && <p className="cadastro-erro">{erro}</p>}
-
-            <button type="submit" className="cadastro-btn">
-              Criar Conta
-            </button>
-          </form>
         </div>
       </div>
     </div>

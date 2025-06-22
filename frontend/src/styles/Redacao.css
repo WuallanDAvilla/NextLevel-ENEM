@@ -1,17 +1,17 @@
-/* Redacao.css */
-
 /* --- Container Principal --- */
 .redacao-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1e90ff, #0d3e63);
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
+}
+.redacao-page #root {
+  height: 100%;
 }
 
 /* --- Header Padrão (copiado de Materias.css para consistência) --- */
 .page-header {
+  width: 100vw; /* ocupa toda largura da viewport */
+  left: 0; /* alinha ao começo da viewport */
   background-color: #0f3c61;
   padding: 15px 30px;
   display: flex;
@@ -22,6 +22,7 @@
   top: 0;
   z-index: 100;
   gap: 20px;
+  box-sizing: border-box; /* padding dentro da largura */
 }
 
 .page-header .logo-section {
@@ -152,9 +153,10 @@
 
 /* --- Conteúdo Principal --- */
 .redacao-content {
-  flex: 1;
-  padding: 50px 30px;
-  max-width: 1200px;
+  flex: 1; /* ocupa o espaço disponível entre o header e o footer */
+  overflow-y: auto;
+  padding: 40px 30px;
+  max-width: 1550px;
   margin: 0 auto;
   width: 100%;
   animation: fadeInPage 0.7s ease-in-out;
@@ -169,17 +171,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.redacao-content h1 {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  text-align: center;
-  margin-bottom: 50px;
-  font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  position: relative;
-  display: block;
-  padding-bottom: 15px;
 }
 
 .redacao-content h1::after {

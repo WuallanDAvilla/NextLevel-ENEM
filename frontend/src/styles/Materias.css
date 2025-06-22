@@ -1,27 +1,32 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
 body.materias-page-active {
   margin: 0;
   padding: 0;
   width: 100vw;
-  min-height: 100vh; /* Alterado de height: 150vh para min-height para evitar scroll desnecessário */
-  overflow-x: hidden;
-  background: #153d61; /* Fundo base caso o gradiente não carregue */
+  min-height: 100vh;
+  background: #153d61;
 }
 
 .materias-page-container {
-  width: 100%;
-  max-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0d3251; /* Cor de fundo principal */
 }
 
-/* Header - Estilizado para ser consistente com Home.css */
+.materias-page-container #root {
+  height: 100%;
+}
+
 .page-header {
   background-color: #0f3c61;
-  padding: 10px 40px; /* Ajuste no padding */
+  padding: 10px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +60,6 @@ body.materias-page-active {
   margin: 0;
 }
 
-/* --- INÍCIO: NOVOS ESTILOS PARA NAVEGAÇÃO E USUÁRIO (ESCOPADOS) --- */
 .main-nav .nav-links {
   display: flex;
   list-style: none;
@@ -132,7 +136,6 @@ body.materias-page-active {
   color: #ffffff;
   text-decoration: underline;
 }
-/* --- FIM: NOVOS ESTILOS --- */
 
 .user-avatar {
   width: 40px;
@@ -149,9 +152,8 @@ body.materias-page-active {
   cursor: pointer;
 }
 
-/* Seção de Matérias */
 .materias-section {
-  padding: 50px 40px; /* Aumentado padding vertical */
+  padding: 50px 40px;
   text-align: center;
   flex-grow: 1;
   animation: fadeInContent 0.7s ease-in-out;
@@ -170,7 +172,7 @@ body.materias-page-active {
 
 .materias-section h1 {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
-  margin-bottom: 50px; /* Aumentado margin */
+  margin-bottom: 50px;
   color: #f0f8ff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -198,7 +200,6 @@ body.materias-page-active {
   padding-bottom: 30px;
 }
 
-/* Cartões de Matéria */
 .materia-card {
   background-color: #ffffff;
   color: #333;
@@ -221,7 +222,7 @@ body.materias-page-active {
 
 .materia-card img {
   width: 100%;
-  height: 140px; /* Ajustado */
+  height: 140px;
   object-fit: cover;
 }
 
@@ -238,7 +239,6 @@ body.materias-page-active {
   border-top: 1px solid #ddebf7;
 }
 
-/* Rodapé */
 .page-footer {
   background-color: #0f3c61;
   color: white;
@@ -248,7 +248,6 @@ body.materias-page-active {
   margin-top: auto;
 }
 
-/* Popup */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -261,7 +260,7 @@ body.materias-page-active {
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
-  /* Melhoria: Fundo semi-transparente para focar no popup */
+
   background: rgba(13, 39, 63, 0.6);
   backdrop-filter: blur(5px);
 }
@@ -353,7 +352,6 @@ body.materias-page-active {
   box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
 }
 
-/* Responsividade */
 @media (max-width: 992px) {
   .page-header {
     flex-wrap: wrap;
@@ -361,7 +359,7 @@ body.materias-page-active {
     padding: 15px 20px;
   }
   .main-nav {
-    order: 3; /* Move a navegação para a próxima linha */
+    order: 3;
     width: 100%;
     margin-top: 15px;
   }
@@ -408,6 +406,6 @@ body.materias-page-active {
     gap: 15px;
   }
   .materia-card {
-    width: 100%; /* Um card por linha */
+    width: 100%;
   }
 }

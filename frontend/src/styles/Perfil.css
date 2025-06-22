@@ -1,17 +1,21 @@
 /* src/styles/Perfil.css */
 
 /* --- Estilo Principal da Página --- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .perfil-page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0d3e63, #1e90ff);
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
 }
 
 /* --- Cabeçalho --- */
 .perfil-header {
+  width: 100vw; /* ocupa toda largura da tela */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,9 +25,10 @@
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
+  left: 0; /* para alinhar no início da viewport */
   z-index: 10;
+  box-sizing: border-box; /* para padding não ultrapassar a largura */
 }
-
 .perfil-logo-section {
   display: flex;
   align-items: center;
@@ -33,6 +38,7 @@
 .perfil-logo-img {
   width: 45px;
   height: 45px;
+  border-radius: 50%; /* Faz a borda totalmente arredondada (círculo) */
 }
 
 .perfil-title-header {
@@ -87,7 +93,8 @@
   height: 180px;
 }
 
-.perfil-image, .perfil-image-placeholder {
+.perfil-image,
+.perfil-image-placeholder {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -219,13 +226,15 @@
 }
 
 /* --- Estados de Feedback --- */
-.perfil-loading-feedback, .perfil-error-feedback, .perfil-login-prompt {
+.perfil-loading-feedback,
+.perfil-error-feedback,
+.perfil-login-prompt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #0D4C74, #032a45);
+  background: linear-gradient(to bottom, #0d4c74, #032a45);
   color: white;
   font-size: 1.5rem;
 }
@@ -257,7 +266,8 @@
     align-items: center;
     gap: 30px;
   }
-  .perfil-info-column, .perfil-chart-column {
+  .perfil-info-column,
+  .perfil-chart-column {
     max-width: 600px;
     width: 100%;
   }
@@ -272,7 +282,11 @@
   .perfil-main-content {
     padding: 30px 20px;
   }
-  .perfil-info-column, .perfil-chart-column {
+  .perfil-info-column,
+  .perfil-chart-column {
     padding: 25px;
   }
+}
+.perfil-page #root {
+  height: 100%;
 }
