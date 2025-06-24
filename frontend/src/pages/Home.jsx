@@ -8,7 +8,7 @@ import "../styles/Home.css";
 const siteInfo = {
   title: "NextLevelENEM",
   description:
-    "Uma plataforma dedicada à preparação para o ENEM e outros vestibulares, oferecendo recursos de estudo, quizzes e material de apoio para ajudar estudantes a alcançarem seu potencial máximo.",
+    "Um plataforma dedicada à preparação para o ENEM e outros vestibulares, oferecendo recursos de estudo, quizzes e material de apoio para ajudar estudantes a alcançarem seu potencial máximo.",
   mission:
     "Nossa missão é democratizar o acesso a educação de qualidade e auxiliar estudantes em sua jornada acadêmica.",
   vision:
