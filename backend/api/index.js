@@ -29,8 +29,8 @@ const scoresRouter = require("../routes/scores");
 const perguntasRouter = require("../routes/perguntas");
 
 // Registrando as rotas (sem o /api na frente, como você definiu)
-app.use("/scores", scoresRouter);
-app.use("/perguntas", perguntasRouter);
+app.use("/api/scores", scoresRouter);
+app.use("/api/perguntas", perguntasRouter);
 
 // Rota de teste para verificar se o servidor está no ar
 app.get("/", (req, res) => {
